@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.cardBlockReason.CardBlockReasonActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.cardBlockReason.CardBlockReasonViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_20">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="@dimen/back_arrow_dimen_new"
+                        android:layout_height="@dimen/back_arrow_dimen_new"
+                        android:layout_marginTop="@dimen/dp_28"
+                        android:padding="@dimen/normal_padding"
+                        android:layout_marginLeft="-8dp"
+                        android:onClick="clickActions"
+                        android:src="@drawable/white_back_arrow" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        android:text="@string/reason_to_bloack_card_text"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/dp_24"
+                        app:custFont="@string/app_font_bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_card_options"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/main_padding">
+
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvReason"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/button_left_right_padding"
+                                android:layout_weight="1"
+                                android:text="@string/card_lost_reason_text"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/dp_16"
+                                app:custFont="@string/app_font_regular" />
+
+                            <ImageView
+                                android:id="@+id/ivLost"
+                                android:layout_width="@dimen/option_selection_icon_dimension"
+                                android:layout_height="@dimen/option_selection_icon_dimension"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/black_dark_circle_bg"
+                                android:onClick="onSelectingReason"
+                                android:src="@{viewModel.ivLost}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/bg_card_options"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_20">
+
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/button_left_right_padding"
+                                android:layout_weight="1"
+                                android:text="@string/card_damage_reason_text"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/dp_16"
+                                app:custFont="@string/app_font_regular" />
+
+                            <ImageView
+                                android:id="@+id/ivDamage"
+                                android:layout_width="@dimen/option_selection_icon_dimension"
+                                android:layout_height="@dimen/option_selection_icon_dimension"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/black_dark_circle_bg"
+                                android:onClick="onSelectingReason"
+                                android:src="@{viewModel.ivDamage}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/bg_card_options"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_20">
+
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/button_left_right_padding"
+                                android:layout_weight="1"
+                                android:text="@string/card_chori_reason_text"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/dp_16"
+                                app:custFont="@string/app_font_regular" />
+
+                            <ImageView
+                                android:id="@+id/ivChori"
+                                android:layout_width="@dimen/option_selection_icon_dimension"
+                                android:layout_height="@dimen/option_selection_icon_dimension"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/black_dark_circle_bg"
+                                android:onClick="onSelectingReason"
+                                android:src="@{viewModel.ivChori}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/bg_card_options"
+                            android:orientation="vertical"
+                            android:padding="@dimen/main_padding">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/button_left_right_padding"
+                                    android:layout_weight="1"
+                                    android:text="@string/card_other_reason_text"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/dp_16"
+                                    app:custFont="@string/app_font_regular" />
+
+                                <ImageView
+                                    android:id="@+id/ivOther"
+                                    android:layout_width="@dimen/option_selection_icon_dimension"
+                                    android:layout_height="@dimen/option_selection_icon_dimension"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/black_dark_circle_bg"
+                                    android:onClick="onSelectingReason"
+                                    android:src="@{viewModel.ivOther}" />
+
+                            </LinearLayout>
+
+                            <com.payu.baas.core.view.viewExtension.CustomEdittext
+                                android:id="@+id/etReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_120"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:hint="@string/kripya_yahan_likhiye"
+                                android:padding="@dimen/dp_5"
+                                android:gravity="left"
+                                android:text="@={viewModel.strOtherReason}"
+                                android:textCursorDrawable="@drawable/bg_cursor"
+                                android:visibility="@{viewModel.getMyViewVisibility(viewModel.visOtherEdittext)}"
+                                app:custFont="@string/app_font_regular" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp_25"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_black_orange_border">
+
+                    <ImageView
+                        android:layout_width="@dimen/block_bulb_icon_width"
+                        android:layout_height="@dimen/block_bulb_icon_height"
+                        android:src="@drawable/ic_bulb_orange" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kripya_dhyaan_dein"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/dp_16"
+                            app:custFont="@string/app_font_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/new_card_delivery_message"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/dp_16"
+                            app:custFont="@string/app_font_regular" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomButton
+                    android:id="@+id/btSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/button_bg"
+                    android:onClick="clickActions"
+                    android:text="@string/submit_text"
+                    android:textAllCaps="false"
+                    android:enabled="false"
+                    app:custFont="@string/app_font_extra_bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/lWarning"
+            layout="@layout/item_card_block_reason_warning"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

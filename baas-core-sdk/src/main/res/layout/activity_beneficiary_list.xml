@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.moneyTransfer.BeneficiaryListActivity">
+
+    <data>
+
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.moneyTransfer.MoneyTransferViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:paddingEnd="@dimen/main_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/llGoBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:onClick="@{(view)->viewModel.onClick(view)}"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/main_padding"
+                android:paddingEnd="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBackArrow"
+                    android:layout_width="@dimen/back_arrow_dimension"
+                    android:layout_height="@dimen/back_arrow_dimension"
+                    android:src="@drawable/black_back_arrow" />
+            </LinearLayout>
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/toolbar_title_payee_list"
+                android:textSize="@dimen/sp_14"
+                app:custFont="@string/app_font_semi_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                android:id="@+id/tvEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:onClick="@{(view)->viewModel.onClick(view)}"
+                android:text="@string/btn_edit"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_14"
+                app:custFont="@string/app_font_semi_bold" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingStart="@dimen/main_padding"
+            android:paddingEnd="@dimen/main_padding"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/llDelete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlToolbar"
+            tools:listitem="@layout/item_beneficiary" />
+
+
+        <LinearLayout
+            android:id="@+id/llDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_black_with_top_round"
+            android:orientation="vertical"
+            android:padding="@dimen/main_padding"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(view)->viewModel.onClick(view)}"
+                android:background="@drawable/button_bg"
+                android:text="@string/btn_delete"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sp_15"
+                app:custFont="@string/app_font_extra_bold" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

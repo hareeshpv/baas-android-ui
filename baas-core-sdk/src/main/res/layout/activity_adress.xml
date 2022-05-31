@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.address.AdressActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.address.AddressViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen"
+        android:padding="@dimen/main_padding">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/addressScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btConfirmAddress">
+
+            <LinearLayout
+                android:id="@+id/nested_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="@dimen/back_arrow_dimen_new"
+                    android:layout_height="@dimen/back_arrow_dimen_new"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_marginTop="-8dp"
+                    android:onClick="openPreviousScreen"
+                    android:padding="@dimen/normal_padding"
+                    android:src="@drawable/white_back_arrow" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back_arrow"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:padding="@dimen/dp_4"
+                    android:text="@string/address_screen_title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_title"
+                    app:custFont="@string/app_font_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back_arrow"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:padding="@dimen/dp_4"
+                    android:text="@string/card_delivery_message"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_regular" />
+
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/rv"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/dp_10"-->
+                <!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+                <!--                    tools:listitem="@layout/item_address_list" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/bg_card_options"
+                    android:orientation="vertical"
+                    android:padding="@dimen/main_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/button_left_right_padding"
+                            android:layout_weight="1"
+                            android:text="@{viewModel.strAddress}"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/dp_16"
+                            app:custFont="@string/app_font_regular" />
+
+                        <ImageView
+                            android:id="@+id/ivSelect"
+                            android:layout_width="@dimen/option_selection_icon_dimension"
+                            android:layout_height="@dimen/option_selection_icon_dimension"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/selected_radio_circle_bg"
+                            android:onClick="@{()->viewModel.onSelectingAddress()}"
+                            android:src="@{viewModel.ivTick}"
+                            app:tint="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivdelete"
+                            android:layout_width="18dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_svg_delete" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/button_left_right_padding"
+                            android:layout_weight="1"
+                            android:text="@string/delete_address_text"
+                            android:textSize="@dimen/dp_14"
+                            app:custFont="@string/app_font_regular" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAddNewAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:background="@drawable/bg_card_options"
+                    android:gravity="center"
+                    android:onClick="addNewAddress">
+
+                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/button_left_right_padding"
+                        android:padding="@dimen/dp_18"
+                        android:text="@string/btn_update_new_address"
+                        android:textSize="@dimen/sp_14"
+                        app:custFont="@string/app_font_semi_bold" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.payu.baas.core.view.viewExtension.CustomButton
+            android:id="@+id/btConfirmAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/button_bg"
+            android:enabled="@{viewModel.btEnabled}"
+            android:onClick="confirmAddress"
+            android:text="@string/confirm_address"
+            android:textAllCaps="false"
+            app:custFont="@string/app_font_extra_bold" />
+    </RelativeLayout>
+</layout>

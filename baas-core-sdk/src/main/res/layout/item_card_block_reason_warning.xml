@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent">
+
+        <View
+            android:id="@+id/vOutsideWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llWarning"
+            android:onClick="clickActions" />
+        <LinearLayout
+            android:id="@+id/llWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_black_gradient_top_rounded"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/main_padding">
+            <ImageView
+                android:id="@+id/ivCloseWarning"
+                android:layout_width="@dimen/cross_icon_dimen"
+                android:layout_height="@dimen/cross_icon_dimen"
+                android:layout_gravity="right|top"
+                android:layout_marginRight="@dimen/dp_20"
+                android:onClick="clickActions"
+                android:background="@drawable/black_circle_bg"
+                android:src="@drawable/cross_icon" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/emoji_thinking" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_20"
+                android:text="@string/block_permanet_warning_message"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/dp_24"
+                app:custFont="@string/app_font_bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_black_orange_border">
+
+                <ImageView
+                    android:layout_width="@dimen/block_bulb_icon_width"
+                    android:layout_height="@dimen/block_bulb_icon_height"
+                    android:src="@drawable/ic_bulb_orange" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kripya_dhyaan_dein"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/dp_16"
+                        app:custFont="@string/app_font_bold" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/new_card_delivery_message"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/dp_16"
+                        app:custFont="@string/app_font_regular" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.payu.baas.core.view.viewExtension.CustomGradientGreenButton
+                    android:id="@+id/btBlock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:onClick="clickActions"
+                    android:background="@drawable/button_black_bg"
+                    android:text="@string/yes_block_text"
+                    android:textAllCaps="false"
+                    app:custFont="@string/app_font_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomButton
+                    android:id="@+id/btNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:onClick="clickActions"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@drawable/button_bg"
+                    android:text="@string/no_text"
+                    android:textAllCaps="false"
+                    app:custFont="@string/app_font_extra_bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

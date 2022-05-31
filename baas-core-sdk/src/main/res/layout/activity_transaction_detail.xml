@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.passbook.PassBookViewModel" />
+
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/main_padding"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="0dp"
+            android:paddingBottom="@dimen/main_padding">
+
+            <LinearLayout
+                android:id="@+id/llCancel"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:onClick="@{(view)->viewModel.onClick(view)}"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:background="@drawable/bg_round_gray"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCancel"
+                        android:layout_width="@dimen/dp_8"
+                        android:layout_height="@dimen/dp_8"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/icon_cancel" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llCancel"
+                android:paddingEnd="@dimen/main_padding">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTransactionStatusIcon"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvNarration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:textSize="@dimen/sp_24"
+                    app:custFont="@string/app_font_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivTransactionStatusIcon" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvExtraNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:gravity="start"
+                    android:textSize="@dimen/sp_12"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNarration" />
+
+                <LinearLayout
+                    android:id="@+id/llAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvExtraNotes">
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvCurrencySymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:text="@string/currency_symbol"
+                        android:textColor="@color/review_title_text_color"
+                        android:textSize="@dimen/sp_28"
+                        app:custFont="@string/app_font_regular" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvTransactionAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="-0.04"
+                        android:text="0"
+                        android:textColor="@color/review_title_text_color"
+                        android:textSize="@dimen/sp_38"
+                        app:custFont="@string/app_font_regular" />
+                </LinearLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvTransactionId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="start"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_12"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llAmount" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvTransactionTimeStamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_12"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTransactionId" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvTopSalutation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="To"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTransactionTimeStamp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlTop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTopSalutation">
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvTopTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_toLeftOf="@+id/viewTop"
+                        android:gravity="start"
+                        android:textSize="@dimen/sp_20"
+                        app:custFont="@string/app_font_regular" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/viewTop"
+                        android:layout_width="@dimen/dp_32"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_transaction_bank_icon_12_radius"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@color/passbook_transaction_bank_icon_bg"
+                        app:cardCornerRadius="@dimen/dp_12">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivTop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dp_8" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvTopShortName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_14"
+                                app:custFont="@string/app_font_regular" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlTopNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlTop"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_toLeftOf="@+id/viewTopTemp">
+
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvBankDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/subtext_color"
+                            android:textSize="@dimen/sp_12"
+                            app:custFont="@string/app_font_semi_bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewTopTemp"
+                        android:layout_width="@dimen/dp_32"
+                        android:layout_height="1dp"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+
+
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvBottomSalutation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="To Your"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlTopNotes" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlBottom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBottomSalutation">
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvBottomTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_toLeftOf="@+id/viewBottom"
+                        android:gravity="start"
+                        android:textSize="@dimen/sp_20"
+                        app:custFont="@string/app_font_regular" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/viewBottom"
+                        android:layout_width="@dimen/dp_32"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_transaction_bank_icon_12_radius"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@color/passbook_transaction_bank_icon_bg"
+                        app:cardCornerRadius="@dimen/dp_12">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dp_8"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivBottom"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    android:id="@+id/tvNeedHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:text="@string/btn_need_help"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlBottom" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

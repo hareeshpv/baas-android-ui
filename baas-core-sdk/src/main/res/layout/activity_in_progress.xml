@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.reviewAndSubmit.ProgressActivity">
+
+    <data></data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/main_padding"
+        android:background="@drawable/bg_screen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:src="@drawable/in_progress_icon" />
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="@dimen/cross_icon_dimen"
+                    android:layout_height="@dimen/cross_icon_dimen"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_close" />
+            </RelativeLayout>
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvInProgressTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_4"
+                android:text="@string/in_progress_screen_title"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/in_progress_screen_title_size"
+                app:custFont="@string/app_font_extra_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvInProgressSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginTop="@dimen/main_padding"
+                android:layout_marginRight="@dimen/dp_6"
+                android:text="@string/in_progress_screen_sub_title"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/screen_title"
+                app:custFont="@string/app_font_extra_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvAccountOpenMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAccountOpenTitle"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_6"
+                android:text="@string/in_progress_screen_desc"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/account_opening_message_text_size"
+                app:custFont="@string/app_font_bold" />
+
+
+        </LinearLayout>
+
+        <com.payu.baas.core.view.viewExtension.CustomButton
+            android:id="@+id/btExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_bg"
+            android:clickable="true"
+            android:text="@string/exit_text"
+            android:textColor="@color/black"
+            app:custFont="@string/app_font_extra_bold" />
+    </RelativeLayout>
+</layout>

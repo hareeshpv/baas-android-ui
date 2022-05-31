@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="addressText"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_options"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/main_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/button_left_right_padding"
+                android:layout_weight="1"
+                android:text="@{addressText}"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/dp_16"
+                app:custFont="@string/app_font_regular" />
+
+            <ImageView
+                android:id="@+id/ivSelect"
+                android:layout_width="28dp"
+                android:layout_height="@dimen/card_icon_dimension"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/black_dark_circle_bg"
+                android:onClick="onSelectingReason" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/llDelete">
+            <ImageView
+                android:id="@+id/ivdelete"
+                android:layout_width="18dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:onClick="onSelectingReason"
+                android:src="@drawable/ic_svg_delete" />
+            <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/button_left_right_padding"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="1"
+                android:text="@string/delete_address_text"
+                android:textSize="@dimen/dp_14"
+                app:custFont="@string/app_font_regular" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

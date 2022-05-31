@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thickness="@dimen/dp_5"
+            android:useLevel="false">
+            <gradient
+                android:endColor="@color/green_light"
+                android:gradientRadius="@dimen/dp_500"
+                android:startColor="@color/green_dark"
+                android:type="radial" />
+        </shape>
+    </item>
+</layer-list>-->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="16dp"
+    android:height="2dp"
+    android:viewportWidth="16"
+    android:viewportHeight="2">
+
+    <group>
+
+        <clip-path android:pathData="M1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0Z" />
+
+        <group
+            android:pivotX="8"
+            android:pivotY="1"
+            android:rotation="-135.594"
+            android:scaleX="6.74"
+            android:scaleY="11.673"
+            android:translateX="0.988"
+            android:translateY="4.841">
+
+            <path android:pathData="M0 0V2H16V0">
+
+                <aapt:attr name="android:fillColor">
+
+                    <gradient
+                        android:centerX="8"
+                        android:centerY="1"
+                        android:gradientRadius="4"
+                        android:type="radial">
+
+                        <item
+                            android:color="#0FC99C"
+                            android:offset="0" />
+
+                        <item
+                            android:color="#B2CC25"
+                            android:offset="1" />
+
+                    </gradient>
+
+                </aapt:attr>
+
+            </path>
+
+        </group>
+
+    </group>
+
+</vector>

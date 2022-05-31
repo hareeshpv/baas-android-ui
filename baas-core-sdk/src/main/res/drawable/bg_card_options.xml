@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item >
+        <shape android:shape="rectangle"  >
+            <corners android:radius="@dimen/dp_20" />
+            <padding android:left="@dimen/button_left_right_padding"
+                />
+            <gradient
+                android:startColor="@color/black_for_button"
+                android:centerColor="@color/black_for_button"
+                android:endColor="@color/black_for_button" />
+        </shape>
+    </item>
+</selector>

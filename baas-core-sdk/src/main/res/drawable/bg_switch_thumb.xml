@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <shape android:dither="true" android:shape="rectangle" android:useLevel="false" android:visible="true">
+            <solid android:color="#ffffff" />
+            <corners android:radius="100dp" />
+            <size android:width="22dp" android:height="23dp" />
+            <stroke android:width="6dp" android:color="#0000ffff" />
+        </shape>
+    </item>
+</selector>
+<!--<shape android:shape="oval" xmlns:android="http://schemas.android.com/apk/res/android" >-->
+
+<!--    <solid android:color="@android:color/white"/>-->
+<!--&lt;!&ndash;<stroke android:width="2dp" android:color="@color/green_dark"/>&ndash;&gt;-->
+<!--    <size android:width="20dp" android:height="20dp"/>-->
+<!--</shape>-->
+
+<!--<vector-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:aapt="http://schemas.android.com/aapt"-->
+<!--android:width="16dp"-->
+<!--android:height="16dp"-->
+<!--android:viewportWidth="16"-->
+<!--android:viewportHeight="16"-->
+<!--    >-->
+
+<!--<group>-->
+
+<!--    <clip-path-->
+<!--        android:pathData="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"-->
+<!--        />-->
+
+<!--    <path-->
+<!--        android:pathData="M0 0V16H16V0"-->
+<!--        android:fillColor="#FFFFFF"-->
+<!--        />-->
+
+<!--</group>-->
+
+<!--</vector>-->

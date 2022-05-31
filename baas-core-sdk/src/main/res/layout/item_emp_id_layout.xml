@@ -1,0 +1,63 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="empText"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_padding"
+        android:orientation="vertical">
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/tvEmployeeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enter_dob_parent_layout"
+            android:inputType="text"
+            android:padding="@dimen/normal_padding"
+            android:text="@string/employee_id"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/screen_sub_title"
+            app:custFont="@string/app_font_semi_bold" />
+
+        <LinearLayout
+            android:id="@+id/enter_employee_id_parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.payu.baas.core.view.viewExtension.CustomEdittext
+                android:id="@+id/etEmployeeId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionDone"
+                android:inputType="textCapCharacters|textVisiblePassword"
+                android:padding="@dimen/normal_padding"
+                android:text="@={empText}"
+                android:editable="false"
+                android:textColor="@color/text_color"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:textSize="@dimen/edit_text_size"
+                app:custFont="@string/app_font_bold" />
+
+            <ImageView
+                android:layout_width="@dimen/help_icon_dimen"
+                android:layout_height="@dimen/help_icon_dimen"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:onClick="openIDCardFormat"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone"
+                android:src="@mipmap/question_icon" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

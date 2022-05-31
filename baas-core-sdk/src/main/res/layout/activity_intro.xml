@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.intro.IntroActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedscrollview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/clHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_black_gradient_bottom_rounded_intro"
+                        android:paddingBottom="@dimen/dp_100">
+
+                        <LinearLayout
+                            android:id="@+id/payu_text_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/app_title_image_width"
+                                android:layout_height="@dimen/app_title_image_height"
+                                android:layout_marginTop="?android:attr/actionBarSize"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_logo_image" />
+                        </LinearLayout>
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/instruct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/payu_text_layout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/gradient_text_margin_top"
+                            android:gravity="center"
+                            android:text="@string/limit_kharch_message"
+                            android:textSize="@dimen/sp_33"
+                            app:custFont="@string/app_font_bold" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/animated_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/instruct"
+                            android:layout_centerInParent="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/card_anim" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/down_arrow"
+                            android:layout_width="@dimen/down_arrow_dimension"
+                            android:layout_height="@dimen/down_arrow_dimension"
+                            android:layout_below="@+id/animated_card"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:src="@drawable/ic_down_arrow" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/zero_balance_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="@dimen/zero_balance_img_margin_left"
+                            android:layout_marginTop="@dimen/balance_icon_top_margin"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/zero_balance_icon" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/zero_balance_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zero_balance_icon"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/gradient_text_left_margin"
+                            android:layout_marginTop="@dimen/gradient_margin_top"
+                            android:layout_marginRight="@dimen/gradient_text_left_margin"
+                            android:text="@string/zero_balance_amp_all_in_one_account"
+                            android:textSize="@dimen/sp_33"
+                            app:custFont="@string/app_font_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/zero_balance_text_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zero_balance_text"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/layout_margin_left"
+                            android:layout_marginTop="@dimen/text_margin_top1"
+                            android:layout_marginEnd="@dimen/text_margin_right"
+                            android:text="@string/apki_salary_or_advance_earnings_dono_ek_hi_account_se"
+                            android:textAlignment="center"
+                            android:textColor="@color/powered_by_payu"
+                            android:textSize="@dimen/text_size1"
+                            app:custFont="@string/app_font_regular" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/offer_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zero_balance_text_message"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/offer_icon_margin_top"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_offer" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/offer_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/offer_icon"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/gradient_text_margin_left"
+                            android:layout_marginTop="@dimen/dp_32"
+                            android:layout_marginEnd="@dimen/gradient_text_margin_right"
+                            android:text="@string/exciting_offers_worth"
+                            android:textSize="@dimen/sp_33"
+                            app:custFont="@string/app_font_bold" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/free_offer_service"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/offer_text"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/free_offer_icon_margin_top"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_atm_machine" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/free_service_offer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/free_offer_service"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/gradient_text_margin_left"
+                            android:layout_marginTop="@dimen/gradient_text_margin_top2"
+                            android:layout_marginEnd="@dimen/gradient_text_margin_right"
+                            android:text="@string/free_atm_cash_withdrawal"
+                            android:textSize="@dimen/sp_33"
+                            app:custFont="@string/app_font_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/free_service_offer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/free_service_offer1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/gradient_text_margin_left"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="@dimen/gradient_text_margin_right"
+                            android:text="@string/free_online_bank_tranfer"
+                            android:textSize="@dimen/sp_33"
+                            app:custFont="@string/app_font_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/every_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/free_service_offer2"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/every_month"
+                            android:textColor="@color/powered_by_payu"
+                            android:textSize="@dimen/sp_16"
+                            app:custFont="@string/app_font_regular" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/petrol_offer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/every_month"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/petrol_offer_margin_top"
+                            android:layout_marginRight="@dimen/_30sdp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_plain_credit_card" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/petrol_offer_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/petrol_offer"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/gradient_text_left_margin"
+                            android:layout_marginTop="@dimen/gradient_text_margin_top3"
+                            android:layout_marginEnd="@dimen/gradient_text_margin_right"
+                            android:text="@string/bina_surcharge_diye_petrol_khareediye"
+                            android:textSize="@dimen/sp_33"
+                            app:custFont="@string/app_font_bold" />
+
+                        <!--   <com.payu.baas.core.view.viewExtension.CustomTextView
+                               android:id="@+id/petrol_offer_text_grey"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_below="@+id/petrol_offer_text"
+                               android:layout_centerInParent="true"
+                               android:layout_marginLeft="@dimen/petrol_offer_left_right_margin"
+                               android:layout_marginTop="@dimen/petrol_offer_margin_top_text"
+                               android:layout_marginRight="@dimen/petrol_offer_left_right_margin"
+                               android:text="@string/apko_3000_tak_petrol_per_2_5_surcharge_nahi_lagega"
+                               android:textAlignment="center"
+                               android:textColor="@color/powered_by_payu"
+                               android:textSize="@dimen/petrol_offer_text_size"
+                               app:custFont="@string/app_font_regular" />-->
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/no_fee_offer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/petrol_offer_text"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/no_fee_offer_icon_margin_top"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/joining_offer" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/no_fee_offer_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/no_fee_offer"
+                            android:layout_marginLeft="@dimen/no_joining_fee_text_left_right_margin"
+                            android:layout_marginRight="@dimen/no_joining_fee_text_left_right_margin"
+                            android:orientation="horizontal">
+
+                            <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                android:id="@+id/no_joining_fee"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/no_joining_fees_amp_annual_fees"
+                                android:textSize="@dimen/sp_33"
+                                app:custFont="@string/app_font_bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/no_joining_fee_temp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/no_joining_fees_amp_annual_fees"
+                                android:textColor="@color/powered_by_payu"
+                                android:textSize="@dimen/sp_33"
+                                app:custFont="@string/app_font_bold"
+                                app:layout_constraintEnd_toEndOf="@+id/no_joining_fee"
+                                app:layout_constraintStart_toStartOf="@+id/no_joining_fee"
+                                app:layout_constraintTop_toTopOf="@+id/no_joining_fee" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/no_joining_fee_message_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/no_fee_offer_layout"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/no_joining_fee_message_let_right_top_margin"
+                            android:layout_marginTop="@dimen/no_joining_fee_message_let_right_top_margin"
+                            android:layout_marginRight="@dimen/no_joining_fee_message_let_right_top_margin"
+                            android:text="@string/sirf_pahele_5000_customers_ke_liye"
+                            android:textColor="@color/powered_by_payu"
+                            android:textSize="@dimen/no_joining_fee_gray_text_size"
+                            app:custFont="@string/app_font_regular" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_150"
+                        android:background="@drawable/bg_black_gradient_top_rounded_intro">
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/all_in_one_salary_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/no_joining_fee_margin_left_right"
+                            android:layout_marginTop="@dimen/dp_60"
+                            android:layout_marginRight="@dimen/no_joining_fee_margin_left_right"
+                            android:text="@string/apka_all_in_one_account_is_backed_by"
+                            android:textSize="@dimen/sp_33"
+                            app:custFont="@string/app_font_bold" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/mintra_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/mitra_icon_height"
+                            android:layout_below="@+id/all_in_one_salary_account"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/mitra_icon_margin_top"
+                            android:src="@drawable/ic_mitra" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/mintra_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mintra_icon"
+                            android:layout_marginLeft="@dimen/left_right_margin"
+                            android:layout_marginTop="@dimen/mitra_margin_top"
+                            android:layout_marginRight="@dimen/left_right_margin"
+                            android:gravity="center"
+                            android:text="@string/mitra_apki_financial_problems_solve_krne_k_liye_advance_salary_use_krne_ki_suvidha_layi_hai"
+                            android:textColor="@color/powered_by_payu"
+                            app:custFont="@string/app_font_regular" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/sbm_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/sbm_icon_height"
+                            android:layout_below="@+id/mintra_message"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/sbm_icon_margin_top"
+                            android:src="@drawable/ic_sbm_logo" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/no_joining_annual_fee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sbm_icon"
+                            android:layout_marginLeft="@dimen/left_right_margin"
+                            android:layout_marginTop="@dimen/sbm_margin_top"
+                            android:layout_marginRight="@dimen/left_right_margin"
+                            android:gravity="center"
+                            android:text="@string/apka_salary_account_rbi_licensed_sbm_bank_me_khola_jayega_taki_apke_paise_safe_rahe"
+                            android:textColor="@color/powered_by_payu"
+                            app:custFont="@string/app_font_regular" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/loan_temp_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/no_joining_annual_fee"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/loan_tap_icon_margin_top"
+                            android:src="@drawable/ic_loantap" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/loantap_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/loan_temp_icon"
+                            android:layout_marginLeft="@dimen/left_right_margin"
+                            android:layout_marginTop="@dimen/text_view_margin_top"
+                            android:layout_marginRight="@dimen/left_right_margin"
+                            android:layout_marginBottom="@dimen/text_margin_bottom"
+                            android:gravity="center"
+                            android:text="@string/loantap_apki_advance_salary_finance_karega"
+                            android:textColor="@color/powered_by_payu"
+                            app:custFont="@string/app_font_regular" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/black"
+                android:elevation="0dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nestedscrollview">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/app_title_image_width_toolbar"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_logo_image" />
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_black_gradient_top_rounded"
+            android:orientation="vertical">
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/btnApplyKaren1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:background="@drawable/button_bg"
+                android:onClick="apply_karein"
+                android:text="@string/apply_karein"
+                android:textAllCaps="false"
+                app:custFont="@string/app_font_extra_bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

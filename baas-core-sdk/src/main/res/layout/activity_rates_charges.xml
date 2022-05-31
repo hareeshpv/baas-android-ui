@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.profile.RatesChargesActivity">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+      >
+
+        <LinearLayout
+            android:id="@+id/back_arrow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="ratesCharges">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="@dimen/back_button_width"
+                android:layout_height="@dimen/back_button_height"
+                android:layout_marginLeft="@dimen/back_button_margin_left"
+                android:src="@drawable/white_back_arrow" />
+        </LinearLayout>
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/normal_padding"
+            android:text="@string/rates_amp_charges"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16sdp"
+            app:custFont="@string/app_font_semi_bold" />
+    </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_padding"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/joining_fee"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:id="@+id/joiningFee"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_padding"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/annual_renewal_fee"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:id="@+id/annualRenewelFee"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_padding"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free_atm_withdrawals_n_monthly"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_bold" />
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/per_month"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:id="@+id/freeATMWithdrawalMonthly"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_padding"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/atm_withdrawal_fee_n_per_transaction"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_bold" />
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/per_transaction"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+
+                 <LinearLayout
+                    android:orientation="vertical"
+                     android:gravity="end"
+                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                     <com.payu.baas.core.view.viewExtension.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/atmWithdrawalFee"
+                         android:textColor="@color/text_color"
+                         android:textSize="@dimen/screen_sub_title"
+                         app:custFont="@string/app_font_semi_bold" />
+                     <com.payu.baas.core.view.viewExtension.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/atmWithdrawalFeeHintColor"
+                         android:textColor="@color/hint_text_color"
+                         android:textSize="@dimen/screen_sub_title"
+                         app:custFont="@string/app_font_semi_bold" />
+                 </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_padding"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free_bank_transfers_n_monthly"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_bold" />
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/per_month"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/freeBankTransfer"
+                    android:gravity="end"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_padding"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bank_transfer_fee_n_per_transaction"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_bold" />
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/per_transaction"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bankTransferFeePerTransaction"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_semi_bold" />
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bankTransferFeePerTransactionHintColor"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginRight="@dimen/main_padding"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/advance_usage_fees_n_per_transaction"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_bold" />
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/per_transaction"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/advanceUsagefee"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_semi_bold" />
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/advanceUsagefeeHintColor"
+                        android:textColor="@color/hint_text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/main_padding"
+            android:layout_marginRight="@dimen/main_padding"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maximum_fuel_surcharge_waiver"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Per Month"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:id="@+id/maximum_fuel_surcharge_waiver"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/screen_sub_title"
+                app:custFont="@string/app_font_semi_bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/main_padding"
+            android:layout_marginRight="@dimen/main_padding"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/late_payment_fees"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/late_payment_message"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/late_payment_fees"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:id="@+id/late_payment_feesHintColor"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Or"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:id="@+id/late_payment_feesFlat"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:id="@+id/late_payment_feesOnDueAmount"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/main_padding"
+            android:layout_marginRight="@dimen/main_padding"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/late_payment_fees_interest_charges"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Per Year"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/late_payment_fees_interest_charges"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/late_payment_fees_interest_chargesHintColor"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:background="@drawable/rates_charges_instruction_layout"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/bulb_icon_dimension"
+                android:layout_height="@dimen/bulb_icon_dimension"
+                android:layout_marginLeft="@dimen/bulb_left_right_margin"
+                android:layout_marginTop="@dimen/bulb_left_right_margin"
+                android:layout_marginRight="@dimen/bulb_left_right_margin"
+                android:src="@drawable/ic_orange_bulb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/important_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/kripya_dhyaan_dein"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange_color"
+                    android:textSize="@dimen/welcome_terms"
+                    app:custFont="@string/app_font_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/important_instruction_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/instruction_margin_top"
+                    android:text="@string/rates_charges_instruction"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:textColor="@color/orange_color"
+                    android:textSize="@dimen/welcome_instruction"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+       </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="sText"
+            type="String"/>
+
+    </data>
+    <LinearLayout
+        android:id="@+id/parentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/black_no_padding_bg"
+        android:onClick="startVerification"
+        android:orientation="horizontal">
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{sText}"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/counter_size"
+            app:custFont="@string/app_font_regular" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginLeft="@dimen/normal_padding"
+            android:src="@drawable/arrow_next" />
+
+    </LinearLayout>
+</layout>

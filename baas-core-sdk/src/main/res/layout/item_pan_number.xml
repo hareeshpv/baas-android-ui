@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="panText"
+            type="String"/>
+
+    </data>
+    <LinearLayout
+        android:layout_marginTop="@dimen/main_padding"
+        android:id="@+id/parentPanNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvPanNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/normal_padding"
+                android:text="@string/pan_number"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/screen_sub_title"
+                app:custFont="@string/app_font_semi_bold" />
+
+            <View
+                android:id="@+id/error_icon"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/icon_error"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.payu.baas.core.view.viewExtension.CustomEdittext
+                android:id="@+id/etPanNumber"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters|textVisiblePassword"
+                android:textAllCaps="true"
+                android:padding="@dimen/normal_padding"
+                android:maxLength="10"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/edit_text_size"
+                android:text="@={panText}"
+                android:imeOptions="actionNext"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                app:custFont="@string/app_font_bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/help_icon_dimen"
+                    android:layout_height="@dimen/help_icon_dimen"
+                    android:src="@mipmap/question_icon"
+                    android:padding="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:onClick="openPanCardFormat"/>
+
+        </LinearLayout>
+
+        <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+            android:id="@+id/tvPanError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_padding"
+            android:text="@string/pan_number_missing_error_message"
+            android:visibility="gone"
+            app:custFont="@string/app_font_regular" />
+    </LinearLayout>
+
+</layout>

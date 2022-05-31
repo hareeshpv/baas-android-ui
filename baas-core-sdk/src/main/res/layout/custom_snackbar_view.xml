@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <RelativeLayout
+        android:id="@+id/snack_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/snackbar_background"
+            android:orientation="horizontal">
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/snack_title_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/without_permission_message"
+                android:textColor="@color/review_title_text_color"
+                android:textSize="@dimen/snack_text_size"
+                android:textStyle="bold"
+                app:custFont="@string/app_font_semi_bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/snack_icon_margin_left">
+
+                <ImageView
+                    android:id="@+id/snack_icon"
+                    android:layout_width="@dimen/snack_icon_dimension"
+                    android:layout_height="@dimen/snack_icon_dimension"
+                    android:src="@drawable/pending_status"/>
+
+                <ImageView
+                    android:id="@+id/tic_black_background_icon"
+                    android:layout_width="@dimen/snack_icon_dimension"
+                    android:layout_height="@dimen/snack_icon_dimension"
+                    android:background="@drawable/black_circle_bg"
+                    android:padding="@dimen/dp_8"
+                    android:src="@drawable/tick_green_icon"
+                    android:visibility="gone" />
+
+                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    android:id="@+id/tvUndo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_gray"
+                    android:padding="@dimen/dp_8"
+                    android:text="Undo"
+                    android:visibility="gone"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_semi_bold"/>
+
+                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    android:id="@+id/tvReTry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_gray"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/re_try"
+                    android:visibility="gone"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_semi_bold"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="@color/black_for_card_list_seprator" />
+    <padding
+        android:bottom="@dimen/tick_padding"
+        android:left="@dimen/tick_padding"
+        android:right="@dimen/tick_padding"
+        android:top="@dimen/tick_padding" />
+    <size
+        android:width="@dimen/circle_dimen"
+        android:height="@dimen/circle_dimen" />
+</shape>

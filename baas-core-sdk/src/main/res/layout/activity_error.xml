@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.onboarding.ErrorActivity">
+
+    <data></data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen"
+        android:paddingTop="@dimen/error_page_bottom_margin"
+        android:paddingBottom="@dimen/error_page_bottom_margin"
+        android:paddingLeft="@dimen/error_page_side_margin"
+        android:paddingRight="@dimen/error_page_side_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/error_layout_top_margin"
+            android:gravity="center"
+            android:paddingLeft="@dimen/main_padding"
+            android:paddingRight="@dimen/main_padding"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_error_msg" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvErrorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/error_title_top_margin"
+                android:gravity="center"
+                android:text="@string/technical_error_title_text"
+                android:textColor="@color/error_text_color"
+                android:textSize="@dimen/error_text_size"
+                app:custFont="@string/app_font_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvErrorSolution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_padding"
+                android:gravity="center"
+                android:text="@string/reload_page_message"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/error_text_size"
+                app:custFont="@string/app_font_bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/btExit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_black_bg"
+                android:onClick="performAction"
+                android:text="@string/exit_text"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                app:custFont="@string/app_font_extra_bold" />
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/btOpenWifiSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_black_bg"
+                android:onClick="performAction"
+                android:text="@string/open_wifi_settings_text"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                app:custFont="@string/app_font_extra_bold"
+                android:visibility="gone"/>
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/btReloadPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/normal_padding"
+                android:background="@drawable/button_bg"
+                android:onClick="performAction"
+                android:text="@string/reload_page_text"
+                android:textAllCaps="false"
+                app:custFont="@string/app_font_extra_bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.addressAddNew.AddNewAddressActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.addressAddNew.AddNewAddressViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_screen"
+        android:paddingStart="@dimen/main_padding"
+        android:paddingTop="@dimen/main_padding"
+        android:paddingEnd="@dimen/main_padding"
+        android:paddingBottom="@dimen/main_padding">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/addressScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btSave">
+
+            <RelativeLayout
+                android:id="@+id/nested_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/clToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_marginTop="-8dp"
+                    android:minHeight="?android:attr/actionBarSize">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_back_arrow"
+                        android:layout_width="@dimen/back_arrow_dimen_new"
+                        android:layout_height="@dimen/back_arrow_dimen_new"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="openPreviousScreen"
+                        android:padding="@dimen/normal_padding"
+                        android:src="@drawable/black_back_arrow"
+                        android:tint="@color/text_color" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvToolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/update_address"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_14"
+                        app:custFont="@string/app_font_regular" />
+
+
+                </RelativeLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/pinCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/clToolbar"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/pin_code"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_regular" />
+
+                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                    android:id="@+id/etPinCode"
+                    android:layout_width="@dimen/pincode_et_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pinCode"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="@dimen/normal_padding"
+                    android:text="@={viewModel.strPinCode}"
+                    android:textColor="@color/text_color"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etPinCode"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:text="@string/address_house_no_building_street_area"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_regular" />
+
+                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                    android:id="@+id/etAddressLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:inputType="textVisiblePassword"
+                    android:padding="@dimen/normal_padding"
+                    android:text="@={viewModel.strAddressLine1}"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_semi_bold" />
+
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/colonySectorStreet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etAddressLine1"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:text="@string/colony_sector_street"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_regular" />
+
+                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                    android:id="@+id/etAddressLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/colonySectorStreet"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:inputType="textVisiblePassword"
+                    android:padding="@dimen/normal_padding"
+                    android:text="@={viewModel.strAddressLine2}"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_semi_bold" />
+
+
+                <!--                <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                <!--                    android:id="@+id/landmark"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@+id/etAddressLine2"-->
+                <!--                    android:layout_marginTop="@dimen/main_padding"-->
+                <!--                    android:text="@string/landmark"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/text_color"-->
+                <!--                    android:textSize="@dimen/sp_14"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    app:custFont="@string/app_font_regular" />-->
+
+                <!--                <com.payu.baas.core.view.viewExtension.CustomEdittext-->
+                <!--                    android:id="@+id/etLandmark"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@+id/landmark"-->
+                <!--                    android:layout_marginTop="@dimen/dp_8"-->
+                <!--                    android:inputType="text"-->
+                <!--                    android:padding="@dimen/normal_padding"-->
+                <!--                    android:text="@={viewModel.strLandmark}"-->
+                <!--                    android:textColor="@color/white"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    android:textCursorDrawable="@drawable/bg_cursor"-->
+                <!--                    android:textSize="@dimen/sp_15"-->
+                <!--                    app:custFont="@string/app_font_semi_bold" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etAddressLine2"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/cityDistrict"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/city_district"
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/sp_14"
+                            app:custFont="@string/app_font_regular" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomEdittext
+                            android:id="@+id/etCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:inputType="textVisiblePassword"
+                            android:padding="@dimen/normal_padding"
+                            android:text="@={viewModel.strCity}"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@drawable/bg_cursor"
+                            android:textSize="@dimen/sp_15"
+                            app:custFont="@string/app_font_semi_bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_padding"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/state"
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/sp_14"
+                            app:custFont="@string/app_font_regular" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomEdittext
+                            android:id="@+id/etState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:inputType="textVisiblePassword"
+                            android:padding="@dimen/normal_padding"
+                            android:text="@={viewModel.strState}"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@drawable/bg_cursor"
+                            android:textSize="@dimen/sp_15"
+                            app:custFont="@string/app_font_semi_bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <!--        android:onClick="@{()->viewModel.addNewAddress()}"-->
+        <com.payu.baas.core.view.viewExtension.CustomButton
+            android:id="@+id/btSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/main_padding"
+            android:background="@drawable/button_bg"
+            android:enabled="false"
+            android:onClick="onUpdateAddress"
+            android:text="@string/save_update_address"
+            android:textAllCaps="false"
+            app:custFont="@string/app_font_extra_bold" />
+    </RelativeLayout>
+
+</layout>

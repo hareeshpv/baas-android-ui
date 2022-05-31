@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.panvalidate.VerifyPANCardNumberActivity">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.panvalidate.VerifyPanViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/back_button_margin_left">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/back_arrow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="@dimen/back_button_width"
+                    android:layout_height="@dimen/back_button_height"
+                    android:layout_marginTop="@dimen/back_button_top_margin"
+                    android:onClick="verify_pancard_backarrow"
+                    android:src="@drawable/white_back_arrow" />
+            </LinearLayout>
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvVerifyPanNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back_arrow_layout"
+                    android:layout_marginTop="@dimen/verify_pan_title_top_margin"
+                    android:text="@string/verify_pan_card_number"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_title"
+                    app:custFont="@string/app_font_regular" />
+                <include
+                    android:id="@+id/parentPanInput"
+                    layout="@layout/item_pan_number"
+                    app:panText="@={viewModel.strVerifyPanNumber}"
+                    android:layout_below="@+id/verify_pan_number"
+                    android:layout_marginTop="@dimen/verify_subtitle_top_margin"
+                    tools:ignore="IncludeLayoutParam" />
+            </LinearLayout>
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/verifyPanNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_bg"
+                android:enabled="false"
+                android:onClick="@{()->viewModel.verifyPAN()}"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                app:custFont="@string/app_font_extra_bold" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/parentPanHelp"
+            layout="@layout/pan_format_layout"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</layout>

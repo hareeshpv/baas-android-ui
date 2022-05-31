@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PTextView">
+        <attr name="custFont" format="string"/>
+    </declare-styleable>
+</resources>

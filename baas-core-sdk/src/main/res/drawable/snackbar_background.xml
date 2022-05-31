@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="30dp"
+                android:topRightRadius="30dp"
+                android:bottomRightRadius="30dp"
+                android:bottomLeftRadius="30dp"/>
+            <solid android:color="@color/light_sky" />
+            <padding android:bottom="@dimen/main_padding" android:left="@dimen/main_padding" android:top="@dimen/main_padding" android:right="@dimen/main_padding"/>
+        </shape>
+    </item>
+</selector>

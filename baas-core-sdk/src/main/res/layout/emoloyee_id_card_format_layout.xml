@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/parentIdCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent">
+
+        <View
+            android:id="@+id/vOutsideId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llHelp"
+            android:onClick="closeHelp" />
+
+        <LinearLayout
+            android:id="@+id/llHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/help_info_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/main_padding"
+            android:paddingBottom="@dimen/main_padding">
+                <ImageView
+                    android:id="@+id/ivCloseIdCardHelp"
+                    android:padding="@dimen/dp_10"
+                    android:layout_gravity="right|top"
+                    android:layout_marginRight="@dimen/main_padding"
+                    android:onClick="closeHelp"
+                    android:layout_width="@dimen/cross_icon_dimen"
+                    android:layout_height="@dimen/cross_icon_dimen"
+                    android:src="@drawable/ic_svg_cross" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/help_layout_padding"
+                android:src="@drawable/employee_id_card_format" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvEmployeeIdInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_padding"
+                android:layout_marginBottom="@dimen/help_layout_padding"
+                android:padding="@dimen/normal_padding"
+                android:text="@string/employee_id_info_text"
+                android:textAllCaps="false"
+                android:textColor="@color/review_title_text_color"
+                android:textSize="@dimen/help_layout_fileds_text_size"
+                app:custFont="@string/app_font_semi_bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

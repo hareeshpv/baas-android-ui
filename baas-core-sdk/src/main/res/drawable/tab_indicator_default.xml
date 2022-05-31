@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="oval"
+            android:useLevel="false">
+            <solid android:color="@color/text_color" />
+        </shape>
+    </item>
+</layer-list>-->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="16dp"
+    android:height="2dp"
+    android:viewportWidth="16"
+    android:viewportHeight="2">
+
+    <group>
+
+        <clip-path android:pathData="M1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0Z" />
+
+        <path
+            android:fillColor="#555F63"
+            android:pathData="M0 0V2H16V0" />
+
+    </group>
+
+</vector>

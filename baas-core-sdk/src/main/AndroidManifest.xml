@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.payu.baas.core">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <application
+        android:name=".app.BaasUIApp"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:largeHeap="true"
+        tools:replace="android:name">
+        <activity
+            android:name=".view.ui.activity.notVerifiedEmp.NotVerifiedEmpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.advance.AdvanceUsageTransactionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.profile.RatesChargesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.addressAddNew.AddNewAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.address.AdressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.webView.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.cardUpdatePin.UpadatePinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.editCurrentAddress.EditCurrentAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.editEmailAddress.EditEmailAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.myDetails.MyDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.profile.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.cardBlockReason.CardBlockReasonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.relogin.ReloginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.notemployee.NotEmployeeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.cardChangeTransactionLimit.ChangeTransactionLimitsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.splash.SplashScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.intro.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.cardTransactionLimit.TransactionLimitsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.cards.CardsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.accountopeningfailure.AccountOpeningFailureScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.onboarding.ErrorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.reviewAndSubmit.ProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.onboarding.PermissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.dashboard.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.passbook.PassBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.passbook.TransactionDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.ui.activity.advance.AdvanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.advance.AdvanceTransactionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.moneyTransfer.MoneyTransferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.moneyTransfer.TransferAmountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.moneyTransfer.TransactionSuccessActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.ui.activity.moneyTransfer.BeneficiaryListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.ui.activity.onboarding.WelcomeScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.reviewAndSubmit.ReviewSubmitDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".view.ui.activity.set_passcode.SetPasscodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.kyc.CardDeliveryAddressDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.panEmpVerification.PANEmployeeDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.kyc.CompleteKYCActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.ui.activity.reset_passcode.ResetPasscodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.panvalidate.VerifyPANCardNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.enterpasscode.PasscodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.otpverification.OTPVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.activity.mobileverification.MobileVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.ui.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ui.activity.kyc.KarzaActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="@string/clevertap_account_id"
+            android:value="@string/ct_pid_value" />
+        <meta-data
+            android:name="@string/clevertap_account_token"
+            android:value="@string/ct_pt_value" />
+        <meta-data
+            android:name="@string/clevertap_google_ad_id"
+            android:value="@string/ct_google_ad_id_value" />
+        <meta-data
+            android:name="payu_sentry_url"
+            android:value="@string/payu_sentry_url_value" />
+        <meta-data
+            android:name="payu_sentry_key"
+            android:value="@string/payu_sentry_key_value" />
+    </application>
+
+</manifest>

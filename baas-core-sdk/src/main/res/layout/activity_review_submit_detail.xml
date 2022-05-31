@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.reviewAndSubmit.ReviewSubmitDetailActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.reviewAndSubmit.ReviewAndSubmitViewModel" />
+
+    </data>
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_screen">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+
+            <RelativeLayout
+                android:id="@+id/rlProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_user_review">
+
+
+                    <RelativeLayout
+                        android:id="@+id/address_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/review_title_margin_top"
+                        android:paddingLeft="@dimen/black_back_icon_margin_left"
+                        android:paddingRight="@dimen/black_back_icon_margin_left">
+
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="@dimen/back_button_width"
+                            android:layout_height="@dimen/back_button_height"
+                            android:layout_centerVertical="true"
+                            android:onClick="openPreviousScreen"
+                            android:src="@drawable/black_back_arrow"
+                            android:visibility="gone" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/address_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:alpha="0.7"
+                            android:text="@string/apni_details_jaanchein"
+                            android:textAllCaps="false"
+                            android:textColor="@color/review_title_text_color"
+                            android:textSize="@dimen/screen_sub_title"
+                            app:custFont="@string/app_font_semi_bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profile_pic_namelayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/address_title_layout"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/linear_layout_left_margin"
+                        android:layout_marginTop="@dimen/linear_layout_top_margin"
+                        android:layout_marginRight="@dimen/linear_layout_right_margin"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/delivery_boy_iconpic_width"
+                            android:layout_height="@dimen/delivery_boy_iconpic_width"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:elevation="16dp"
+                            app:cardCornerRadius="16dp">
+
+                            <ImageView
+                                android:id="@+id/profile_pic"
+                                android:layout_width="@dimen/delivery_boy_iconpic_width"
+                                android:layout_height="@dimen/delivery_boy_iconpic_width"
+                                android:background="@color/white"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/default_profile" />
+                        </androidx.cardview.widget.CardView>
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/employee_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:gravity="center"
+                            android:text="@{viewModel.strName}"
+                            android:textAllCaps="false"
+                            android:textColor="@color/review_title_text_color"
+                            android:textSize="@dimen/screen_title"
+                            app:custFont="@string/app_font_bold" />
+
+                    </LinearLayout>
+
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/card_address_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_pic_namelayout"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/address_title_margin_top"
+                        android:text="@string/card_delivery_address"
+                        android:textAllCaps="false"
+                        android:textColor="@color/review_title_text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        android:textStyle="bold"
+                        app:custFont="@string/app_font_bold" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/card_delivery_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_address_title"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/address_left_right_margin"
+                        android:layout_marginTop="@dimen/address_margin_top"
+                        android:layout_marginRight="@dimen/address_left_right_margin"
+                        android:layout_marginBottom="@dimen/address_margin_bottom"
+                        android:gravity="center"
+                        android:text="@={viewModel.strAddress}"
+                        android:textColor="@color/review_title_text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_regular" />
+
+                </RelativeLayout>
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/terms_layout1"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@+id/profile_layout">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/check1"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="@dimen/ckeck_box_margin_left"-->
+                <!--                        android:layout_marginTop="@dimen/check_box1_margin_top"-->
+                <!--                        android:background="@drawable/ic_tick_bg"-->
+                <!--                        android:onClick="@{()->viewModel.check1Clicked()}"-->
+                <!--                        android:padding="@dimen/review_check_padding"-->
+                <!--                        android:src="@{viewModel.ivTick1}" />-->
+
+                <!--                    <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                <!--                        android:id="@+id/terms1"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="@dimen/check_terms_margin_left"-->
+                <!--                        android:layout_marginTop="@dimen/check1_temrs_margin_top"-->
+                <!--                        android:layout_marginRight="@dimen/ckeck_box_margin_left"-->
+                <!--                        android:layout_toRightOf="@+id/check1"-->
+                <!--                        android:text="@string/main_apni_salary_account_payu_me_open_krne_k_liye_sehemat_hu"-->
+                <!--                        android:textAllCaps="false"-->
+                <!--                        android:textColor="@color/text_color"-->
+                <!--                        android:textSize="@dimen/screen_sub_title"-->
+                <!--                        app:custFont="@string/app_font_regular" />-->
+                <!--                </RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/terms_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_layout"
+                    android:layout_marginTop="@dimen/check_terms_margin_top">
+
+                    <LinearLayout
+                        android:id="@+id/llCheck1"
+                        android:layout_width="@dimen/ckeck_box_parent_size"
+                        android:layout_height="@dimen/ckeck_box_parent_size"
+                        android:layout_marginLeft="@dimen/ckeck_box_margin_left"
+                        android:onClick="@{()->viewModel.check1Clicked()}"
+                       android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:id="@+id/check1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_tick_bg"
+                            android:onClick="@{()->viewModel.check1Clicked()}"
+                            android:layout_marginTop="-3dp"
+                            android:src="@{viewModel.ivTick1}"
+                            android:padding="@dimen/review_check_padding"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/terms1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="@dimen/ckeck_box_margin_left"
+                        android:layout_toRightOf="@+id/llCheck1"
+                        android:orientation="horizontal">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvTerms1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text="@string/main_iske_dvaara_payu_ki"
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/screen_sub_title"
+                            app:custFont="@string/app_font_regular" />
+
+                        <!--                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView-->
+                        <!--                            android:id="@+id/privacy_policy"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:onClick="privacyPolicy"-->
+                        <!--                            android:text="@string/privacy_policy"-->
+                        <!--                            android:textAllCaps="false"-->
+                        <!--                            android:textColor="@color/text_color"-->
+                        <!--                            android:textSize="@dimen/screen_sub_title"-->
+                        <!--                            app:custFont="@string/app_font_semi_bold" />-->
+
+                        <!--                        <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginLeft="@dimen/_5sdp"-->
+                        <!--                            android:text="@string/aur"-->
+                        <!--                            android:textAllCaps="false"-->
+                        <!--                            android:textColor="@color/text_color"-->
+                        <!--                            android:textSize="@dimen/screen_sub_title"-->
+                        <!--                            app:custFont="@string/app_font_regular" />-->
+                    </LinearLayout>
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:id="@+id/terms1b"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_below="@+id/terms1"-->
+                    <!--                        android:layout_marginLeft="@dimen/check_terms_margin_left"-->
+                    <!--                        android:layout_marginRight="@dimen/ckeck_box_margin_left"-->
+                    <!--                        android:layout_toRightOf="@+id/check1"-->
+                    <!--                        android:orientation="horizontal">-->
+
+                    <!--                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView-->
+                    <!--                            android:id="@+id/terms_condition"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginLeft="@dimen/_6sdp"-->
+                    <!--                            android:onClick="termsCondition"-->
+                    <!--                            android:text="@string/terms_condition"-->
+                    <!--                            android:textAllCaps="false"-->
+                    <!--                            android:textColor="@color/text_color"-->
+                    <!--                            android:textSize="@dimen/screen_sub_title"-->
+                    <!--                            app:custFont="@string/app_font_semi_bold" />-->
+
+                    <!--                        <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginLeft="@dimen/_6sdp"-->
+                    <!--                            android:text="@string/sehmat_hu"-->
+                    <!--                            android:textAllCaps="false"-->
+                    <!--                            android:textColor="@color/text_color"-->
+                    <!--                            android:textSize="@dimen/screen_sub_title"-->
+                    <!--                            app:custFont="@string/app_font_regular" />-->
+                    <!--                    </LinearLayout>-->
+
+                    <!--                    <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_below="@+id/terms1b"-->
+                    <!--                        android:layout_marginLeft="@dimen/check_terms_margin_left"-->
+                    <!--                        android:layout_toRightOf="@+id/check1"-->
+                    <!--                        android:text="@string/smjha_gaya_hai"-->
+                    <!--                        android:textAllCaps="false"-->
+                    <!--                        android:textColor="@color/text_color"-->
+                    <!--                        android:textSize="@dimen/screen_sub_title"-->
+                    <!--                        app:custFont="@string/app_font_regular" />-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/terms_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/terms_layout1"
+                    android:layout_marginTop="@dimen/check_terms_margin_top">
+
+                    <LinearLayout
+                        android:id="@+id/llCheck2"
+                        android:layout_width="@dimen/ckeck_box_parent_size"
+                        android:layout_height="@dimen/ckeck_box_parent_size"
+                        android:layout_marginLeft="@dimen/ckeck_box_margin_left"
+                        android:onClick="@{()->viewModel.check2Clicked()}"
+                        android:gravity="center"
+                       >
+
+                        <ImageView
+                            android:id="@+id/check2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_tick_bg"
+                            android:layout_marginTop="-3dp"
+                            android:onClick="@{()->viewModel.check2Clicked()}"
+                            android:src="@{viewModel.ivTick2}"
+                            android:padding="@dimen/review_check_padding"/>
+                    </LinearLayout>
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/terms2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/ckeck_box_margin_left"
+                        android:layout_toRightOf="@+id/llCheck2"
+                        android:text="@string/main_apni_kyc_details_happy_or_loan_tap_k_sath_share_krne_k_liye_sehemat_hu"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_regular" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/main_padding"
+                android:layout_marginTop="@dimen/main_padding"
+                android:layout_marginEnd="@dimen/main_padding"
+                android:layout_marginBottom="@dimen/normal_padding"
+                android:layout_below="@+id/rlProfile"
+                android:orientation="vertical">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/agree_and_confirm_above_true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/tooltip_textsize"
+                    app:custFont="@string/app_font_regular" />
+
+                <com.payu.baas.core.view.viewExtension.CustomButton
+                    android:id="@+id/btnThikHai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:background="@drawable/button_bg"
+                    android:enabled="@{viewModel.enableThikHai}"
+                    android:onClick="@{()->viewModel.reTry()}"
+                    android:text="@string/ha_yeh_sab_sahi_hai"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:custFont="@string/app_font_extra_bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

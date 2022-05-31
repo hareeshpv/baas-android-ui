@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--    <item android:state_checked="true"-->
+<!--        android:drawable="@drawable/bg_on_switch"/>-->
+<!--    <item android:state_checked="false"-->
+<!--        android:drawable="@drawable/bg_off_switch"/>-->
+<!--</selector>-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_checked="true">
+    <shape android:dither="true" android:shape="rectangle" android:useLevel="false" android:visible="true">
+
+<!--            <gradient-->
+<!--                android:type="linear"-->
+<!--                android:startX="9.5"-->
+<!--                android:startY="11"-->
+<!--                android:endX="28.5"-->
+<!--                android:endY="11"-->
+<!--                >-->
+
+<!--                <item-->
+<!--                    android:color="#1AD5AD"-->
+<!--                    android:offset="0"-->
+<!--                    />-->
+
+<!--                <item-->
+<!--                    android:color="#23D99D"-->
+<!--                    android:offset="1"-->
+<!--                    />-->
+
+<!--            </gradient>-->
+        <solid android:color="#1AD5AD" />
+        <corners android:radius="25dp" />
+        <size android:width="2dp" android:height="20dp" />
+    </shape>
+</item>
+<item android:state_checked="false">
+    <shape android:dither="true" android:shape="rectangle" android:useLevel="false" android:visible="true">
+        <solid android:color="#464A59" />
+        <corners android:radius="25dp" />
+        <size android:width="2dp" android:height="20dp" />
+    </shape>
+</item>
+</selector>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.cardTransactionLimit.TransactionLimitsActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.cardTransactionLimit.TransactionLimitViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/main_padding">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:layout_marginLeft="-8dp">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/back_arrow_dimen_new"
+                    android:layout_height="@dimen/back_arrow_dimen_new"
+                    android:layout_centerVertical="true"
+                    android:onClick="openPreviousScreen"
+                    android:padding="@dimen/normal_padding"
+                    android:src="@drawable/white_back_arrow" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/transaction_limits_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/card_title_text_size"
+                    app:custFont="@string/app_font_regular" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/lSwipeLimit"
+                layout="@layout/limits_layout"
+                app:dLimitValue="@={viewModel.strSwipeDailyValue}"
+                app:ptLimitValue="@={viewModel.strSwipePerTransactionValue}"
+                app:titleText="@={viewModel.strSwipeLimitTitle}"
+                tools:ignore="IncludeLayoutParam" />
+
+            <include
+                android:id="@+id/lTransactionLimit"
+                layout="@layout/limits_layout"
+                app:dLimitValue="@={viewModel.strTransDailyValue}"
+                app:ptLimitValue="@={viewModel.strTransPerTransactionValue}"
+                app:titleText="@={viewModel.strTransLimitLayoutTitle}"
+                tools:ignore="IncludeLayoutParam" />
+
+            <include
+                android:id="@+id/lAtmWithdrawalLimit"
+                layout="@layout/limits_layout"
+                app:dLimitValue="@={viewModel.strAtmDailyValue}"
+                app:ptLimitValue="@={viewModel.strAtmPerTransactionValue}"
+                app:titleText="@={viewModel.strAtmWithdrawalLimitTitle}"
+                tools:ignore="IncludeLayoutParam" />
+        </LinearLayout>
+
+        <com.payu.baas.core.view.viewExtension.CustomButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/main_padding"
+            android:layout_marginTop="@dimen/main_padding"
+            android:layout_marginEnd="@dimen/main_padding"
+            android:layout_marginBottom="@dimen/main_padding"
+            android:background="@drawable/button_bg"
+            android:onClick="changeLimits"
+            android:text="@string/change_limits_text"
+            android:textAllCaps="false"
+            app:custFont="@string/app_font_extra_bold" />
+
+    </RelativeLayout>
+</layout>

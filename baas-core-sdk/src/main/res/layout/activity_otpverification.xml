@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.otpverification.OTPVerificationActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.otpverification.OTPVerificationViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp_24"
+            android:paddingTop="@dimen/main_padding"
+            android:paddingRight="@dimen/dp_24"
+            android:paddingBottom="@dimen/main_padding">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/verify"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/back_arrow_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="otp_backarrow"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/back_arrow"
+                            android:layout_width="@dimen/back_button_width"
+                            android:layout_height="@dimen/back_button_height"
+                            android:layout_marginTop="@dimen/back_button_top_margin"
+                            android:src="@drawable/white_back_arrow" />
+                    </LinearLayout>
+
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/verify_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/back_arrow_layout"
+                        android:layout_marginTop="@dimen/otp_verification_title_margin_top"
+                        android:text="@string/verify_mobile_number"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_title"
+                        app:custFont="@string/app_font_bold" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/otp_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verify_mobile_number"
+                        android:layout_marginTop="@dimen/otp_verification_subtitle_margin_top"
+                        android:text="@string/apke_number_pr_bheja_hua_4_number_ka_otp_niche_enter_kariye"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/error_message"
+                        app:custFont="@string/app_font_regular" />
+
+                    <LinearLayout
+                        android:id="@+id/registered_mobile_number_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otp_information"
+                        android:orientation="horizontal">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/registered_mobile_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/registered_mobile_number_top_left_margin"
+                            android:text="+91 7307377214"
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/edit_text_size"
+                            app:custFont="@string/app_font_semi_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/edit_mobile_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/edit_number_text_left_margin"
+                            android:layout_marginTop="@dimen/edit_number_text_top_margin"
+
+                            android:onClick="editNumber"
+                            android:text="@string/edit_number"
+                            android:textAllCaps="false"
+                            android:textColor="@color/green_dark"
+                            android:textSize="@dimen/screen_sub_title"
+                            app:custFont="@string/app_font_bold" />
+                    </LinearLayout>
+
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/enter_OTP_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/registered_mobile_number_layout"
+                        android:layout_marginTop="@dimen/enter_otp_text_top_margin"
+                        android:text="@string/enter_4_digit_otp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_regular" />
+
+                    <LinearLayout
+                        android:id="@+id/lOTP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/enter_OTP_message"
+                        android:layout_marginTop="@dimen/otp_box_top_margin">
+
+                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                            android:id="@+id/enter_otp1"
+                            android:layout_width="@dimen/otp_width"
+                            android:layout_height="@dimen/otp_height"
+                            android:layout_below="@+id/enter_OTP_message"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:text="@={viewModel.strotp1}"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@drawable/bg_cursor"
+                            android:textSize="@dimen/passcode_otp_size"
+                            app:custFont="@string/app_font_semi_bold" />
+
+
+                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                            android:id="@+id/enter_otp2"
+                            android:layout_width="@dimen/otp_width"
+                            android:layout_height="@dimen/otp_height"
+                            android:layout_marginLeft="@dimen/otp_box_left_margin"
+                            android:layout_toRightOf="@+id/enter_otp1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:text="@={viewModel.strotp2}"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@drawable/bg_cursor"
+                            android:textSize="@dimen/passcode_otp_size"
+                            app:custFont="@string/app_font_semi_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                            android:id="@+id/enter_otp3"
+                            android:layout_width="@dimen/otp_width"
+                            android:layout_height="@dimen/otp_height"
+                            android:layout_marginLeft="@dimen/otp_box_left_margin"
+                            android:layout_toRightOf="@+id/enter_otp2"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:text="@={viewModel.strotp3}"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@drawable/bg_cursor"
+                            android:textSize="@dimen/passcode_otp_size"
+                            app:custFont="@string/app_font_semi_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                            android:id="@+id/enter_otp4"
+                            android:layout_width="@dimen/otp_width"
+                            android:layout_height="@dimen/otp_height"
+                            android:layout_marginLeft="@dimen/otp_box_left_margin"
+                            android:layout_marginRight="@dimen/otp1_left_margin"
+                            android:layout_toRightOf="@+id/enter_otp3"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:text="@={viewModel.strotp4}"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@drawable/bg_cursor"
+                            android:textSize="@dimen/passcode_otp_size"
+                            android:visibility="visible"
+                            app:custFont="@string/app_font_semi_bold" />
+                    </LinearLayout>
+
+                    <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+                        android:id="@+id/errorMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lOTP"
+                        android:layout_marginTop="@dimen/otp_error_message_top_bottom_margin"
+                        android:layout_marginRight="@dimen/otp_error_message_right_margin"
+                        android:layout_marginBottom="@dimen/otp_error_message_top_bottom_margin"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/error_message"
+                        android:visibility="visible"
+                        app:custFont="@string/app_font_regular" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/errorMessage"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/otp_mila_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/normal_padding"
+                            android:text="@string/agar_apko_otp_nyi_mila_hai"
+                            android:textAllCaps="false"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/screen_sub_title"
+                            app:custFont="@string/app_font_regular" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/resend_otp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/resend_text_left_margin"
+                            android:layout_toRightOf="@+id/otp_mila_message"
+                            android:onClick="@{()->viewModel.resendOtp()}"
+                            android:text="@string/resend_otp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/green_dark"
+                            android:textSize="@dimen/screen_sub_title"
+                            app:custFont="@string/app_font_bold" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/verify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/otp_button_height"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_bg"
+                android:enabled="false"
+                android:onClick="@{()->viewModel.verify()}"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:custFont="@string/app_font_extra_bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

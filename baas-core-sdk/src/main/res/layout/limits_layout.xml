@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="titleText"
+            type="String" />
+
+        <variable
+            name="ptLimitValue"
+            type="String" />
+
+        <variable
+            name="dLimitValue"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parentLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_padding"
+        android:orientation="vertical">
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={titleText}"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/header_text_size"
+            app:custFont="@string/app_font_bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_padding">
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/per_transaction_text"
+                android:textColor="@color/subtext_color"
+                android:textSize="@dimen/sub_text_size"
+                app:custFont="@string/app_font_semi_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvPerTransactionValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:text="@={ptLimitValue}"
+                android:textColor="@color/subtext_color"
+                android:textSize="@dimen/sub_text_size"
+                app:custFont="@string/app_font_regular" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_padding">
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/daily_text"
+                android:textColor="@color/subtext_color"
+                android:textSize="@dimen/sub_text_size"
+                app:custFont="@string/app_font_semi_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvDailyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:text="@={dLimitValue}"
+                android:textColor="@color/subtext_color"
+                android:textSize="@dimen/sub_text_size"
+                app:custFont="@string/app_font_regular" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

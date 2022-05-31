@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.reviewAndSubmit.ProgressActivity">
+    <data>
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_screen"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/pBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_marginLeft="@dimen/progressbar_left_right_margin"
+        android:layout_marginTop="@dimen/progressbar_top_margin"
+        android:layout_marginRight="@dimen/progressbar_left_right_margin"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/progress_drawable_green"
+        android:max="100"
+        android:progress="30" />
+
+    <com.payu.baas.core.view.viewExtension.CustomTextView
+        android:id="@+id/tvAccountOpenTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pBar"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/account_open_title_margin_left_right"
+        android:layout_marginTop="@dimen/account_open_title_margin_top"
+        android:layout_marginRight="@dimen/account_open_title_margin_left_right"
+        android:text="@string/account_opening"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/screen_title"
+        app:custFont="@string/app_font_bold" />
+
+    <com.payu.baas.core.view.viewExtension.CustomTextView
+        android:id="@+id/tvAccountOpenMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAccountOpenTitle"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/account_open_title_message_left_right_margin"
+        android:layout_marginTop="@dimen/account_open_title_message_margin_top"
+        android:layout_marginRight="@dimen/account_open_title_message_left_right_margin"
+        android:text="@string/account_opening_message"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/account_opening_message_text_size"
+        app:custFont="@string/app_font_regular" />
+</RelativeLayout>
+</layout>

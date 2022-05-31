@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape android:shape="rectangle"  >
+            <corners android:radius="16dp" />
+            <solid android:color="@color/black_for_button"/>
+<!--            <size android:width="@dimen/passcode_dimension" android:height="@dimen/passcode_dimension"/>-->
+        </shape>
+    </item>
+</selector>

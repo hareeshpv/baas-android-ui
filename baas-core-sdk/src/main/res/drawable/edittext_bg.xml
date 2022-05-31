@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="@color/text_color" />
+            <corners android:radius="12dp" />
+            <padding android:bottom="@dimen/edittext_top_bottom_padding" android:left="@dimen/button_left_right_padding" android:right="@dimen/button_left_right_padding" android:top="@dimen/edittext_top_bottom_padding" />
+            <gradient android:centerColor="@color/black_light_for_edittext" android:endColor="@color/black_for_edittext" android:startColor="@color/black_for_edittext" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" />
+            <padding android:bottom="@dimen/edittext_top_bottom_padding" android:left="@dimen/button_left_right_padding" android:right="@dimen/button_left_right_padding" android:top="@dimen/edittext_top_bottom_padding" />
+            <gradient android:centerColor="@color/black_light_for_edittext" android:endColor="@color/black_for_edittext" android:startColor="@color/black_for_edittext" />
+        </shape>
+    </item>
+</selector>
+
+<!--    <vector xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:aapt="http://schemas.android.com/aapt"-->
+<!--        android:width="320dp"-->
+<!--        android:height="30dp"-->
+<!--        android:viewportWidth="320"-->
+<!--        android:viewportHeight="48">-->
+
+<!--        <group>-->
+
+<!--            <clip-path android:pathData="M12 0H308C314.627 0 320 5.37258 320 12V36C320 42.6274 314.627 48 308 48H12C5.37258 48 0 42.6274 0 36V12C0 5.37258 5.37258 0 12 0Z" />-->
+
+<!--            <group-->
+<!--                android:pivotX="160"-->
+<!--                android:pivotY="24"-->
+<!--                android:rotation="46.047"-->
+<!--                android:scaleX="3.386"-->
+<!--                android:scaleY="104.473"-->
+<!--                android:translateX="0.528"-->
+<!--                android:translateY="-26.33">-->
+
+<!--                <path android:pathData="M0 0V48H320V0">-->
+
+<!--                    <aapt:attr name="android:fillColor">-->
+
+<!--                        <gradient-->
+<!--                            android:endX="240"-->
+<!--                            android:endY="24"-->
+<!--                            android:startX="80"-->
+<!--                            android:startY="24"-->
+<!--                            android:type="linear">-->
+
+<!--                            <item-->
+<!--                                android:color="#303639"-->
+<!--                                android:offset="0" />-->
+
+<!--                            <item-->
+<!--                                android:color="#2D343E"-->
+<!--                                android:offset="1" />-->
+<!--                        </gradient>-->
+<!--                    </aapt:attr>-->
+<!--                </path>-->
+<!--            </group>-->
+<!--        </group>-->
+<!--    </vector>-->

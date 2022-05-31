@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.cards.CardsActivity">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.cards.CardsViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/main_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_marginTop="-8dp">
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="@dimen/back_arrow_dimen_new"
+                        android:layout_height="@dimen/back_arrow_dimen_new"
+                        android:layout_centerVertical="true"
+                        android:onClick="openPreviousScreen"
+                        android:padding="@dimen/normal_padding"
+                        android:src="@drawable/white_back_arrow" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/cards_text"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/card_title_text_size"
+                        app:custFont="@string/app_font_regular" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/min_padding"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginRight="@dimen/min_padding"
+                    android:onClick="clickActions">
+
+                    <RelativeLayout
+                        android:id="@+id/llCardBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/ic_card_bg"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/vBlackLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/main_padding"
+                            android:background="@color/black" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvQueries"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/vBlackLine"
+                            android:layout_marginLeft="@dimen/main_padding"
+                            android:layout_marginTop="@dimen/min_padding"
+                            android:layout_marginRight="@dimen/main_padding"
+                            android:text="@string/cards_queries_text"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/card_query_text_size"
+                            app:custFont="@string/app_font_regular" />
+
+                        <ImageView
+                            android:id="@+id/ivCardBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/vBlackLine"
+                            android:layout_marginLeft="110dp"
+                            android:scaleX="1.7"
+                            android:scaleY="1.4" />
+<!--                            android:tintMode="src_atop"-->
+<!--                            app:tint="@color/black" />-->
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/main_padding"
+                            android:layout_marginTop="@dimen/main_padding"
+                            android:layout_marginEnd="@dimen/main_padding"
+                            android:layout_marginRight="@dimen/main_padding"
+                            android:layout_marginBottom="@dimen/normal_padding"
+                            android:src="@drawable/ic_visa" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/llCardFront"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_height"
+                        android:background="@drawable/ic_card_front_bg"
+                        android:orientation="vertical"
+                        android:padding="@dimen/main_padding">
+
+
+                        <!--                        <ImageView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_gravity="right"-->
+                        <!--                            android:layout_marginTop="@dimen/min_padding"-->
+                        <!--                            android:src="@drawable/ic_sbm"-->
+                        <!--                            android:visibility="gone" />-->
+
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginTop="@dimen/min_padding"-->
+                        <!--                            android:visibility="gone">-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:src="@drawable/ic_card_chip" />-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:layout_width="20dp"-->
+                        <!--                                android:layout_height="21dp"-->
+                        <!--                                android:layout_marginLeft="@dimen/dp_10"-->
+                        <!--                                android:src="@drawable/icon_wifi" />-->
+                        <!--                        </LinearLayout>-->
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginTop="@dimen/card_main_spacing"-->
+                        <!--                            android:orientation="horizontal"-->
+                        <!--                            android:visibility="gone">-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:src="@drawable/icon_tap" />-->
+
+                        <!--                            <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_centerInParent="true"-->
+                        <!--                                android:layout_marginLeft="@dimen/normal_padding"-->
+                        <!--                                android:text="@string/cards_details_tap_text"-->
+                        <!--                                android:textColor="@color/black"-->
+                        <!--                                android:textSize="@dimen/card_title_text_size"-->
+                        <!--                                app:custFont="@string/app_font_regular" />-->
+                        <!--                        </LinearLayout>-->
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="@dimen/card_main_spacing">
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/normal_padding"
+                                android:layout_marginRight="@dimen/normal_padding"
+                                android:text="@{viewModel.strUserName}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/card_username_textsize"
+                                app:custFont="@string/app_font_bold" />
+
+                            <!--                            <ImageView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_alignParentRight="true"-->
+                            <!--                                android:background="@drawable/card_bg"-->
+                            <!--                                android:src="@drawable/ic_pay_u"-->
+                            <!--                                android:visibility="gone" />-->
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:orientation="vertical">
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normal_padding"
+                        android:text="@string/cards_settings_text"
+                        android:textColor="@color/card_settings_heading_text_color"
+                        android:textSize="@dimen/screen_sub_title"
+                        app:custFont="@string/app_font_bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:background="@drawable/bg_card_options"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/normal_padding"
+                            android:layout_marginRight="@dimen/main_padding"
+                            android:layout_marginBottom="@dimen/normal_padding"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/card_icon_dimension"
+                                android:layout_height="@dimen/card_icon_dimension"
+                                android:background="@drawable/card_icon_bg"
+                                android:src="@drawable/ic_svg_card" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvCardActiveStatus"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/main_padding"
+                                android:layout_weight="1"
+                                android:text="@string/card_active_text"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/screen_sub_title"
+                                app:custFont="@string/app_font_bold" />
+
+                            <Switch
+                                android:id="@+id/sCardActiveStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/main_padding"
+                                android:checked="true"
+                                android:onClick="clickActions"
+                                android:switchMinWidth="@dimen/switch_icon_width"
+                                android:thumb="@drawable/bg_switch_thumb"
+                                android:track="@drawable/bg_switch_states" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/card_seperation_view_left_margin"
+                            android:background="@color/black_for_card_list_seprator" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/normal_padding"
+                            android:layout_marginRight="@dimen/main_padding"
+                            android:layout_marginBottom="@dimen/normal_padding"
+                            android:gravity="center_vertical"
+                            android:onClick="goToCardBlockReasonScreen"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/card_icon_dimension"
+                                android:layout_height="@dimen/card_icon_dimension"
+                                android:background="@drawable/card_icon_bg"
+                                android:src="@drawable/ic_svg_block" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvCardBlock"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/main_padding"
+                                android:layout_weight="1"
+                                android:text="@string/card_block_text"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/screen_sub_title"
+                                app:custFont="@string/app_font_bold" />
+
+                            <ImageView
+                                android:id="@+id/ivBlockNext"
+                                android:layout_width="@dimen/card_arror_dimension"
+                                android:layout_height="@dimen/card_arror_dimension"
+                                android:layout_marginLeft="@dimen/main_padding"
+                                android:background="@drawable/black_circle_for_card_arrow_bg"
+                                android:padding="@dimen/card_icon_padding"
+                                android:src="@drawable/ic_svg_next_arrow" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/card_seperation_view_left_margin"
+                            android:background="@color/black_for_card_list_seprator" />
+
+                        <LinearLayout
+                            android:id="@+id/llChangePin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/normal_padding"
+                            android:layout_marginRight="@dimen/main_padding"
+                            android:layout_marginBottom="@dimen/normal_padding"
+                            android:gravity="center_vertical"
+                            android:onClick="goToChangePin"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/card_icon_dimension"
+                                android:layout_height="@dimen/card_icon_dimension"
+                                android:background="@drawable/card_icon_bg"
+                                android:padding="@dimen/min_padding"
+                                android:src="@drawable/ic_svg_key" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvChangePin"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/main_padding"
+                                android:layout_weight="1"
+                                android:text="@string/card_change_pin_text"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/screen_sub_title"
+                                app:custFont="@string/app_font_bold" />
+
+                            <ImageView
+                                android:id="@+id/ivChangePinNext"
+                                android:layout_width="@dimen/card_arror_dimension"
+                                android:layout_height="@dimen/card_arror_dimension"
+                                android:layout_marginLeft="@dimen/main_padding"
+                                android:background="@drawable/black_circle_for_card_arrow_bg"
+                                android:padding="@dimen/card_icon_padding"
+                                android:src="@drawable/ic_svg_next_arrow" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_padding"
+                        android:orientation="vertical">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/normal_padding"
+                            android:text="@string/payment_control_text"
+                            android:textColor="@color/card_settings_heading_text_color"
+                            android:textSize="@dimen/screen_sub_title"
+                            app:custFont="@string/app_font_bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_14"
+                            android:background="@drawable/bg_card_options"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/normal_padding"
+                                android:layout_marginRight="@dimen/main_padding"
+                                android:layout_marginBottom="@dimen/normal_padding"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/card_icon_dimension"
+                                    android:layout_height="@dimen/card_icon_dimension"
+                                    android:background="@drawable/card_icon_bg"
+                                    android:src="@drawable/ic_svg_online_payment" />
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvOnlineTransactions"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:layout_weight="1"
+                                    android:text="@string/online_transactions_text"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/screen_sub_title"
+                                    app:custFont="@string/app_font_bold" />
+
+                                <Switch
+                                    android:id="@+id/sOnlineTransaction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:checked="true"
+                                    android:onClick="clickActions"
+                                    android:switchMinWidth="@dimen/switch_icon_width"
+                                    android:thumb="@drawable/bg_switch_thumb"
+                                    android:track="@drawable/bg_switch_states" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/card_seperation_view_left_margin"
+                                android:background="@color/black_for_card_list_seprator" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/normal_padding"
+                                android:layout_marginRight="@dimen/main_padding"
+                                android:layout_marginBottom="@dimen/normal_padding"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/card_icon_dimension"
+                                    android:layout_height="@dimen/card_icon_dimension"
+                                    android:background="@drawable/card_icon_bg"
+                                    android:src="@drawable/ic_svg_atm_withdrawal" />
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvAtmCashWithdrawal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:layout_weight="1"
+                                    android:text="@string/atm_cash_withdrawals_text"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/screen_sub_title"
+                                    app:custFont="@string/app_font_bold" />
+
+                                <Switch
+                                    android:id="@+id/sAtmCashWithdrawal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:checked="false"
+                                    android:onClick="clickActions"
+                                    android:switchMinWidth="@dimen/switch_icon_width"
+                                    android:thumb="@drawable/bg_switch_thumb"
+                                    android:track="@drawable/bg_switch_states" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/card_seperation_view_left_margin"
+                                android:background="@color/black_for_card_list_seprator" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/normal_padding"
+                                android:layout_marginRight="@dimen/main_padding"
+                                android:layout_marginBottom="@dimen/normal_padding"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/card_icon_dimension"
+                                    android:layout_height="@dimen/card_icon_dimension"
+                                    android:background="@drawable/card_icon_bg"
+                                    android:src="@drawable/ic_svg_card_swipe" />
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvCardSwipe"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:layout_weight="1"
+                                    android:text="@string/card_swipe_text"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/screen_sub_title"
+                                    app:custFont="@string/app_font_bold" />
+
+                                <Switch
+                                    android:id="@+id/sCardSwipe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:checked="false"
+                                    android:onClick="clickActions"
+                                    android:switchMinWidth="@dimen/switch_icon_width"
+                                    android:thumb="@drawable/bg_switch_thumb"
+                                    android:track="@drawable/bg_switch_states" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/card_seperation_view_left_margin"
+                                android:background="@color/black_for_card_list_seprator" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/normal_padding"
+                                android:layout_marginRight="@dimen/main_padding"
+                                android:layout_marginBottom="@dimen/normal_padding"
+                                android:gravity="center_vertical"
+                                android:onClick="@{()->viewModel.openTransacationLimitsScreen()}"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/card_icon_dimension"
+                                    android:layout_height="@dimen/card_icon_dimension"
+                                    android:background="@drawable/card_icon_bg"
+                                    android:src="@drawable/ic_svg_transaction_limit" />
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvTransactionLimt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:layout_weight="1"
+                                    android:text="@string/transaction_limits_text"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/screen_sub_title"
+                                    app:custFont="@string/app_font_bold" />
+
+                                <ImageView
+                                    android:id="@+id/ivTransactionLimits"
+                                    android:layout_width="@dimen/card_arror_dimension"
+                                    android:layout_height="@dimen/card_arror_dimension"
+                                    android:layout_marginLeft="@dimen/main_padding"
+                                    android:background="@drawable/black_circle_for_card_arrow_bg"
+                                    android:padding="@dimen/card_icon_padding"
+                                    android:src="@drawable/ic_svg_next_arrow" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

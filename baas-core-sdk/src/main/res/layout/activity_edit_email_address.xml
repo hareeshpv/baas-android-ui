@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.editEmailAddress.EditEmailAddressActivity">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.editEmailAddress.EditEmailAddressViewModel" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+        <LinearLayout
+            android:id="@+id/back_arrow_layout"
+            android:onClick="edit_email_backarrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="@dimen/back_button_top_margin"
+                android:layout_marginLeft="@dimen/back_button_margin_left"
+                android:id="@+id/back_arrow"
+                android:layout_width="@dimen/back_button_width"
+                android:layout_height="@dimen/back_button_height"
+                android:src="@drawable/white_back_arrow" />
+        </LinearLayout>
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/verify_email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back_arrow_layout"
+            android:layout_marginLeft="@dimen/mobile_verification_title_margin_left"
+            android:layout_marginTop="@dimen/mobile_verification_title_margin_topn"
+            android:text="Edit email address"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/screen_title"
+            app:custFont="@string/app_font_bold" />
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/enter_email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verify_email_address"
+            android:layout_marginLeft="@dimen/mobile_verification_sub_title_margin_left"
+            android:layout_marginTop="@dimen/mobile_verification_subtitle_margin_top"
+            android:text="@string/enter_new_email"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/screen_sub_title"
+            app:custFont="@string/app_font_regular" />
+        <ImageView
+            android:id="@+id/failed_icon"
+            android:layout_width="@dimen/failed_icon_width_height"
+            android:layout_marginLeft="@dimen/failed_icon_left_margin"
+            android:layout_marginTop="@dimen/failed_icon_top_margin"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/enter_email_address"
+            android:layout_below="@+id/verify_email_address"
+            android:src="@drawable/failed_icon"
+            android:layout_height="@dimen/failed_icon_width_height"/>
+        <ImageView
+            android:id="@+id/correct"
+            android:layout_width="@dimen/correct_icon_width"
+            android:layout_marginLeft="@dimen/correct_icon_left_margin"
+            android:layout_marginTop="@dimen/correct_icon_top_margin"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/enter_email_address"
+            android:layout_below="@+id/verify_email_address"
+            android:src="@drawable/icon_correct"
+            android:layout_height="@dimen/correct_icon_height"/>
+
+        <LinearLayout
+            android:id="@+id/email_address_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enter_email_address"
+            android:layout_marginLeft="@dimen/mobile_number_text_left_right_margin"
+            android:layout_marginTop="@dimen/mobile_number_field_margin_top"
+            android:layout_marginRight="@dimen/mobile_number_text_left_right_margin"
+            android:background="@drawable/mobile_background"
+            android:orientation="horizontal">
+
+
+
+            <com.payu.baas.core.view.viewExtension.CustomMobileFieldEditText
+                android:id="@+id/email_address"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/mobile_number_text_height"
+                android:layout_below="@+id/enter_mobile_number"
+                android:inputType="text"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/mobile_number_text_size"
+                android:text="@={viewModel.strEmailAddress}"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                app:custFont="@string/app_font_semi_bold" />
+        </LinearLayout>
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/errorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_address_layout"
+            android:layout_marginTop="@dimen/error_message_margin_top"
+            android:textAllCaps="false"
+            android:text="Example:user@gmail.com"
+            android:layout_marginLeft="@dimen/error_message_margin_left_right"
+            android:layout_marginRight="@dimen/error_message_margin_left_right"
+            android:textSize="@dimen/error_message"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:textColor="@color/text_color"
+            app:custFont="@string/app_font_regular" />
+
+        <com.payu.baas.core.view.viewExtension.CustomButton
+            android:id="@+id/sendEmailOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/mobile_verification_left_right_bottom_margin"
+            android:layout_marginRight="@dimen/mobile_verification_left_right_bottom_margin"
+            android:layout_marginBottom="@dimen/mobile_verification_left_right_bottom_margin"
+            android:background="@drawable/button_bg"
+            android:enabled="false"
+            android:onClick="@{()->viewModel.sendEmailOTP()}"
+            android:text="@string/send_otp"
+            android:textAllCaps="false"
+            app:custFont="@string/app_font_extra_bold" />
+    </RelativeLayout>
+</layout>

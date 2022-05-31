@@ -1,0 +1,2130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.dashboard.DashboardActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.dashboard.DashboardViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/rlAccountNotificationCardInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llDummyAccountNotificationInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_57"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_black_gradient_bottom_rounded"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="@dimen/dp_8"
+                                android:paddingBottom="@dimen/dp_32">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/dp_8"
+                                    android:paddingRight="@dimen/dp_16">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dp_48"
+                                        android:layout_height="@dimen/dp_48"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center">
+
+                                        <LinearLayout
+                                            android:layout_width="@dimen/dp_32"
+                                            android:layout_height="@dimen/dp_32"
+                                            android:background="@drawable/bg_circle_green_border"
+                                            android:padding="@dimen/dp_2">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                app:cardCornerRadius="@dimen/dp_16">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" />
+
+                                            </androidx.cardview.widget.CardView>
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:alpha="0.87"
+                                        android:text="@string/help"
+                                        android:textSize="@dimen/sp_14"
+                                        app:custFont="@string/app_font_semi_bold" />
+
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_logo_image" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_28"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="bottom"
+                                        android:orientation="horizontal">
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="@dimen/dp_4"
+                                            android:text="@string/currency_symbol"
+                                            android:textColor="@color/scandal"
+                                            android:textSize="@dimen/sp_22"
+                                            app:custFont="@string/app_font_regular" />
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:letterSpacing="-0.04"
+                                            android:text="0"
+                                            android:textColor="@color/scandal"
+                                            android:textSize="@dimen/sp_32"
+                                            app:custFont="@string/app_font_bold" />
+
+
+                                    </LinearLayout>
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_2"
+                                        android:text="@string/spend_limit"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_12"
+                                        app:custFont="@string/app_font_regular" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_32"
+                                    android:layout_marginTop="@dimen/dp_30"
+                                    android:layout_marginRight="@dimen/dp_32"
+                                    android:background="@drawable/bg_black_russian_rounded"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/llDummyAccountNoBalanceInfo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="@dimen/dp_20"
+                                        android:paddingTop="@dimen/dp_16"
+                                        android:paddingRight="@dimen/dp_20"
+                                        android:paddingBottom="@dimen/dp_9"
+                                        android:visibility="visible">
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/no_account_balance_info"
+                                            android:textColor="@color/scandal"
+                                            android:textSize="@dimen/sp_12"
+                                            app:custFont="@string/app_font_regular" />
+
+                                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:gravity="center"
+                                            android:onClick="onAddMoneyClicked"
+                                            android:padding="@dimen/dp_10"
+                                            android:text="@string/add_money"
+                                            android:textSize="@dimen/sp_15"
+                                            app:custFont="@string/app_font_semi_bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llDummyAccountBalanceInfo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="@dimen/dp_22"
+                                        android:paddingTop="@dimen/dp_22"
+                                        android:paddingRight="@dimen/dp_22"
+                                        android:paddingBottom="@dimen/dp_20"
+                                        android:visibility="gone">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal"
+                                                android:paddingTop="@dimen/dp_5"
+                                                android:paddingBottom="@dimen/dp_5"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/tvPlus2"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginEnd="@dimen/dp_2"
+                                                    android:text="@string/currency_symbol"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_14"
+                                                    app:custFont="@string/app_font_regular" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="0"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_18"
+                                                    app:custFont="@string/app_font_bold" />
+                                            </LinearLayout>
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:id="@+id/tvPlus2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/dp_15"
+                                                android:layout_marginEnd="@dimen/dp_15"
+                                                android:text="+"
+                                                android:textColor="@color/river_bed_plus"
+                                                android:textSize="@dimen/sp_20"
+                                                app:custFont="@string/app_font_bold"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toEndOf="@+id/tvPlus2"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_horizontal"
+                                                    android:orientation="horizontal"
+                                                    android:paddingTop="@dimen/dp_5"
+                                                    android:paddingBottom="@dimen/dp_5">
+
+                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginEnd="@dimen/dp_2"
+                                                        android:text="@string/currency_symbol"
+                                                        android:textColor="@color/scandal"
+                                                        android:textSize="@dimen/sp_14"
+                                                        app:custFont="@string/app_font_regular" />
+
+                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="0"
+                                                        android:textColor="@color/scandal"
+                                                        android:textSize="@dimen/sp_18"
+                                                        app:custFont="@string/app_font_bold" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:orientation="vertical">
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:gravity="center"
+                                                        android:orientation="vertical"
+                                                        android:paddingStart="@dimen/dp_6"
+                                                        android:paddingEnd="@dimen/dp_6">
+
+                                                        <LinearLayout
+                                                            android:layout_width="@dimen/dp_14"
+                                                            android:layout_height="@dimen/dp_14"
+                                                            android:layout_gravity="center_vertical"
+                                                            android:background="@drawable/bg_theme_rounded"
+                                                            android:gravity="center">
+
+                                                            <androidx.appcompat.widget.AppCompatImageView
+                                                                android:layout_width="@dimen/dp_5"
+                                                                android:layout_height="@dimen/dp_8"
+                                                                app:srcCompat="@drawable/ic_help" />
+
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/tvPlusTemp2"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:layout_width="@dimen/dp_11"
+                                                    android:layout_height="@dimen/dp_11"
+                                                    android:layout_marginEnd="@dimen/dp_6"
+                                                    android:scaleType="fitXY"
+                                                    app:srcCompat="@drawable/icon_wallet" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/account_balance"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_11"
+                                                    app:custFont="@string/app_font_regular" />
+                                            </LinearLayout>
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:id="@+id/tvPlusTemp2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/dp_15"
+                                                android:layout_marginEnd="@dimen/dp_15"
+                                                android:text="+"
+                                                android:textSize="1dp"
+                                                android:visibility="invisible"
+                                                app:custFont="@string/app_font_bold"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toEndOf="@+id/tvPlusTemp2"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:layout_width="@dimen/dp_14"
+                                                    android:layout_height="@dimen/dp_12"
+                                                    android:layout_marginEnd="@dimen/dp_6"
+                                                    android:scaleType="fitXY"
+                                                    app:srcCompat="@drawable/icon_advance_allowed" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/advance_allowed"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_11"
+                                                    app:custFont="@string/app_font_regular" />
+                                            </LinearLayout>
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llDummyNotificationInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-35dp"
+                                android:background="@drawable/ic_notification_bg"
+                                android:gravity="bottom"
+                                android:onClick="onNotificationClicked"
+                                android:orientation="horizontal"
+                                android:paddingLeft="@dimen/dp_26"
+                                android:paddingRight="@dimen/dp_12"
+                                android:paddingBottom="@dimen/dp_12"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_32"
+                                        android:layout_height="@dimen/dp_32"
+                                        android:background="@drawable/bg_black_russian_12dp_rounded"
+                                        android:padding="@dimen/dp_9"
+                                        app:srcCompat="@drawable/ic_wallet" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/dp_12"
+                                        android:layout_weight="1"
+                                        android:text="@string/advance_pay_cut_alert_message"
+                                        android:textColor="@color/cinder"
+                                        android:textSize="@dimen/sp_12"
+                                        app:custFont="@string/app_font_regular" />
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dp_48"
+                                        android:layout_height="@dimen/dp_48"
+                                        android:gravity="center">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/dp_24"
+                                            android:layout_height="@dimen/dp_24"
+                                            android:background="@drawable/bg_transparent_black_cirle"
+                                            android:padding="@dimen/dp_8"
+                                            app:srcCompat="@drawable/ic_close"
+                                            app:tint="@color/cinder" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlCardInfo"
+                            android:layout_width="@dimen/dp_300"
+                            android:layout_height="@dimen/dp_189"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="onCardInfoClicked">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCard"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                app:srcCompat="@drawable/card_bg" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="@dimen/dp_26"
+                                android:layout_marginRight="@dimen/dp_17"
+                                android:layout_marginBottom="@dimen/dp_17">
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvUserName"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/dp_10"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/screen_sub_title"
+                                    app:custFont="@string/app_font_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/ivPayU"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivPayU"
+                                    android:layout_width="@dimen/dp_60"
+                                    android:layout_height="@dimen/dp_30"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_pay_u" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:shadowRadius="@dimen/dp_32"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/dp_32"
+                        app:cardElevation="@dimen/dp_4">
+
+                        <LinearLayout
+                            android:id="@+id/llAccountNotificationInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llDummyAccountInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_black_gradient_bottom_rounded"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="@dimen/dp_8"
+                                android:paddingBottom="@dimen/dp_32"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/dp_8"
+                                    android:paddingRight="@dimen/dp_16">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dp_48"
+                                        android:layout_height="@dimen/dp_48"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center">
+
+                                        <LinearLayout
+                                            android:layout_width="@dimen/dp_32"
+                                            android:layout_height="@dimen/dp_32"
+                                            android:background="@drawable/bg_circle_green_border"
+                                            android:padding="@dimen/dp_2">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                app:cardCornerRadius="@dimen/dp_16">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" />
+
+                                            </androidx.cardview.widget.CardView>
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:alpha="0.87"
+                                        android:text="@string/help"
+                                        android:textSize="@dimen/sp_14"
+                                        app:custFont="@string/app_font_semi_bold" />
+
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_logo_image" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_28"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="bottom"
+                                        android:orientation="horizontal">
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="@dimen/dp_4"
+                                            android:text="@string/currency_symbol"
+                                            android:textColor="@color/scandal"
+                                            android:textSize="@dimen/sp_22"
+                                            app:custFont="@string/app_font_regular" />
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:letterSpacing="-0.04"
+                                            android:text="0"
+                                            android:textColor="@color/scandal"
+                                            android:textSize="@dimen/sp_32"
+                                            app:custFont="@string/app_font_bold" />
+
+
+                                    </LinearLayout>
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_2"
+                                        android:text="@string/spend_limit"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_12"
+                                        app:custFont="@string/app_font_regular" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_32"
+                                    android:layout_marginTop="@dimen/dp_30"
+                                    android:layout_marginRight="@dimen/dp_32"
+                                    android:background="@drawable/bg_black_russian_rounded"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/llDummyNoBalanceInfo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="@dimen/dp_20"
+                                        android:paddingTop="@dimen/dp_16"
+                                        android:paddingRight="@dimen/dp_20"
+                                        android:paddingBottom="@dimen/dp_9"
+                                        android:visibility="visible">
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/no_account_balance_info"
+                                            android:textColor="@color/scandal"
+                                            android:textSize="@dimen/sp_12"
+                                            app:custFont="@string/app_font_regular" />
+
+                                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:gravity="center"
+                                            android:onClick="onAddMoneyClicked"
+                                            android:padding="@dimen/dp_10"
+                                            android:text="@string/add_money"
+                                            android:textSize="@dimen/sp_15"
+                                            app:custFont="@string/app_font_semi_bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llDummyBalanceInfo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="@dimen/dp_22"
+                                        android:paddingTop="@dimen/dp_22"
+                                        android:paddingRight="@dimen/dp_22"
+                                        android:paddingBottom="@dimen/dp_20"
+                                        android:visibility="gone">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal"
+                                                android:paddingTop="@dimen/dp_5"
+                                                android:paddingBottom="@dimen/dp_5"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/tvPlus1"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginEnd="@dimen/dp_2"
+                                                    android:text="@string/currency_symbol"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_14"
+                                                    app:custFont="@string/app_font_regular" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="0"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_18"
+                                                    app:custFont="@string/app_font_bold" />
+                                            </LinearLayout>
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:id="@+id/tvPlus1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/dp_15"
+                                                android:layout_marginEnd="@dimen/dp_15"
+                                                android:text="+"
+                                                android:textColor="@color/river_bed_plus"
+                                                android:textSize="@dimen/sp_20"
+                                                app:custFont="@string/app_font_bold"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toEndOf="@+id/tvPlus1"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_horizontal"
+                                                    android:orientation="horizontal"
+                                                    android:paddingTop="@dimen/dp_5"
+                                                    android:paddingBottom="@dimen/dp_5">
+
+                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginEnd="@dimen/dp_2"
+                                                        android:text="@string/currency_symbol"
+                                                        android:textColor="@color/scandal"
+                                                        android:textSize="@dimen/sp_14"
+                                                        app:custFont="@string/app_font_regular" />
+
+                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="0"
+                                                        android:textColor="@color/scandal"
+                                                        android:textSize="@dimen/sp_18"
+                                                        app:custFont="@string/app_font_bold" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:orientation="vertical">
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:gravity="center"
+                                                        android:orientation="vertical"
+                                                        android:paddingStart="@dimen/dp_6"
+                                                        android:paddingEnd="@dimen/dp_6">
+
+                                                        <LinearLayout
+                                                            android:layout_width="@dimen/dp_14"
+                                                            android:layout_height="@dimen/dp_14"
+                                                            android:layout_gravity="center_vertical"
+                                                            android:background="@drawable/bg_theme_rounded"
+                                                            android:gravity="center">
+
+                                                            <androidx.appcompat.widget.AppCompatImageView
+                                                                android:layout_width="@dimen/dp_5"
+                                                                android:layout_height="@dimen/dp_8"
+                                                                app:srcCompat="@drawable/ic_help" />
+
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/tvPlusTemp1"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:layout_width="@dimen/dp_11"
+                                                    android:layout_height="@dimen/dp_11"
+                                                    android:layout_marginEnd="@dimen/dp_6"
+                                                    android:scaleType="fitXY"
+                                                    app:srcCompat="@drawable/icon_wallet" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/account_balance"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_11"
+                                                    app:custFont="@string/app_font_regular" />
+                                            </LinearLayout>
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:id="@+id/tvPlusTemp1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/dp_15"
+                                                android:layout_marginEnd="@dimen/dp_15"
+                                                android:text="+"
+                                                android:textSize="1dp"
+                                                android:visibility="invisible"
+                                                app:custFont="@string/app_font_bold"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toEndOf="@+id/tvPlusTemp1"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:layout_width="@dimen/dp_14"
+                                                    android:layout_height="@dimen/dp_12"
+                                                    android:layout_marginEnd="@dimen/dp_6"
+                                                    android:scaleType="fitXY"
+                                                    app:srcCompat="@drawable/icon_advance_allowed" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/advance_allowed"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_11"
+                                                    app:custFont="@string/app_font_regular" />
+                                            </LinearLayout>
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llNotificationInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-35dp"
+                                android:background="@drawable/ic_notification_bg"
+                                android:gravity="bottom"
+                                android:onClick="onNotificationClicked"
+                                android:orientation="horizontal"
+                                android:paddingLeft="@dimen/dp_26"
+                                android:paddingRight="@dimen/dp_12"
+                                android:paddingBottom="@dimen/dp_12"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivNotificationIcon"
+                                        android:layout_width="@dimen/dp_32"
+                                        android:layout_height="@dimen/dp_32"
+                                        android:background="@drawable/bg_black_russian_12dp_rounded"
+                                        android:padding="@dimen/dp_9"
+                                        app:srcCompat="@drawable/ic_wallet" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvNotification"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/dp_12"
+                                        android:layout_weight="1"
+                                        android:text="@string/advance_pay_cut_alert_message"
+                                        android:textColor="@color/cinder"
+                                        android:textSize="@dimen/sp_12"
+                                        app:custFont="@string/app_font_regular" />
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dp_48"
+                                        android:layout_height="@dimen/dp_48"
+                                        android:gravity="center"
+                                        android:onClick="hideNotificationUI">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivNotificationClose"
+                                            android:layout_width="@dimen/dp_24"
+                                            android:layout_height="@dimen/dp_24"
+                                            android:background="@drawable/bg_transparent_black_cirle"
+                                            android:padding="@dimen/dp_8"
+                                            app:srcCompat="@drawable/ic_close"
+                                            app:tint="@color/cinder" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-32dp"
+                        android:shadowRadius="@dimen/dp_32"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/dp_32"
+                        app:cardElevation="@dimen/dp_4">
+
+                        <LinearLayout
+                            android:id="@+id/llAccountInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:background="@drawable/bg_black_gradient_bottom_rounded"
+                            android:gravity="center"
+                            android:onClick="onAccountInfoClicked"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_32">
+
+                            <RelativeLayout
+                                android:id="@+id/rlToolbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/dp_8"
+                                android:paddingRight="@dimen/dp_16">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp_48"
+                                    android:layout_height="@dimen/dp_48"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:onClick="onProfileClicked">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dp_32"
+                                        android:layout_height="@dimen/dp_32"
+                                        android:background="@drawable/bg_circle_green_border"
+                                        android:padding="@dimen/dp_2">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            app:cardCornerRadius="@dimen/dp_16">
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:id="@+id/ivProfilePic"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent" />
+
+                                        </androidx.cardview.widget.CardView>
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                    android:id="@+id/tvHelp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:alpha="0.87"
+                                    android:onClick="onHelpClicked"
+                                    android:text="@string/help"
+                                    android:textSize="@dimen/sp_14"
+                                    app:custFont="@string/app_font_semi_bold" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_logo_image" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_28"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:orientation="horizontal">
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/dp_4"
+                                        android:text="@string/currency_symbol"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_22"
+                                        app:custFont="@string/app_font_regular" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvExpenseLimitAmount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:letterSpacing="-0.04"
+                                        android:text="0"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_32"
+                                        app:custFont="@string/app_font_bold" />
+
+
+                                </LinearLayout>
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_2"
+                                    android:text="@string/spend_limit"
+                                    android:textColor="@color/scandal"
+                                    android:textSize="@dimen/sp_12"
+                                    app:custFont="@string/app_font_regular" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_32"
+                                android:layout_marginTop="@dimen/dp_30"
+                                android:layout_marginRight="@dimen/dp_32"
+                                android:background="@drawable/bg_black_russian_rounded"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/llNoBalanceInfo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="@dimen/dp_20"
+                                    android:paddingTop="@dimen/dp_16"
+                                    android:paddingRight="@dimen/dp_20"
+                                    android:paddingBottom="@dimen/dp_9"
+                                    android:visibility="visible">
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvNoBalanceInfo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/no_account_balance_info"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_12"
+                                        app:custFont="@string/app_font_regular" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                        android:id="@+id/tvAddMoney"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:gravity="center"
+                                        android:onClick="onAddMoneyClicked"
+                                        android:padding="@dimen/dp_10"
+                                        android:text="@string/add_money"
+                                        android:textSize="@dimen/sp_15"
+                                        app:custFont="@string/app_font_semi_bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llBalanceInfo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="@dimen/dp_22"
+                                    android:paddingTop="@dimen/dp_22"
+                                    android:paddingRight="@dimen/dp_22"
+                                    android:paddingBottom="@dimen/dp_20"
+                                    android:visibility="gone">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="@dimen/dp_5"
+                                            android:paddingBottom="@dimen/dp_5"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/tvPlus"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="@dimen/dp_2"
+                                                android:text="@string/currency_symbol"
+                                                android:textColor="@color/scandal"
+                                                android:textSize="@dimen/sp_14"
+                                                app:custFont="@string/app_font_regular" />
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:id="@+id/tvAccountBalanceAmount"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="0"
+                                                android:textColor="@color/scandal"
+                                                android:textSize="@dimen/sp_18"
+                                                app:custFont="@string/app_font_bold" />
+                                        </LinearLayout>
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:id="@+id/tvPlus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/dp_15"
+                                            android:layout_marginEnd="@dimen/dp_15"
+                                            android:text="+"
+                                            android:textColor="@color/river_bed_plus"
+                                            android:textSize="@dimen/sp_20"
+                                            app:custFont="@string/app_font_bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/tvPlus"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <LinearLayout
+                                                android:id="@+id/llAdvanceAllowedAmount"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal"
+                                                android:paddingTop="@dimen/dp_5"
+                                                android:paddingBottom="@dimen/dp_5">
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginEnd="@dimen/dp_2"
+                                                    android:text="@string/currency_symbol"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_14"
+                                                    app:custFont="@string/app_font_regular" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:id="@+id/tvAdvanceAllowedAmount"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="0"
+                                                    android:textColor="@color/scandal"
+                                                    android:textSize="@dimen/sp_18"
+                                                    app:custFont="@string/app_font_bold" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_gravity="center_vertical"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:id="@+id/llTooltip"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:onClick="onTooltipClicked"
+                                                    android:orientation="vertical"
+                                                    android:paddingStart="@dimen/dp_6"
+                                                    android:paddingEnd="@dimen/dp_6">
+
+                                                    <LinearLayout
+                                                        android:id="@+id/llHelp"
+                                                        android:layout_width="@dimen/dp_14"
+                                                        android:layout_height="@dimen/dp_14"
+                                                        android:layout_gravity="center_vertical"
+                                                        android:background="@drawable/bg_theme_rounded"
+                                                        android:gravity="center">
+
+                                                        <androidx.appcompat.widget.AppCompatImageView
+                                                            android:layout_width="@dimen/dp_5"
+                                                            android:layout_height="@dimen/dp_8"
+                                                            app:srcCompat="@drawable/ic_help" />
+
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/tvPlusTemp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="@dimen/dp_11"
+                                                android:layout_height="@dimen/dp_11"
+                                                android:layout_marginEnd="@dimen/dp_6"
+                                                android:scaleType="fitXY"
+                                                app:srcCompat="@drawable/icon_wallet" />
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/account_balance"
+                                                android:textColor="@color/river_bed_plus"
+                                                android:textSize="@dimen/sp_11"
+                                                app:custFont="@string/app_font_regular" />
+                                        </LinearLayout>
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:id="@+id/tvPlusTemp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/dp_15"
+                                            android:layout_marginEnd="@dimen/dp_15"
+                                            android:text="+"
+                                            android:textSize="1dp"
+                                            android:visibility="invisible"
+                                            app:custFont="@string/app_font_bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/tvPlusTemp"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="@dimen/dp_14"
+                                                android:layout_height="@dimen/dp_12"
+                                                android:layout_marginEnd="@dimen/dp_6"
+                                                android:scaleType="fitXY"
+                                                app:srcCompat="@drawable/icon_advance_allowed" />
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/advance_allowed"
+                                                android:textColor="@color/river_bed_plus"
+                                                android:textSize="@dimen/sp_11"
+                                                app:custFont="@string/app_font_regular" />
+                                        </LinearLayout>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llModules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_52"
+                    android:layout_marginTop="@dimen/dp_36"
+                    android:layout_marginRight="@dimen/dp_52"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llSendMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="onSendMoneyClicked"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dp_56"
+                            android:layout_height="@dimen/dp_56"
+                            android:background="@drawable/bg_black_rock_18dp_rounded">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/dp_12"
+                                android:layout_height="@dimen/dp_17"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_rupee" />
+
+                        </RelativeLayout>
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/send_money"
+                            android:textColor="@color/scandal"
+                            android:textSize="@dimen/sp_12"
+                            app:custFont="@string/app_font_regular" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/llPassbook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="onPassbookClicked"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dp_56"
+                            android:layout_height="@dimen/dp_56"
+                            android:background="@drawable/bg_black_rock_18dp_rounded">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/dp_18"
+                                android:layout_height="@dimen/dp_23"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_passbook" />
+
+                        </RelativeLayout>
+
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/passbook"
+                            android:textColor="@color/scandal"
+                            android:textSize="@dimen/sp_12"
+                            app:custFont="@string/app_font_regular" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/llAdvanceAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="onAdvanceAccountClicked"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dp_56"
+                            android:layout_height="@dimen/dp_56"
+                            android:background="@drawable/bg_black_rock_18dp_rounded">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/dp_28"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_advance_allowed" />
+                        </RelativeLayout>
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/advance_a_c"
+                            android:textColor="@color/scandal"
+                            android:textSize="@dimen/sp_12"
+                            app:custFont="@string/app_font_regular" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCardDeliveryStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_36"
+                    android:layout_marginRight="@dimen/dp_24"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llCardDeliveryStatusTrack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/apka_card_delivery_status"
+                            android:textColor="@color/scandal"
+                            android:textSize="@dimen/sp_16"
+                            app:custFont="@string/app_font_semi_bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llCardDeliveryStatusOrdered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:id="@+id/viewCardDeliveryStatusOrderedPending"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:background="@drawable/bg_rounded_corner_black_rock"
+                                    android:visibility="gone" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlCardDeliveryStatusOrderedInTransist"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone">
+
+                                    <View
+                                        android:layout_width="@dimen/dp_20"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/bg_rounded_corner_scandal" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_32"
+                                        android:layout_height="@dimen/dp_18"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/dp_20"
+                                        app:srcCompat="@drawable/ic_biker" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rlCardDeliveryStatusOrderedCompleted"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:background="@drawable/bg_rounded_corner_scandal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_11"
+                                        android:layout_height="@dimen/dp_8"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/ic_checked_mark" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_8"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvCardDeliveryStatusOrdered"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/ordered"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_11"
+                                        app:custFont="@string/app_font_semi_bold" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvCardDeliveryStatusOrderedDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.6"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_11"
+                                        app:custFont="@string/app_font_regular" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/viewOrderedToDispatched"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_horizontal_dashed_line_jade"
+                                android:layerType="software" />
+
+                            <LinearLayout
+                                android:id="@+id/llCardDeliveryStatusDispatched"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:id="@+id/viewCardDeliveryStatusDispatchedPending"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:background="@drawable/bg_rounded_corner_black_rock"
+                                    android:visibility="gone" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlCardDeliveryStatusDispatchedInTransist"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <View
+                                        android:layout_width="@dimen/dp_20"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/bg_rounded_corner_scandal" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_32"
+                                        android:layout_height="@dimen/dp_18"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/dp_20"
+                                        app:srcCompat="@drawable/ic_biker" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rlCardDeliveryStatusDispatchedCompleted"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:background="@drawable/bg_rounded_corner_scandal"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_11"
+                                        android:layout_height="@dimen/dp_8"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/ic_checked_mark" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_8"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvCardDeliveryStatusDispatched"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/dispatched"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_11"
+                                        app:custFont="@string/app_font_semi_bold" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvCardDeliveryStatusDispatchedDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.6"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_11"
+                                        app:custFont="@string/app_font_regular" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/viewDispatchedToDelivered"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_horizontal_dashed_line_river_bed"
+                                android:layerType="software" />
+
+                            <LinearLayout
+                                android:id="@+id/llCardDeliveryStatusDelivered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:id="@+id/viewCardDeliveryStatusDeliveredPending"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:background="@drawable/bg_rounded_corner_black_rock" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlCardDeliveryStatusDeliveredInTransist"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone">
+
+                                    <View
+                                        android:layout_width="@dimen/dp_20"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/bg_rounded_corner_scandal" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_32"
+                                        android:layout_height="@dimen/dp_18"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/dp_20"
+                                        app:srcCompat="@drawable/ic_biker" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rlCardDeliveryStatusDeliveredCompleted"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:background="@drawable/bg_rounded_corner_scandal"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_11"
+                                        android:layout_height="@dimen/dp_8"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/ic_checked_mark" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_8"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvCardDeliveryStatusDelivered"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.6"
+                                        android:text="@string/delivered"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_11"
+                                        app:custFont="@string/app_font_semi_bold" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvCardDeliveryStatusDeliveredDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.6"
+                                        android:textColor="@color/scandal"
+                                        android:textSize="@dimen/sp_11"
+                                        app:custFont="@string/app_font_regular" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/tvIsCardDelivered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_27"
+                            android:gravity="center"
+                            android:onClick="onIsCardDeliveredClicked"
+                            android:text="@string/is_card_delivered"
+                            android:textSize="@dimen/sp_15"
+                            android:textStyle="bold"
+                            app:custFont="@string/app_font_semi_bold" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomButton
+                            android:id="@+id/tvIsCardDeliveredConfirmed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/button_bg"
+                            android:onClick="onConfirmCardDeliveredClicked"
+                            android:text="@string/is_card_delivered_confirmed"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            app:custFont="@string/app_font_extra_bold" />
+
+
+                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            android:id="@+id/tvIsCardNotDelivered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_27"
+                            android:gravity="center"
+                            android:onClick="onIsCardNotDeliveredClicked"
+                            android:text="@string/is_card_not_delivered"
+                            android:textSize="@dimen/sp_15"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:custFont="@string/app_font_semi_bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCardReturned"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clCardReturned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_card_with_orange_border"
+                            android:padding="@dimen/dp_15">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivIdea"
+                                android:layout_width="@dimen/dp_28"
+                                android:layout_height="@dimen/dp_28"
+                                app:layout_constraintBottom_toBottomOf="@+id/tvPleaseNote"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tvPleaseNote"
+                                app:srcCompat="@drawable/icon_idea" />
+
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvPleaseNote"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:gravity="start"
+                                android:text="@string/please_note"
+                                android:textColor="@color/orange_color"
+                                android:textSize="@dimen/sp_14"
+                                app:custFont="@string/app_font_bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivIdea"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvPleaseNoteDetails"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:gravity="start"
+                                android:text="@string/card_is_not_delievered_please_reorder_card"
+                                android:textColor="@color/orange_color"
+                                android:textSize="@dimen/sp_14"
+                                app:custFont="@string/app_font_regular"
+                                app:layout_constraintEnd_toEndOf="@+id/tvPleaseNote"
+                                app:layout_constraintStart_toStartOf="@+id/tvPleaseNote"
+                                app:layout_constraintTop_toBottomOf="@+id/tvPleaseNote" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.payu.baas.core.view.viewExtension.CustomButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/button_bg"
+                            android:onClick="onCardReOrderClicked"
+                            android:text="@string/re_order_card"
+                            android:textAllCaps="false"
+                            app:custFont="@string/app_font_extra_bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCardActivation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_36"
+                    android:layout_marginRight="@dimen/dp_24"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        app:srcCompat="@drawable/ic_delivered_checked" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:gravity="center"
+                        android:text="@string/card_is_delivered_activate_your_card"
+                        android:textColor="@color/scandal"
+                        android:textSize="@dimen/sp_16"
+                        app:custFont="@string/app_font_semi_bold" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvOne"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:background="@drawable/bg_circle_black_rock"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/scandal"
+                            android:textSize="@dimen/sp_12"
+                            app:custFont="@string/app_font_regular"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvOneLabel" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="0dp"
+                            android:background="@color/black_rock"
+                            app:layout_constraintBottom_toTopOf="@+id/tvTwo"
+                            app:layout_constraintEnd_toEndOf="@+id/tvOne"
+                            app:layout_constraintStart_toStartOf="@+id/tvOne"
+                            app:layout_constraintTop_toBottomOf="@+id/tvOne" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvOneLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:gravity="start"
+                            android:text="@string/verify_your_number_using_otp"
+                            android:textColor="@color/gumbo"
+                            android:textSize="@dimen/sp_14"
+                            app:custFont="@string/app_font_regular"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvOne"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvTwo"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:layout_marginTop="@dimen/dp_14"
+                            android:background="@drawable/bg_circle_black_rock"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/scandal"
+                            android:textSize="@dimen/sp_12"
+                            app:custFont="@string/app_font_regular"
+                            app:layout_constraintEnd_toEndOf="@+id/tvOne"
+                            app:layout_constraintStart_toStartOf="@+id/tvOne"
+                            app:layout_constraintTop_toBottomOf="@+id/tvOneLabel" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="0dp"
+                            android:background="@color/black_rock"
+                            app:layout_constraintBottom_toTopOf="@+id/tvThree"
+                            app:layout_constraintEnd_toEndOf="@+id/tvTwo"
+                            app:layout_constraintStart_toStartOf="@+id/tvTwo"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTwo" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvTwoLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/set_four_digit_pin"
+                            android:textColor="@color/gumbo"
+                            android:textSize="@dimen/sp_14"
+                            app:custFont="@string/app_font_regular"
+                            app:layout_constraintEnd_toEndOf="@+id/tvOneLabel"
+                            app:layout_constraintStart_toStartOf="@+id/tvOneLabel"
+                            app:layout_constraintTop_toTopOf="@+id/tvTwo" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvThree"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:layout_marginTop="@dimen/dp_14"
+                            android:background="@drawable/bg_circle_black_rock"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/scandal"
+                            android:textSize="@dimen/sp_12"
+                            app:custFont="@string/app_font_regular"
+                            app:layout_constraintEnd_toEndOf="@+id/tvTwo"
+                            app:layout_constraintStart_toStartOf="@+id/tvTwo"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTwoLabel" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvThreeLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/your_card_will_be_activated_enjoy"
+                            android:textColor="@color/gumbo"
+                            android:textSize="@dimen/sp_14"
+                            app:custFont="@string/app_font_regular"
+                            app:layout_constraintEnd_toEndOf="@+id/tvOneLabel"
+                            app:layout_constraintStart_toStartOf="@+id/tvOneLabel"
+                            app:layout_constraintTop_toTopOf="@+id/tvThree" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.payu.baas.core.view.viewExtension.CustomButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:background="@drawable/button_bg"
+                        android:onClick="onSetCardPinClicked"
+                        android:text="@string/set_card_pin"
+                        android:textAllCaps="false"
+                        app:custFont="@string/app_font_extra_bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_75"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_90"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:background="@drawable/bg_black_gradient_rounded">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/vpTips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_marginTop="@dimen/dp_22"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_24" />
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tlTips"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:background="@android:color/transparent"
+                            app:tabBackground="@drawable/tab_selector"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_28"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_tip" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/viewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bottom_sheet_bg_color"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llOffersDeals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_black_gradient_top_rounded"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@dimen/dp_55"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <View
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/bg_rounded_corner_black_rock" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvOffersAndDeals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_13"
+                android:paddingBottom="@dimen/dp_18"
+                android:text="@string/offers_deals"
+                android:textColor="@color/scandal"
+                android:textSize="@dimen/sp_14"
+                app:custFont="@string/app_font_regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

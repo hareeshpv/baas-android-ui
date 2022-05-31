@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black_light">#171425</color>
+    <color name="black_for_button">#262A34</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green_light">#B2CC25</color>
+    <color name="green_dark">#0FC99C</color>
+    <color name="grey">#738B8E</color>
+    <color name="pink">#EEB2E8</color>
+    <color name="purple_light">#C29EF8</color>
+    <color name="blue_sky">#88C8F6</color>
+    <color name="green_extra_light">#B8DFAD</color>
+    <color name="green_bright">#93FB66</color>
+    <color name="powered_by_payu">#555F63</color>
+    <color name="offer_background">#F2F2F2</color>
+
+</resources>

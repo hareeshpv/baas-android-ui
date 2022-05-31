@@ -1,0 +1,3 @@
+rootProject.name = "baas-sample-app-android"
+include ':app'
+include ':baas-core-sdk'

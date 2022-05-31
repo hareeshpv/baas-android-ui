@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.activity.dashboard.DashboardActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.passbook.PassBookViewModel" />
+
+    </data>
+
+
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedscrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_passbook_card_with_bottom_round"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rlToolbar"
+                                android:layout_width="0dp"
+                                android:layout_height="?android:attr/actionBarSize"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:id="@+id/llGoBack"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentStart="true"
+                                    android:gravity="center"
+                                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                                    android:orientation="vertical"
+                                    android:paddingStart="@dimen/main_padding"
+                                    android:paddingEnd="0dp">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/back_arrow_dimension"
+                                        android:layout_height="@dimen/back_arrow_dimension"
+                                        android:src="@drawable/black_back_arrow" />
+                                </LinearLayout>
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/toolbar_title_passbook"
+                                    android:textColor="@color/review_title_text_color"
+                                    android:textSize="@dimen/card_title_text_size"
+                                    app:custFont="@string/app_font_semi_bold" />
+
+                            </RelativeLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clAccountDetails"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/dp_32"
+                                android:paddingEnd="@dimen/dp_32"
+                                android:paddingBottom="@dimen/dp_32"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/rlToolbar">
+
+
+                                <LinearLayout
+                                    android:id="@+id/llKharchLimit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_20"
+                                    android:gravity="bottom"
+                                    android:orientation="horizontal"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvAmountSymbol"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/dp_4"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/currency_symbol"
+                                        android:textColor="@color/review_title_text_color"
+                                        android:textSize="@dimen/sp_22"
+                                        app:custFont="@string/app_font_regular" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:id="@+id/tvTotalAmountKharchLimit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:includeFontPadding="false"
+                                        android:letterSpacing="-0.04"
+                                        android:text="0"
+                                        android:textColor="@color/review_title_text_color"
+                                        android:textSize="@dimen/sp_32"
+                                        app:custFont="@string/app_font_extra_bold" />
+                                </LinearLayout>
+
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvKharchKarneKiLimitLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_2"
+                                    android:text="@string/label_kharch_karne_ki_limit"
+                                    android:textColor="@color/text_color_light"
+                                    android:textSize="@dimen/sp_12"
+                                    app:custFont="@string/app_font_regular"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/llKharchLimit" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_30"
+                                    android:background="@drawable/bg_passbook_card"
+                                    android:orientation="vertical"
+                                    android:paddingTop="@dimen/dp_17"
+                                    android:paddingBottom="@dimen/dp_22"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvKharchKarneKiLimitLabel">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="@dimen/dp_5"
+                                            android:paddingBottom="@dimen/dp_5"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/tvPlus"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="@dimen/dp_2"
+                                                android:includeFontPadding="false"
+                                                android:text="@string/currency_symbol"
+                                                android:textColor="@color/review_title_text_color"
+                                                android:textSize="@dimen/sp_12"
+                                                app:custFont="@string/app_font_regular" />
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:id="@+id/tvAmountForAccountBalance"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:text="0"
+                                                android:textColor="@color/review_title_text_color"
+                                                android:textSize="@dimen/sp_18"
+                                                app:custFont="@string/app_font_extra_bold" />
+                                        </LinearLayout>
+
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:id="@+id/tvPlus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/dp_15"
+                                            android:layout_marginEnd="@dimen/dp_15"
+                                            android:alpha=".20"
+                                            android:text="+"
+                                            android:textColor="@color/review_title_text_color"
+                                            android:textSize="@dimen/sp_20"
+                                            app:custFont="@string/app_font_semi_bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/tvPlus"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <LinearLayout
+                                                android:id="@+id/llAdvanceAllowedAmount"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal"
+                                                android:paddingTop="@dimen/dp_5"
+                                                android:paddingBottom="@dimen/dp_5">
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginEnd="@dimen/dp_2"
+                                                    android:includeFontPadding="false"
+                                                    android:text="@string/currency_symbol"
+                                                    android:textColor="@color/review_title_text_color"
+                                                    android:textSize="@dimen/sp_12"
+                                                    app:custFont="@string/app_font_regular" />
+
+                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    android:id="@+id/tvAmountForAdvanceAllowed"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:includeFontPadding="false"
+                                                    android:text="0"
+                                                    android:textColor="@color/review_title_text_color"
+                                                    android:textSize="@dimen/sp_18"
+                                                    app:custFont="@string/app_font_extra_bold" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_gravity="center_vertical"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:id="@+id/llHelpTooltip"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                                                    android:orientation="vertical"
+                                                    android:paddingStart="@dimen/dp_6"
+                                                    android:paddingEnd="@dimen/dp_6">
+
+                                                    <LinearLayout
+                                                        android:id="@+id/llHelp"
+                                                        android:layout_width="@dimen/dp_14"
+                                                        android:layout_height="@dimen/dp_14"
+                                                        android:layout_gravity="center_vertical"
+                                                        android:gravity="center">
+
+                                                        <androidx.appcompat.widget.AppCompatImageView
+                                                            android:layout_width="@dimen/dp_5"
+                                                            android:layout_height="@dimen/dp_8"
+                                                            android:scaleType="centerInside"
+                                                            app:srcCompat="@drawable/ic_help" />
+
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/tvPlusTemp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="@dimen/dp_13"
+                                                android:layout_height="@dimen/dp_13"
+                                                android:layout_marginEnd="@dimen/dp_4"
+                                                android:scaleType="fitXY"
+                                                app:srcCompat="@drawable/icon_wallet" />
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/label_account_balance"
+                                                android:textColor="@color/text_color_light"
+                                                android:textSize="@dimen/sp_11"
+                                                app:custFont="@string/app_font_regular" />
+                                        </LinearLayout>
+
+
+                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            android:id="@+id/tvPlusTemp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/dp_15"
+                                            android:layout_marginEnd="@dimen/dp_15"
+                                            android:text="+"
+                                            android:textSize="1dp"
+                                            android:visibility="invisible"
+                                            app:custFont="@string/app_font_regular"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/tvPlusTemp"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="@dimen/dp_13"
+                                                android:layout_height="@dimen/dp_13"
+                                                android:layout_marginEnd="@dimen/dp_4"
+                                                android:scaleType="fitXY"
+                                                app:srcCompat="@drawable/icon_advance_allowed" />
+
+                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/label_advance_allowed"
+                                                android:textColor="@color/text_color_light"
+                                                android:textSize="@dimen/sp_11"
+                                                app:custFont="@string/app_font_regular" />
+                                        </LinearLayout>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </LinearLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llTransactions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvTransactionLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/main_padding"
+                            android:text="@string/toolbar_title_transactions"
+                            android:textSize="@dimen/sp_14"
+                            android:textColor="@color/powered_by_payu"
+                            app:custFont="@string/app_font_regular" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clFilters"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/main_padding"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/main_padding"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llSelectedTimePeriod"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:onClick="@{(view)->viewModel.onClick(view)}"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/llFilters"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start|center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/dp_12"
+                                        android:layout_height="@dimen/dp_12"
+                                        android:layout_marginEnd="@dimen/dp_10"
+                                        android:scaleType="fitXY"
+                                        android:tint="@color/blue_dark"
+                                        app:srcCompat="@drawable/icon_calendar" />
+
+                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/label_select_time_period"
+                                        android:textColor="@color/blue_dark"
+                                        android:textSize="@dimen/sp_14"
+                                        app:custFont="@string/app_font_regular" />
+                                </LinearLayout>
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvAppliedTimePeriod"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="22dp"
+                                    android:text="@{viewModel.appliedTimePeriodO}"
+                                    android:textColor="@color/subtext_color"
+                                    android:textSize="@dimen/sp_11"
+                                    app:custFont="@string/app_font_regular" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llFilters"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:onClick="@{(view)->viewModel.onClick(view)}"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/dp_12"
+                                    android:layout_height="@dimen/dp_12"
+                                    android:layout_marginEnd="@dimen/dp_10"
+                                    android:scaleType="fitXY"
+                                    android:tint="@color/blue_dark"
+                                    app:srcCompat="@drawable/icon_filter" />
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/label_filters"
+                                    android:textColor="@color/blue_dark"
+                                    android:textSize="@dimen/sp_14"
+                                    app:custFont="@string/app_font_regular" />
+
+                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    android:id="@+id/tvAppliedFilter"
+                                    android:layout_width="@dimen/dp_15"
+                                    android:layout_height="@dimen/dp_15"
+                                    android:layout_marginStart="@dimen/dp_8"
+                                    android:background="@drawable/bg_round_red"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="@{viewModel.appliedFilterO}"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/sp_8"
+                                    android:visibility="@{viewModel.appliedFilterO.trim().length()>0?View.VISIBLE:View.GONE}"
+                                    app:custFont="@string/app_font_semi_bold" />
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvTransactions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_15" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clNoTransactionsFoundAfterAppliedFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/main_padding"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/main_padding">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivError1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerInside"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/icon_no_data_found" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/no_single_transaction_done_yet"
+                                android:textColor="@color/error_text_color"
+                                android:textSize="@dimen/sp_22"
+                                app:custFont="@string/app_font_extra_bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/ivError1" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clTechnicalIssueAfterAppliedFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/main_padding"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/main_padding">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toTopOf="@+id/tvTechnicalErrorTitle1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/icon_error_msg" />
+
+                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                android:id="@+id/tvTechnicalErrorTitle1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/error_title_top_margin"
+                                android:gravity="center"
+                                android:text="@string/technical_error_while_fetching_passbook_transactions"
+                                android:textColor="@color/error_text_color"
+                                android:textSize="@dimen/sp_22"
+                                app:custFont="@string/app_font_extra_bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNoTransactionsFound"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/main_padding"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/main_padding"
+                android:layout_marginBottom="@dimen/main_padding"
+                android:layout_weight="1"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/btnAbhiPaisaBhejo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/icon_no_data_found" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:id="@+id/tvErrorMsg"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/no_single_transaction_done_yet"
+                            android:textColor="@color/error_text_color"
+                            android:textSize="@dimen/sp_22"
+                            app:custFont="@string/app_font_extra_bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ivError" />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+                <com.payu.baas.core.view.viewExtension.CustomButton
+                    android:id="@+id/btnAbhiPaisaBhejo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:text="@string/btn_abhi_paisa_bhejo"
+                    android:textAllCaps="false"
+                    app:custFont="@string/app_font_extra_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTechnicalIssue"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/main_padding"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/main_padding"
+                android:layout_marginBottom="@dimen/main_padding"
+                android:layout_weight="1"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/main_padding"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/btnReloadPage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/tvTechnicalErrorTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/icon_error_msg" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvTechnicalErrorTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/error_title_top_margin"
+                        android:gravity="center"
+                        android:text="@string/technical_error_while_fetching_passbook_transactions"
+                        android:textColor="@color/error_text_color"
+                        android:textSize="@dimen/error_text_size"
+                        app:custFont="@string/app_font_bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.payu.baas.core.view.viewExtension.CustomButton
+                    android:id="@+id/btnReloadPage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:text="@string/btn_reload_page"
+                    android:textAllCaps="false"
+                    app:custFont="@string/app_font_extra_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFilterOptionsTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clAccountDetails">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/llGoBack1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/main_padding"
+                    android:paddingEnd="0dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackArrow"
+                        android:layout_width="@dimen/back_arrow_dimension"
+                        android:layout_height="@dimen/back_arrow_dimension"
+                        android:src="@drawable/black_back_arrow" />
+                </LinearLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvToolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_title_transactions"
+                    android:textSize="@dimen/card_title_text_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_padding"
+                android:layout_marginEnd="@dimen/main_padding"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5">
+
+                <LinearLayout
+                    android:id="@+id/llSelectedTimePeriodTemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/llFiltersTemp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_12"
+                            android:layout_height="@dimen/dp_12"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:scaleType="fitXY"
+                            android:tint="@color/blue_dark"
+                            app:srcCompat="@drawable/icon_calendar" />
+
+                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_select_time_period"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="@dimen/sp_14"
+                            app:custFont="@string/app_font_regular" />
+                    </LinearLayout>
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvAppliedTimePeriodTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:text="@{viewModel.appliedTimePeriodO}"
+                        android:textColor="@color/subtext_color"
+                        android:textSize="@dimen/sp_11"
+                        app:custFont="@string/app_font_regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFiltersTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="@dimen/dp_12"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:scaleType="fitXY"
+                        android:tint="@color/blue_dark"
+                        app:srcCompat="@drawable/icon_filter" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_filters"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="@dimen/sp_14"
+                        app:custFont="@string/app_font_regular" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/tvAppliedFilterTemp"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:background="@drawable/bg_round_red"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@{viewModel.appliedFilterO}"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_8"
+                        android:visibility="@{viewModel.appliedFilterO.trim().length()>0?View.VISIBLE:View.GONE}"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>

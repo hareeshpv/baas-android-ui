@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item >
+        <shape android:shape="rectangle"  >
+            <corners android:radius="@dimen/bg_icon_radius" />
+            <padding android:left="@dimen/card_bg_padding"
+                android:right="@dimen/card_bg_padding"/>
+            <solid android:color="@color/black_for_card_list_seprator"/>
+<!--            <gradient-->
+<!--                android:startColor="@color/black"-->
+<!--                android:centerColor="@color/black"-->
+<!--                android:endColor="@color/black" />-->
+<!--            <gradient-->
+<!--                android:startColor="@color/black_for_card_list_seprator"-->
+<!--                android:centerColor="@color/black_for_card_list_seprator"-->
+<!--                android:endColor="@color/black_for_card_list_seprator" />-->
+<!--           <gradient-->
+<!--                android:startColor="@color/black_for_card_list_iocn_bg"-->
+<!--                android:centerColor="@color/black_for_card_list_iocn_bg"-->
+<!--                android:endColor="@color/black_for_card_list_iocn_bg" />-->
+        </shape>
+    </item>
+</selector>

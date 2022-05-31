@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.kyc.CompleteKYCActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isVisible"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.kyc.CompleteKycViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen"
+        android:orientation="vertical"
+        android:padding="@dimen/main_padding">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/back_arrow_dimension"
+            android:layout_height="@dimen/back_arrow_dimension"
+            android:onClick="openPreviousScreen"
+            android:src="@drawable/white_back_arrow"
+            android:visibility="gone" />
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding"
+            android:layout_marginBottom="@dimen/main_padding"
+            android:text="@string/complete_kyc"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/screen_title"
+            app:custFont="@string/app_font_bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/min_negative_padding">
+
+            <RelativeLayout
+                android:id="@+id/rlPanEmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginTop="@dimen/min_padding"
+                android:layout_marginBottom="@dimen/min_padding"
+                android:background="@{viewModel.bgRlPan}"
+                android:gravity="center_vertical">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/pan_card_employee_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:padding="@dimen/main_padding"
+                    android:text="@string/pan_card_and_employee_details"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/kyc_options_title"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{()->viewModel.openPanScreen()}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visStartPanLayout)}">
+
+                    <include
+                        android:id="@+id/parentStart"
+                        layout="@layout/kyc_status_layout"
+                        android:onClick="@{()->viewModel.openPanScreen()}"
+                        app:sText="@={viewModel.strStartPanText}" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivTickPan"
+                    android:layout_width="@dimen/kyc_icon_dimension"
+                    android:layout_height="@dimen/kyc_icon_dimension"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/normal_padding"
+                    android:background="@drawable/black_dark_circle_bg"
+                    android:src="@{viewModel.ivTickPan}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visTickPan)}" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlStep1"
+                android:layout_width="@dimen/kyc_icon_dimension"
+                android:layout_height="@dimen/kyc_icon_dimension"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:background="@{viewModel.bgRlStep1}">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvStep1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/step1_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/counter_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/min_negative_padding">
+
+            <RelativeLayout
+                android:id="@+id/card_delivery_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginTop="@dimen/min_padding"
+                android:layout_marginBottom="@dimen/min_padding"
+                android:background="@{viewModel.bgRlCardDelivery}"
+                android:gravity="center_vertical">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/rlCardDeliveryAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/normal_padding"
+                    android:layout_marginRight="50dp"
+                    android:padding="@dimen/main_padding"
+                    android:text="@string/card_delivery_address"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/kyc_options_title"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{()->viewModel.openCardDelivery()}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visStartCardDeliveryLayout)}">
+
+                    <include
+                        android:id="@+id/parentContinueCardDelivery"
+                        layout="@layout/kyc_status_layout"
+                        android:onClick="@{()->viewModel.openCardDelivery()}"
+                        app:sText="@={viewModel.strStartCardDeliveryText}" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivTickCardDelivery"
+                    android:layout_width="@dimen/kyc_icon_dimension"
+                    android:layout_height="@dimen/kyc_icon_dimension"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/normal_padding"
+                    android:background="@drawable/black_dark_circle_bg"
+                    android:src="@{viewModel.ivTickCardDelivery}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visTickCardDelivery)}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlStep2"
+                android:layout_width="@dimen/kyc_icon_dimension"
+                android:layout_height="@dimen/kyc_icon_dimension"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:background="@{viewModel.bgRlStep2}">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvStep2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/step2_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/counter_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/min_negative_padding">
+
+            <RelativeLayout
+                android:id="@+id/rlSelfie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginTop="@dimen/min_padding"
+                android:layout_marginBottom="@dimen/min_padding"
+                android:background="@{viewModel.bgRlSelfie}"
+                android:gravity="center_vertical">
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/selfie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/normal_padding"
+                    android:padding="@dimen/main_padding"
+                    android:text="@string/selfie"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/kyc_options_title"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:onClick="@{()-> viewModel.getApplicationId()}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visStartSelfieLayout)}">
+
+                    <include
+                        android:id="@+id/parentContinueSelfie"
+                        layout="@layout/kyc_status_layout"
+                        android:onClick="@{()->viewModel.getApplicationId()}"
+                        app:sText="@={viewModel.strStartSelfieText}" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivTickSelfie"
+                    android:layout_width="@dimen/kyc_icon_dimension"
+                    android:layout_height="@dimen/kyc_icon_dimension"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/normal_padding"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginEnd="@dimen/normal_padding"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:background="@drawable/black_dark_circle_bg"
+                    android:src="@{viewModel.ivTickSelfie}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visTickSelfie)}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlStep3"
+                android:layout_width="@dimen/kyc_icon_dimension"
+                android:layout_height="@dimen/kyc_icon_dimension"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:background="@{viewModel.bgRlStep3}">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvStep3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/step3_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/counter_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/min_negative_padding">
+
+            <RelativeLayout
+                android:id="@+id/rlAadhaarVerification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginTop="@dimen/min_padding"
+                android:layout_marginBottom="@dimen/min_padding"
+                android:background="@{viewModel.bgRlAadhaar}"
+                android:gravity="center_vertical">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/aadhar_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/normal_padding"
+                    android:padding="@dimen/main_padding"
+                    android:text="@string/aadhar_verification"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/kyc_options_title"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{()-> viewModel.getApplicationId()}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visStartAadhaarLayout)}">
+
+                    <include
+                        android:id="@+id/parentContinueAadhaar"
+                        layout="@layout/kyc_status_layout"
+                        android:onClick="@{()->viewModel.getApplicationId()}"
+                        app:sText="@={viewModel.strStartAadhaarText}" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivTickAadhaar"
+                    android:layout_width="@dimen/kyc_icon_dimension"
+                    android:layout_height="@dimen/kyc_icon_dimension"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/normal_padding"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginEnd="@dimen/normal_padding"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:background="@drawable/black_dark_circle_bg"
+                    android:src="@{viewModel.ivTickAadhaar}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visTickAadhaar)}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlStep4"
+                android:layout_width="@dimen/kyc_icon_dimension"
+                android:layout_height="@dimen/kyc_icon_dimension"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:background="@{viewModel.bgRlStep4}">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvStep4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/step4_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/counter_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/min_negative_padding">
+
+            <RelativeLayout
+                android:id="@+id/rlReviewSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_padding"
+                android:layout_marginTop="@dimen/min_padding"
+                android:layout_marginBottom="@dimen/min_padding"
+                android:background="@{viewModel.bgRlSubmit}"
+                android:gravity="center_vertical">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/review_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/normal_padding"
+                    android:padding="@dimen/main_padding"
+                    android:text="@string/review_and_submit_details"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/kyc_options_title"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:onClick="@{()-> viewModel.reviewAndSubmit()}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visStartSubmitLayout)}">
+
+                    <include
+                        android:id="@+id/parentContinueSubmit"
+                        layout="@layout/kyc_status_layout"
+                        android:onClick="@{()->viewModel.reviewAndSubmit()}"
+                        app:sText="@={viewModel.strStartSubmitText}" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivTickSubmit"
+                    android:layout_width="@dimen/kyc_icon_dimension"
+                    android:layout_height="@dimen/kyc_icon_dimension"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/normal_padding"
+                    android:layout_marginTop="@dimen/normal_padding"
+                    android:layout_marginEnd="@dimen/normal_padding"
+                    android:layout_marginBottom="@dimen/normal_padding"
+                    android:background="@drawable/black_dark_circle_bg"
+                    android:src="@{viewModel.ivTickSubmit}"
+                    android:visibility="@{viewModel.getMyViewVisibility(viewModel.visTickSubmit)}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlStep5s"
+                android:layout_width="@dimen/kyc_icon_dimension"
+                android:layout_height="@dimen/kyc_icon_dimension"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/normal_padding"
+                android:background="@{viewModel.bgRlStep5}">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvStep5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/step5_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/counter_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

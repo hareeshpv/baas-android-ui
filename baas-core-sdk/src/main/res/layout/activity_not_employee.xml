@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.notemployee.NotEmployeeActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.notemployee.NotEmpViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/main_padding">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="130dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="@dimen/back_button_height"
+                        android:layout_marginTop="@dimen/back_button_top_margin"
+                        android:onClick="openPreviousScreen"
+                        android:src="@drawable/white_back_arrow"
+                        android:visibility="gone" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/account_opening_top_margin"
+                        android:text="@string/user_name"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_title"
+                        app:custFont="@string/app_font_extra_bold" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/not_eligible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/account_opening_top_margin"
+                        android:text="@string/pan_aur_emp_details_not_matched_text"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/screen_title"
+                        app:custFont="@string/app_font_extra_bold" />
+
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/verify_detail_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/account_opening_top_margin"
+                        android:text="@string/verify_detail_message"
+                        android:textAllCaps="false"
+                        android:textColor="@color/permission_text_color"
+                        android:textSize="@dimen/screen_title"
+                        app:custFont="@string/app_font_extra_bold" />
+
+<!--                    <com.payu.baas.core.view.viewExtension.CustomTextView-->
+<!--                        android:id="@+id/full_name"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:padding="@dimen/normal_padding"-->
+<!--                        android:text="@string/full_name_pan_card_k_anusaar"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        android:textColor="@color/text_color"-->
+<!--                        android:textSize="@dimen/screen_sub_title"-->
+<!--                        android:visibility="gone"-->
+<!--                        app:custFont="@string/app_font_regular" />-->
+
+<!--                    <com.payu.baas.core.view.viewExtension.CustomEdittext-->
+<!--                        android:id="@+id/etFullName"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/full_name"-->
+<!--                        android:hint="ANJALI PATEL"-->
+<!--                        android:imeOptions="actionNext"-->
+<!--                        android:inputType="textCapWords|textVisiblePassword"-->
+<!--                        android:padding="@dimen/normal_padding"-->
+<!--                        android:text="@={viewModel.strName}"-->
+<!--                        android:textColor="@color/text_color"-->
+<!--                        android:textCursorDrawable="@drawable/bg_cursor"-->
+<!--                        android:textSize="@dimen/edit_text_size"-->
+<!--                        android:visibility="gone"-->
+<!--                        app:custFont="@string/app_font_semi_bold" />-->
+
+                    <include
+                        android:id="@+id/parentPanInput"
+                        layout="@layout/item_pan_number"
+                        app:panText="@={viewModel.strPanNumber}"
+                        tools:ignore="IncludeLayoutParam" />
+
+                    <include
+                        android:id="@+id/parentEmpInput"
+                        layout="@layout/item_emp_id_layout"
+                        android:layout_below="@+id/etFullName"
+                        app:empText="@={viewModel.strEmpId}"
+                        android:visibility="gone"
+                        tools:ignore="IncludeLayoutParam" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/retry_again_margin_height"
+                    android:background="@drawable/button_black_bg"
+                    android:onClick="@{()->viewModel.verifyPanEmp()}">
+
+                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        android:id="@+id/btReloadPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/retry_text_margin_top_bottom"
+                        android:layout_marginBottom="@dimen/retry_text_margin_top_bottom"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="@string/try_again"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        app:custFont="@string/app_font_bold" />
+                </LinearLayout>
+
+
+                <com.payu.baas.core.view.viewExtension.CustomButton
+                    android:id="@+id/btExit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_bg"
+                    android:onClick="openPreviousScreen"
+                    android:text="@string/exit_text"
+                    android:textAllCaps="false"
+                    app:custFont="@string/app_font_extra_bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/parentPanHelp"
+            layout="@layout/pan_format_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/parentEmployeeIdHelp"
+            layout="@layout/emoloyee_id_card_format_layout"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialer_background"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/_55sdp"
+    android:layout_marginRight="@dimen/_58sdp"
+    android:layout_marginTop="@dimen/_49sdp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:onClick="clickOne"
+        android:src="@drawable/ic_number_one"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:onClick="clickTwo"
+        android:src="@drawable/ic_number_two"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:onClick="clickThree"
+        android:src="@drawable/ic_number_three"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/_55sdp"
+        android:layout_marginRight="@dimen/_58sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickFour"
+            android:src="@drawable/ic_number_four"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickFive"
+            android:src="@drawable/ic_five_number"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickSix"
+            android:src="@drawable/ic_six_number"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/_58sdp"
+        android:layout_marginLeft="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickSeven"
+            android:src="@drawable/ic_number_seven"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickEight"
+            android:src="@drawable/ic_number_eight"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickNine"
+            android:src="@drawable/ic_number_nine"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/_58sdp"
+        android:layout_marginLeft="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:layout_marginBottom="@dimen/_36sdp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_astrick_icon"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickZero"
+            android:src="@drawable/ic_number_zero"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickDelete"
+            android:src="@drawable/ic_backspace"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

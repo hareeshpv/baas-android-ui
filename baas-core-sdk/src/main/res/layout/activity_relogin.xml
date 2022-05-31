@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.relogin.ReloginActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.relogin.ReLoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_screen">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/nested_scroll_view_margin_bottom">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--        <LinearLayout-->
+                <!--            android:id="@+id/back_arrow_layout"-->
+                <!--            android:onClick="relogin_back"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content">-->
+                <ImageView
+                    android:id="@+id/back_arrow_layout"
+                    android:layout_width="@dimen/back_arrow_dimen_new"
+                    android:layout_height="@dimen/back_arrow_dimen_new"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/back_button_top_margin"
+                    android:onClick="openPreviousScreen"
+                    android:padding="@dimen/normal_padding"
+                    android:visibility="gone"
+                    android:src="@drawable/white_back_arrow" />
+                <!--        </LinearLayout>-->
+
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back_arrow_layout"
+                    android:layout_marginLeft="@dimen/account_opening_name_margin_left"
+                    android:layout_marginTop="@dimen/account_opening_top_margin"
+                    android:layout_marginRight="@dimen/account_opening_margin_right"
+                    android:text="@string/user_name"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_title"
+                    app:custFont="@string/app_font_extra_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/account_status_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_marginLeft="@dimen/account_opening_name_margin_left"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/account_opening_margin_right"
+                    android:text="@string/account_status"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_title"
+                    app:custFont="@string/app_font_extra_bold" />
+
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/relogin_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/account_status_message"
+                    android:layout_marginLeft="@dimen/account_opening_name_margin_left"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:layout_marginRight="@dimen/account_opening_margin_right"
+                    android:text="@string/relogin_enter_mobilenumber_message"
+                    android:textAllCaps="false"
+                    android:textColor="@color/permission_text_color"
+                    android:textSize="@dimen/screen_title"
+                    app:custFont="@string/app_font_extra_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/enter_mobile_number_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relogin_message"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:text="@string/enter_registered_mobile_number"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <ImageView
+                    android:id="@+id/failed_icon"
+                    android:layout_width="@dimen/failed_icon_width_height"
+                    android:layout_height="@dimen/failed_icon_width_height"
+                    android:layout_below="@+id/relogin_message"
+                    android:layout_marginLeft="@dimen/failed_icon_left_margin"
+                    android:layout_marginTop="@dimen/failed_icon_top_margin"
+                    android:layout_toRightOf="@+id/enter_mobile_number_title"
+                    android:src="@drawable/failed_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/correct"
+                    android:layout_width="@dimen/correct_icon_width"
+                    android:layout_height="@dimen/correct_icon_height"
+                    android:layout_below="@+id/relogin_message"
+                    android:layout_marginLeft="@dimen/correct_icon_left_margin"
+                    android:layout_marginTop="@dimen/correct_icon_top_margin"
+                    android:layout_toRightOf="@+id/enter_mobile_number_title"
+                    android:src="@drawable/icon_correct"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/mobilenumber_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enter_mobile_number_title"
+                    android:layout_marginLeft="@dimen/mobile_number_text_left_right_margin"
+                    android:layout_marginTop="@dimen/mobile_number_field_margin_top"
+                    android:layout_marginRight="@dimen/mobile_number_text_left_right_margin"
+                    android:background="@drawable/mobile_background"
+                    android:orientation="horizontal">
+
+                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                        android:id="@+id/country_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/mobile_number_text_height"
+                        android:layout_marginLeft="@dimen/country_code_margin_left"
+                        android:text="+91"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/mobile_number_text_size"
+                        app:custFont="@string/app_font_semi_bold" />
+
+                    <com.payu.baas.core.view.viewExtension.CustomMobileFieldEditText
+                        android:id="@+id/mobilenumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/mobile_number_text_height"
+                        android:layout_below="@+id/enter_mobile_number"
+                        android:layout_marginLeft="@dimen/normal_padding"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:text="@={viewModel.strMobileNo}"
+                        android:textColor="@color/text_color"
+                        android:textCursorDrawable="@drawable/bg_cursor"
+                        android:textSize="@dimen/mobile_number_text_size"
+                        app:custFont="@string/app_font_semi_bold" />
+                </LinearLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+                    android:id="@+id/errorMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobilenumber_layout"
+                    android:layout_marginLeft="@dimen/error_message_margin_left_right"
+                    android:layout_marginTop="@dimen/error_message_margin_top"
+                    android:layout_marginRight="@dimen/error_message_margin_left_right"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_light"
+                    android:textSize="@dimen/error_message"
+                    app:custFont="@string/app_font_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/errorMessage"
+                    android:layout_marginTop="143dp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/normal_padding">
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/important_instruction_background"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/bulb_icon_dimension"
+                    android:layout_height="@dimen/bulb_icon_dimension"
+                    android:layout_marginLeft="@dimen/bulb_left_right_margin"
+                    android:layout_marginTop="@dimen/bulb_left_right_margin"
+                    android:layout_marginRight="@dimen/bulb_left_right_margin"
+                    android:src="@drawable/bulb_icon" />
+
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/important_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/relogin_mobile_activation_message"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp"
+                    app:custFont="@string/app_font_semi_bold" />
+
+
+            </LinearLayout>
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/btSendOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg"
+                android:enabled="false"
+                android:onClick="@{()->viewModel.sendOtp()}"
+                android:text="@string/send_otp"
+                android:textAllCaps="false"
+                app:custFont="@string/app_font_extra_bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

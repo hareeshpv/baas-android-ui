@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.kyc.CardDeliveryAddressDetailActivity">
+
+    <data>
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alert_overlay"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/alert_margin"
+            android:layout_marginEnd="@dimen/alert_margin"
+            android:background="@drawable/bg_alert_dialog"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_24">
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvBankTransferChargesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/label_bank_transfer_charges"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toStartOf="@+id/tvBankTransferCharges"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvBankTransferCharges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹15"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvAdvanceUseFeesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="2% advance use fees"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAdvanceUseFees"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBankTransferChargesLabel" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvAdvanceUseFees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹8"
+                    android:textColor="@color/subtext_color"
+                    android:textSize="@dimen/sp_14"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBankTransferChargesLabel" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvTotalChargesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:gravity="start"
+                    android:text="@string/label_total_charges"
+                    android:textSize="@dimen/sp_16"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTotalCharges"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAdvanceUseFees" />
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/tvTotalCharges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹23"
+                    android:textSize="@dimen/sp_16"
+                    app:custFont="@string/app_font_semi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvTotalChargesLabel" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_12">
+
+                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_14"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/btn_cancel"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_regular" />
+
+                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    android:id="@+id/tvMoveAhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/btn_thik_hai"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_15"
+                    app:custFont="@string/app_font_regular" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

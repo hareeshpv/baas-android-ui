@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="@dimen/sp_26"
+            app:custFont="@string/app_font_semi_bold" />
+
+        <LinearLayout
+            android:id="@+id/llPoweredByPayu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2_5"
+            android:gravity="center">
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvPoweredBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/powered_by_payu"
+                android:textColor="@color/powered_by_payu"
+                android:textSize="@dimen/sp_11"
+                android:textStyle="bold"
+                app:custFont="@string/app_font_regular" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_14"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:adjustViewBounds="true"
+                android:src="@drawable/payu_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

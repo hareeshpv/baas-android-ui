@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.passbook.PassBookViewModel" />
+
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_passbook_filter"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/main_padding"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingEnd="0dp"
+        android:paddingBottom="@dimen/main_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/dp_12">
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/llCancel"
+                android:text="@string/title_select_time_period"
+                android:textSize="@dimen/sp_22"
+                app:custFont="@string/app_font_extra_bold" />
+
+            <LinearLayout
+                android:id="@+id/llCancel"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:background="@drawable/bg_round_gray"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCancel"
+                        android:layout_width="@dimen/dp_8"
+                        android:layout_height="@dimen/dp_8"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/icon_cancel" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/main_padding">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTimePeriod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="start"
+                android:text="@string/label_start_date"
+                android:textSize="@dimen/sp_14"
+                app:custFont="@string/app_font_semi_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvTimePeriod" />
+
+            <LinearLayout
+                android:id="@+id/llStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartDate">
+
+                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                    android:id="@+id/etStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789/"
+                    android:hint="DD/MM/YYYY"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:minWidth="@dimen/dp_100"
+                    android:padding="@dimen/normal_padding"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_18"
+                    app:custFont="@string/app_font_regular" />
+
+                <LinearLayout
+                    android:id="@+id/llChooseStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivStartDate"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/icon_calendar" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="start"
+                android:text="@string/label_end_date"
+                android:textSize="@dimen/sp_14"
+                app:custFont="@string/app_font_semi_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llStartDate" />
+
+            <LinearLayout
+                android:id="@+id/llEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEndDate">
+
+                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                    android:id="@+id/etEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789/"
+                    android:hint="DD/MM/YYYY"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:minWidth="@dimen/dp_100"
+                    android:padding="@dimen/normal_padding"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_18"
+                    app:custFont="@string/app_font_regular" />
+
+                <LinearLayout
+                    android:id="@+id/llChooseEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivEndDate"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/icon_calendar" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/btnApply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:background="@drawable/button_bg"
+                android:text="@string/btn_apply"
+                android:textAllCaps="false"
+                app:custFont="@string/app_font_extra_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llEndDate" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</layout>

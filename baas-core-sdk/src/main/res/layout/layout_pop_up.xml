@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingEnd="@dimen/dp_20">
+
+    <com.payu.baas.core.view.viewExtension.CustomTextView
+        android:id="@+id/tvTooltipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_tooltip_bg"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_12"
+        android:textColor="@color/black_russian"
+        android:textSize="@dimen/sp_12"
+        android:text="@string/tooltip_msg_for_passbook"
+        app:custFont="@string/app_font_semi_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<ImageView
+        android:id="@+id/tooltip_nav_up"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTooltipText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:background="@drawable/nav_top" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.payu.baas.core.view.viewExtension.CustomTextView
+            android:id="@+id/tooltip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_transaction_bank_icon_12_radius"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="Magic"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_12"
+            app:custFont="@string/app_font_regular"
+
+            />
+
+        <ImageView
+            android:id="@+id/tooltip_nav_up"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@drawable/nav_top" />
+
+
+    </LinearLayout>-->
+

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payu.baas.core.view.ui.activity.reset_passcode.ResetPasscodeActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.payu.baas.core.view.ui.activity.reset_passcode.ResetPasscodeViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/main_padding"
+        android:background="@drawable/bg_screen">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <RelativeLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/back_arrow_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="re_setpasscode_backarrow"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="@dimen/back_button_width"
+                        android:layout_height="@dimen/back_button_height"
+                        android:layout_marginLeft="@dimen/back_button_margin_left"
+                        android:layout_marginTop="@dimen/back_button_top_margin"
+                        android:src="@drawable/white_back_arrow" />
+                </LinearLayout>
+
+                <com.payu.baas.core.view.viewExtension.CustomTextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/min_padding"
+                    android:gravity="center"
+                    android:text="@string/reset_passcode"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/screen_sub_title"
+                    app:custFont="@string/app_font_semi_bold" />
+            </RelativeLayout>
+
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/enter_passcode_title_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/enter_passcode_title_top_margin"
+                android:text="@string/enter_new_4_digit_passcode"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/screen_sub_title"
+                app:custFont="@string/app_font_semi_bold" />
+
+            <LinearLayout
+                android:id="@+id/llEnterPasscode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enter_passcode_title_message"
+                android:layout_marginTop="@dimen/passcode_box_margin_top"
+                android:gravity="center">
+
+                <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                    android:id="@+id/enter_passcode1"
+                    android:layout_width="@dimen/passcode_dimension"
+                    android:layout_height="@dimen/passcode_dimension"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={viewModel.resetcode1}"
+                    android:textColor="@color/text_color"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/passcode_otp_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                    android:id="@+id/enter_passcode2"
+                    android:layout_width="@dimen/passcode_dimension"
+                    android:layout_height="@dimen/passcode_dimension"
+                     android:layout_marginLeft="@dimen/passcode_left_margin"
+                     android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={viewModel.resetcode2}"
+                    android:textColor="@color/text_color"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/passcode_otp_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                    android:id="@+id/enter_passcode3"
+                    android:layout_width="@dimen/passcode_dimension"
+                    android:layout_height="@dimen/passcode_dimension"
+                    android:layout_marginLeft="@dimen/passcode_left_margin"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={viewModel.resetcode3}"
+                    android:textColor="@color/text_color"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/passcode_otp_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                    android:id="@+id/enter_passcode4"
+                    android:layout_width="@dimen/passcode_dimension"
+                    android:layout_height="@dimen/passcode_dimension"
+                     android:layout_marginLeft="@dimen/passcode_left_margin"
+                     android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={viewModel.resetcode4}"
+                    android:textColor="@color/text_color"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/passcode_otp_size"
+                    app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+
+            <com.payu.baas.core.view.viewExtension.CustomTextView
+                android:id="@+id/re_enter_passcode_title_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llEnterPasscode"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/re_enter_passcode_title_margin_top"
+                android:text="@string/re_enter_passcode"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/screen_sub_title"
+                app:custFont="@string/app_font_semi_bold" />
+            <LinearLayout
+                android:id="@+id/llReEnterPasscode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/re_enter_passcode_title_message"
+                android:layout_marginTop="@dimen/passcode_box_margin_top"
+                android:gravity="center">
+
+                <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                    android:id="@+id/re_enter_passcode1"
+                    android:layout_width="@dimen/passcode_dimension"
+                    android:layout_height="@dimen/passcode_dimension"
+                     android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/text_color"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/passcode_otp_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+                <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                    android:id="@+id/re_enter_passcode2"
+                    android:layout_width="@dimen/passcode_dimension"
+                    android:layout_height="@dimen/passcode_dimension"
+                     android:layout_marginLeft="@dimen/passcode_left_margin"
+                     android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/text_color"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/passcode_otp_size"
+                    app:custFont="@string/app_font_semi_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                android:id="@+id/re_enter_passcode3"
+                android:layout_width="@dimen/passcode_dimension"
+                android:layout_height="@dimen/passcode_dimension"
+                 android:layout_marginLeft="@dimen/passcode_left_margin"
+                 android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/text_color"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:textSize="@dimen/passcode_otp_size"
+                app:custFont="@string/app_font_semi_bold" />
+
+            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+                android:id="@+id/re_enter_passcode4"
+                android:layout_width="@dimen/passcode_dimension"
+                android:layout_height="@dimen/passcode_dimension"
+                android:layout_marginLeft="@dimen/passcode_left_margin"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/text_color"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:textSize="@dimen/passcode_otp_size"
+                app:custFont="@string/app_font_semi_bold" />
+            </LinearLayout>
+            <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+                android:id="@+id/error_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llReEnterPasscode"
+                android:layout_marginLeft="@dimen/error_mesg_left_right_dimension"
+                android:layout_marginTop="@dimen/error_msg_top_margin"
+                android:layout_marginRight="@dimen/error_mesg_left_right_dimension"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textSize="@dimen/error_message"
+                app:custFont="@string/app_font_regular" />
+
+            <com.payu.baas.core.view.viewExtension.CustomButton
+                android:id="@+id/reset_passcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/error_message"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:background="@drawable/button_bg"
+                android:enabled="false"
+                android:onClick="@{()->viewModel.resetPasscode()}"
+                android:text="@string/reset_passcode"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:custFont="@string/app_font_extra_bold" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>
