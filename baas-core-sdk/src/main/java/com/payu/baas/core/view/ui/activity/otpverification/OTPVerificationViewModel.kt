@@ -42,7 +42,12 @@ class OTPVerificationViewModel(baseCallBack: BaseCallback?, context: Context
         mobileNo_ = SessionManagerUI.getInstance(context).userMobileNumber
     }
     fun verify() {
-        baseCallBack!!.cleverTapUserOnBoardingEvent(BaaSConstantsUI.CL_USER_VERIFY_OTP,BaaSConstantsUI.CL_USER_OTP_VERIFICATION_EVENT_ID, SessionManager.getInstance(context).accessToken,imeiNumber,mobileNo_, Date())
+//        baseCallBack!!.cleverTapUserOnBoardingEvent(BaaSConstantsUI.CL_USER_VERIFY_OTP,
+//            BaaSConstantsUI.CL_USER_OTP_VERIFICATION_EVENT_ID,
+//            SessionManager.getInstance(context).accessToken,
+//            imeiNumber,
+//            mobileNo_,
+//            Date())
         if(!baseCallBack!!.isInternetAvailable(false)){
             val mBundle = Bundle()
             mBundle.putInt(BaaSConstantsUI.BS_KEY_ERROR_TYPE, ErrorType.NO_INTERNET.ordinal)

@@ -298,8 +298,23 @@ class CompleteKYCActivity : BaseActivity() {
         if ((uState.equals(UserState.ONBOARDING_SUCCESS.getValue())
                     || uState.equals(UserState.ONBOARDED.getValue())
                     || uState.equals(UserState.PASSCODE_SET.getValue()))
-        )
+        ) {
+            if(uState.equals(UserState.PASSCODE_SET.getValue()))
+            viewModel.baseCallBack!!.cleverTapUserOnBoardingEvent(BaaSConstantsUI.CL_USER_VERIFY_OTP,
+                BaaSConstantsUI.CL_USER_OTP_VERIFICATION_EVENT_ID,
+                SessionManager.getInstance(this).accessToken,
+                imei,
+                mobileNumber,
+                Date())
             return true
+        }
+        viewModel.baseCallBack!!.cleverTapUserOnBoardingEvent(
+            BaaSConstantsUI.CL_USER_MOBILE_VERIFICATION,
+            BaaSConstantsUI.CL_USER_MOBILE_VERIFICATION_EVENT_ID,
+            SessionManager.getInstance(this).accessToken, imei,
+            mobileNumber,
+            Date()
+        )
         return false
     }
 }

@@ -190,13 +190,6 @@ class MobileVerificationActivity : BaseActivity() {
                                         BaaSConstantsUI.CL_USER_PROFILE_PHOTO,
                                         ""
                                     )
-                                    viewModel.baseCallBack!!.cleverTapUserOnBoardingEvent(
-                                        BaaSConstantsUI.CL_USER_MOBILE_VERIFICATION,
-                                        BaaSConstantsUI.CL_USER_MOBILE_VERIFICATION_EVENT_ID,
-                                        SessionManager.getInstance(this).accessToken, imei,
-                                        mobileNumber,
-                                        Date()
-                                    )
                                     callNextScreen(
                                         Intent(
                                             applicationContext,
