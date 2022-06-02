@@ -1,0 +1,7 @@
+{
+  "userState": "Mobile_Verified",
+  "msg": "OTP_VERIFIED",
+  "user_access_token": "fd43fc6f2bd7762ec490e9deb268de4713338fe78876216be633a5f5b0d2f0dd",
+  "expires_in": "7199",
+  "scope": "send_verification_otp verify_verification_otp update_user_profile"
+}

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.reviewAndSubmit.ProgressActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.reviewAndSubmit.ProgressActivity">
 
     <data></data>
     <RelativeLayout
@@ -36,7 +36,7 @@
                     android:src="@drawable/ic_close" />
             </RelativeLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvInProgressTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                 android:textSize="@dimen/in_progress_screen_title_size"
                 app:custFont="@string/app_font_extra_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvInProgressSubTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                 android:textSize="@dimen/screen_title"
                 app:custFont="@string/app_font_extra_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvAccountOpenMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
 
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/btExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

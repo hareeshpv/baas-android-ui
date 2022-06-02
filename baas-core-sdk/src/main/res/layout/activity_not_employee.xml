@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.notemployee.NotEmployeeActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.notemployee.NotEmployeeActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.notemployee.NotEmpViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.notemployee.NotEmpViewModel" />
     </data>
 
     <RelativeLayout
@@ -42,7 +42,7 @@
                         android:src="@drawable/white_back_arrow"
                         android:visibility="gone" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                         android:textSize="@dimen/screen_title"
                         app:custFont="@string/app_font_extra_bold" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/not_eligible"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                         app:custFont="@string/app_font_extra_bold" />
 
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/verify_detail_message"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                         android:textSize="@dimen/screen_title"
                         app:custFont="@string/app_font_extra_bold" />
 
-<!--                    <com.payu.baas.core.view.viewExtension.CustomTextView-->
+<!--                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView-->
 <!--                        android:id="@+id/full_name"-->
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->
@@ -89,7 +89,7 @@
 <!--                        android:visibility="gone"-->
 <!--                        app:custFont="@string/app_font_regular" />-->
 
-<!--                    <com.payu.baas.core.view.viewExtension.CustomEdittext-->
+<!--                    <com.payu.baas.coreUI.view.viewExtension.CustomEdittext-->
 <!--                        android:id="@+id/etFullName"-->
 <!--                        android:layout_width="match_parent"-->
 <!--                        android:layout_height="wrap_content"-->
@@ -133,7 +133,7 @@
                     android:background="@drawable/button_black_bg"
                     android:onClick="@{()->viewModel.verifyPanEmp()}">
 
-                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                         android:id="@+id/btReloadPage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
                 </LinearLayout>
 
 
-                <com.payu.baas.core.view.viewExtension.CustomButton
+                <com.payu.baas.coreUI.view.viewExtension.CustomButton
                     android:id="@+id/btExit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

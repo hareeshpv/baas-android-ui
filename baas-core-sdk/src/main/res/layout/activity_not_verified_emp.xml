@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
                 android:textSize="@dimen/screen_title"
                 app:custFont="@string/app_font_extra_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/not_eligible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                 android:textSize="@dimen/screen_title"
                 app:custFont="@string/app_font_extra_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/account_opening_top_margin"
@@ -49,7 +49,7 @@
                 android:textSize="@dimen/screen_title"
                 app:custFont="@string/app_font_extra_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/verify_detail_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
         </LinearLayout>
 
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/btExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

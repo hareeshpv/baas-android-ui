@@ -41,7 +41,7 @@
                 android:layout_marginTop="@dimen/help_layout_padding"
                 android:src="@drawable/employee_id_card_format" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvEmployeeIdInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

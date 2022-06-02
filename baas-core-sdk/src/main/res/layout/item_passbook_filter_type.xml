@@ -8,7 +8,7 @@
 
         <variable
             name="model"
-            type="com.payu.baas.core.model.entities.model.TypeModel" />
+            type="com.payu.baas.coreUI.model.entities.model.TypeModel" />
 
 
     </data>
@@ -35,7 +35,7 @@
 
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

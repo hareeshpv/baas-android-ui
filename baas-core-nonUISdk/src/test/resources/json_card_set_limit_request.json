@@ -1,0 +1,19 @@
+{
+  "transactionLimits": [
+    {
+      "channel": "ATM",
+      "perTransaction": 500000,
+      "daily": 1500000
+    },
+    {
+      "channel": "POS",
+      "perTransaction": 500000,
+      "daily": 1500000
+    },
+    {
+      "channel": "ECOM",
+      "perTransaction": 500000,
+      "daily": 1500000
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.passbook.PassBookViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.passbook.PassBookViewModel" />
 
 
     </data>
@@ -32,7 +32,7 @@
             android:paddingStart="0dp"
             android:paddingEnd="@dimen/dp_12">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvStartDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvStartDate">
 
-                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                     android:id="@+id/etStartDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvEndDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvEndDate">
 
-                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                     android:id="@+id/etEndDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -206,7 +206,7 @@
             </LinearLayout>
 
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btnApply"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

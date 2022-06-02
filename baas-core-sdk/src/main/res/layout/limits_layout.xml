@@ -25,7 +25,7 @@
         android:layout_marginTop="@dimen/main_padding"
         android:orientation="vertical">
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/normal_padding">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/per_transaction_text"
@@ -47,7 +47,7 @@
                 android:textSize="@dimen/sub_text_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvPerTransactionValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/min_padding">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/daily_text"
@@ -72,7 +72,7 @@
                 android:textSize="@dimen/sub_text_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvDailyValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

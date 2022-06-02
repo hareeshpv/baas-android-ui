@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.advance.AdvanceViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.advance.AdvanceViewModel" />
 
 
     </data>
@@ -49,7 +49,7 @@
                     android:tint="@color/text_color"/>
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvToolbarTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvToolbarSubTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

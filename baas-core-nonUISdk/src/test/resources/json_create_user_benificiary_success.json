@@ -1,0 +1,14 @@
+{
+  "msg": "SUCCESS",
+  "userBeneficiary": {
+    "beneficiaryId": "c74c88c9-efd7-4528-94c5-676be547a5e7",
+    "userId": "BLIPA5292E.SW",
+    "beneficiaryName": "Jyoti",
+    "accountNumber": "12345678910",
+    "ifsc": "IFSC",
+    "verified": "false",
+    "status": "Active",
+    "last4Digits": "8910",
+    "addedOn": "2021-11-20T12:52:21.463+00:00"
+  }
+}

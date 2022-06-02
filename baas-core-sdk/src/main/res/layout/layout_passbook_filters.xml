@@ -24,7 +24,7 @@
             android:paddingStart="0dp"
             android:paddingEnd="@dimen/dp_12">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             android:paddingStart="0dp"
             android:paddingEnd="@dimen/main_padding">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvTransactions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTransactions" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvAccountType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvAccountType" />
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btnApplyFilter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

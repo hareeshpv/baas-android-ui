@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.payu.baas.core.view.ui.snackbaar.SimpleCustomSnackbarView
+<com.payu.baas.coreUI.view.ui.snackbaar.SimpleCustomSnackbarView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/snack_view"
     android:layout_width="match_parent"

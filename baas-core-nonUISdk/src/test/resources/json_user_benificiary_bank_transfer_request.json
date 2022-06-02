@@ -1,0 +1,12 @@
+{
+  "currency": "INR",
+  "payment_type": "NEFT",
+  "remarks": "Bank Transfer to my savings account",
+  "account_id": "acc_8bea7349bd2c4784b18f9bcabbad0479",
+  "amount": 900,
+  "creditor_details": {
+    "accountNumber": "000201080893",
+    "ifsc": "ICIC0002660",
+    "name": "Ashima"
+  }
+}

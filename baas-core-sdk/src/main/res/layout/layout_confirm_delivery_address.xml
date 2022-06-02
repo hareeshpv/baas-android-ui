@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.panEmpVerification.PANEmployeeDetailActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.panEmpVerification.PANEmployeeDetailActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.panEmpVerification.PanEmpVerificationViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.panEmpVerification.PanEmpVerificationViewModel" />
     </data>
 
     <RelativeLayout
@@ -40,7 +40,7 @@
                     android:tint="@color/text_color" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 android:textSize="@dimen/sp_22"
                 app:custFont="@string/app_font_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvSubTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 android:padding="@dimen/dp_20">
 
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvAddress"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_add_new_address"
@@ -130,7 +130,7 @@
         </LinearLayout>
 
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/btConfirmAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

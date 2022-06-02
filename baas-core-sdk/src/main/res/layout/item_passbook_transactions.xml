@@ -39,7 +39,7 @@
                 app:layout_constraintStart_toEndOf="@+id/view"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.cardBlockReason.CardBlockReasonViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.cardBlockReason.CardBlockReasonViewModel" />
 
     </data>
 
@@ -45,7 +45,7 @@
                         android:onClick="clickActions"
                         android:src="@drawable/white_back_arrow" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/tvTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                             android:padding="@dimen/main_padding">
 
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/tvReason"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                             android:padding="@dimen/dp_20">
 
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="@dimen/button_left_right_padding"
@@ -131,7 +131,7 @@
                             android:padding="@dimen/dp_20">
 
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="@dimen/button_left_right_padding"
@@ -166,7 +166,7 @@
                                 android:gravity="center"
                                 android:orientation="horizontal">
 
-                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginRight="@dimen/button_left_right_padding"
@@ -188,7 +188,7 @@
 
                             </LinearLayout>
 
-                            <com.payu.baas.core.view.viewExtension.CustomEdittext
+                            <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                                 android:id="@+id/etReason"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/dp_120"
@@ -230,7 +230,7 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/kripya_dhyaan_dein"
@@ -238,7 +238,7 @@
                             android:textSize="@dimen/dp_16"
                             app:custFont="@string/app_font_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_10"
@@ -249,7 +249,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <com.payu.baas.core.view.viewExtension.CustomButton
+                <com.payu.baas.coreUI.view.viewExtension.CustomButton
                     android:id="@+id/btSubmit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

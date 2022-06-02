@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.onboarding.ErrorActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.onboarding.ErrorActivity">
 
     <data></data>
 
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_error_msg" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvErrorTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 android:textSize="@dimen/error_text_size"
                 app:custFont="@string/app_font_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvErrorSolution"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btExit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/text_color"
                 app:custFont="@string/app_font_extra_bold" />
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btOpenWifiSettings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                 android:textColor="@color/text_color"
                 app:custFont="@string/app_font_extra_bold"
                 android:visibility="gone"/>
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btReloadPage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -42,7 +42,7 @@
                 android:layout_marginTop="@dimen/help_layout_padding"
                 android:src="@drawable/pan_format" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvPanCardInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

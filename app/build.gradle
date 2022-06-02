@@ -4,9 +4,9 @@ plugins {
 }
 
 android {
-    buildFeatures {
-        buildConfig = true
-    }
+//    buildFeatures {
+//        buildConfig = true
+//    }
     compileSdkVersion 31
 
     defaultConfig {
@@ -57,6 +57,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(path: ':baas-core-sdk')
+//    implementation project(path: ':baas-core-nonUISdk')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.6.0'

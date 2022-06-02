@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.enterpasscode.PasscodeActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.enterpasscode.PasscodeActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.enterpasscode.EnterPasscodeViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.enterpasscode.EnterPasscodeViewModel" />
     </data>
 
     <RelativeLayout
@@ -44,7 +44,7 @@
                         android:src="@drawable/white_back_arrow" />
                 </LinearLayout>
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
                     android:src="@drawable/ring_circle" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomErrorTextView
                 android:id="@+id/passcodeError"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -152,7 +152,7 @@
 
         </RelativeLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

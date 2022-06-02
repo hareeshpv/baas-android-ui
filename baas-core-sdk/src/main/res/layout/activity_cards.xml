@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.cards.CardsViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.cards.CardsViewModel" />
     </data>
 
     <RelativeLayout
@@ -41,7 +41,7 @@
                         android:padding="@dimen/normal_padding"
                         android:src="@drawable/white_back_arrow" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                             android:layout_marginTop="@dimen/main_padding"
                             android:background="@color/black" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvQueries"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -161,7 +161,7 @@
                         <!--                                android:layout_height="wrap_content"-->
                         <!--                                android:src="@drawable/icon_tap" />-->
 
-                        <!--                            <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                        <!--                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView-->
                         <!--                                android:layout_width="wrap_content"-->
                         <!--                                android:layout_height="wrap_content"-->
                         <!--                                android:layout_centerInParent="true"-->
@@ -178,7 +178,7 @@
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="@dimen/card_main_spacing">
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/tvUserName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
                     android:layout_marginTop="@dimen/main_padding"
                     android:orientation="vertical">
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/normal_padding"
@@ -238,7 +238,7 @@
                                 android:background="@drawable/card_icon_bg"
                                 android:src="@drawable/ic_svg_card" />
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/tvCardActiveStatus"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -283,7 +283,7 @@
                                 android:background="@drawable/card_icon_bg"
                                 android:src="@drawable/ic_svg_block" />
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/tvCardBlock"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -329,7 +329,7 @@
                                 android:padding="@dimen/min_padding"
                                 android:src="@drawable/ic_svg_key" />
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/tvChangePin"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -358,7 +358,7 @@
                         android:layout_marginTop="@dimen/main_padding"
                         android:orientation="vertical">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/normal_padding"
@@ -389,7 +389,7 @@
                                     android:background="@drawable/card_icon_bg"
                                     android:src="@drawable/ic_svg_online_payment" />
 
-                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                     android:id="@+id/tvOnlineTransactions"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -433,7 +433,7 @@
                                     android:background="@drawable/card_icon_bg"
                                     android:src="@drawable/ic_svg_atm_withdrawal" />
 
-                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                     android:id="@+id/tvAtmCashWithdrawal"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -477,7 +477,7 @@
                                     android:background="@drawable/card_icon_bg"
                                     android:src="@drawable/ic_svg_card_swipe" />
 
-                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                     android:id="@+id/tvCardSwipe"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -522,7 +522,7 @@
                                     android:background="@drawable/card_icon_bg"
                                     android:src="@drawable/ic_svg_transaction_limit" />
 
-                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                     android:id="@+id/tvTransactionLimt"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"

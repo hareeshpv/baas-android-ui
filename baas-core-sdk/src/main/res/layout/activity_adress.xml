@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.address.AddressViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.address.AddressViewModel" />
 
     </data>
 
@@ -42,7 +42,7 @@
                     android:padding="@dimen/normal_padding"
                     android:src="@drawable/white_back_arrow" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                     android:textSize="@dimen/screen_title"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/back_arrow"
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvAddress"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                             android:layout_centerInParent="true"
                             android:src="@drawable/ic_svg_delete" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dp_10"
@@ -149,7 +149,7 @@
                     android:gravity="center"
                     android:onClick="addNewAddress">
 
-                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_10"
@@ -164,7 +164,7 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/btConfirmAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

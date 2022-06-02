@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.panvalidate.VerifyPanViewModel"/>
+            type="com.payu.baas.coreUI.view.ui.activity.panvalidate.VerifyPanViewModel"/>
     </data>
 
     <RelativeLayout
@@ -38,7 +38,7 @@
                     android:onClick="verify_pancard_backarrow"
                     android:src="@drawable/white_back_arrow" />
             </LinearLayout>
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvVerifyPanNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                     tools:ignore="IncludeLayoutParam" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/verifyPanNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -1,0 +1,52 @@
+{
+  "transactionModes": [
+    {
+      "txn_mode": "CONTACTLESS",
+      "allow": false,
+      "channel": "POS",
+      "location": "DOM"
+    },
+    {
+      "txn_mode": "CONTACTLESS",
+      "allow": false,
+      "channel": "POS",
+      "location": "INTL"
+    },
+    {
+      "txn_mode": null,
+      "allow": true,
+      "channel": "ATM",
+      "location": "DOM"
+    },
+    {
+      "txn_mode": null,
+      "allow": true,
+      "channel": "POS",
+      "location": "DOM"
+    },
+    {
+      "txn_mode": null,
+      "allow": true,
+      "channel": "ECOM",
+      "location": "DOM"
+    },
+    {
+      "txn_mode": null,
+      "allow": false,
+      "channel": "ATM",
+      "location": "INTL"
+    },
+    {
+      "txn_mode": null,
+      "allow": false,
+      "channel": "POS",
+      "location": "INTL"
+    },
+    {
+      "txn_mode": null,
+      "allow": false,
+      "channel": "ECOM",
+      "location": "INTL"
+    }
+  ]
+}

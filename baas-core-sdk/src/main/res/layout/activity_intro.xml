@@ -52,7 +52,7 @@
                                 android:src="@drawable/ic_logo_image" />
                         </LinearLayout>
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/instruct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                             android:scaleType="fitXY"
                             android:src="@drawable/zero_balance_icon" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/zero_balance_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
                             android:textSize="@dimen/sp_33"
                             app:custFont="@string/app_font_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/zero_balance_text_message"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -139,7 +139,7 @@
                             android:scaleType="fitXY"
                             android:src="@drawable/ic_offer" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/offer_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -163,7 +163,7 @@
                             android:scaleType="fitXY"
                             android:src="@drawable/ic_atm_machine" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/free_service_offer1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -176,7 +176,7 @@
                             android:textSize="@dimen/sp_33"
                             app:custFont="@string/app_font_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/free_service_offer2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -189,7 +189,7 @@
                             android:textSize="@dimen/sp_33"
                             app:custFont="@string/app_font_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/every_month"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -214,7 +214,7 @@
                             android:scaleType="fitXY"
                             android:src="@drawable/ic_plain_credit_card" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/petrol_offer_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -227,7 +227,7 @@
                             android:textSize="@dimen/sp_33"
                             app:custFont="@string/app_font_bold" />
 
-                        <!--   <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <!--   <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                android:id="@+id/petrol_offer_text_grey"
                                android:layout_width="wrap_content"
                                android:layout_height="wrap_content"
@@ -262,7 +262,7 @@
                             android:layout_marginRight="@dimen/no_joining_fee_text_left_right_margin"
                             android:orientation="horizontal">
 
-                            <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                                 android:id="@+id/no_joining_fee"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -274,7 +274,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/no_joining_fee_temp"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -289,7 +289,7 @@
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/no_joining_fee_message_gray"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                         android:layout_marginTop="@dimen/dp_150"
                         android:background="@drawable/bg_black_gradient_top_rounded_intro">
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/all_in_one_salary_account"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -334,7 +334,7 @@
                             android:layout_marginTop="@dimen/mitra_icon_margin_top"
                             android:src="@drawable/ic_mitra" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/mintra_message"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -356,7 +356,7 @@
                             android:layout_marginTop="@dimen/sbm_icon_margin_top"
                             android:src="@drawable/ic_sbm_logo" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/no_joining_annual_fee"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -378,7 +378,7 @@
                             android:layout_marginTop="@dimen/loan_tap_icon_margin_top"
                             android:src="@drawable/ic_loantap" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/loantap_message"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -433,7 +433,7 @@
             android:background="@drawable/bg_black_gradient_top_rounded"
             android:orientation="vertical">
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btnApplyKaren1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

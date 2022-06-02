@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.panEmpVerification.PANEmployeeDetailActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.panEmpVerification.PANEmployeeDetailActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.panEmpVerification.PanEmpVerificationViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.panEmpVerification.PanEmpVerificationViewModel" />
     </data>
 
     <RelativeLayout
@@ -43,7 +43,7 @@
                         android:src="@drawable/white_back_arrow"
                         android:visibility="gone" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/back_arrow"
@@ -55,7 +55,7 @@
                         android:textSize="@dimen/screen_title"
                         app:custFont="@string/app_font_bold" />
 
-                    <!--                    <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                    <!--                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView-->
                     <!--                        android:id="@+id/full_name"-->
                     <!--                        android:layout_width="wrap_content"-->
                     <!--                        android:layout_height="wrap_content"-->
@@ -68,7 +68,7 @@
                     <!--                        android:textSize="@dimen/screen_sub_title"-->
                     <!--                        app:custFont="@string/app_font_regular" />-->
 
-                    <!--                    <com.payu.baas.core.view.viewExtension.CustomEdittext-->
+                    <!--                    <com.payu.baas.coreUI.view.viewExtension.CustomEdittext-->
                     <!--                        android:id="@+id/etFullName"-->
                     <!--                        android:layout_width="match_parent"-->
                     <!--                        android:layout_height="wrap_content"-->
@@ -91,7 +91,7 @@
                         app:panText="@={viewModel.strPanNumber}"
                         tools:ignore="IncludeLayoutParam" />
 
-                    <!--                    <com.payu.baas.core.view.viewExtension.CustomTextView-->
+                    <!--                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView-->
                     <!--                        android:id="@+id/date_of_birth"-->
                     <!--                        android:layout_width="wrap_content"-->
                     <!--                        android:layout_height="wrap_content"-->
@@ -112,7 +112,7 @@
                     <!--                        android:visibility="gone"-->
                     <!--                        android:orientation="horizontal">-->
 
-                    <!--                        <com.payu.baas.core.view.viewExtension.CustomEdittext-->
+                    <!--                        <com.payu.baas.coreUI.view.viewExtension.CustomEdittext-->
                     <!--                            android:id="@+id/etDOB"-->
                     <!--                            android:layout_width="wrap_content"-->
                     <!--                            android:layout_height="wrap_content"-->
@@ -148,7 +148,7 @@
                 </LinearLayout>
             </ScrollView>
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btNext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

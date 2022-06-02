@@ -24,7 +24,7 @@
         android:layout_marginTop="@dimen/main_padding"
         android:orientation="vertical">
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/per_transaction_text"
@@ -61,7 +61,7 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvPerTransactionMaxLimit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:background="@drawable/edittext_bg"
             android:padding="@dimen/normal_padding">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/normal_padding"
@@ -108,7 +108,7 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomErrorTextView
             android:id="@+id/tvErrorMsgForPerTransaction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/daily_text"
@@ -145,7 +145,7 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvDailyMaxLimit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
             android:background="@drawable/edittext_bg"
             android:padding="@dimen/normal_padding">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/normal_padding"
@@ -192,7 +192,7 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomErrorTextView
             android:id="@+id/tvErrorMsgForDailyLimit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

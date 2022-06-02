@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">baasdevtest.payu.in</domain>
+        <pin-set>
+            <pin digest="SHA-256">P0ofhtQPclFNzKB0I9pSAdfrMZtlIkHAg6NxQjDkd38=</pin>
+            <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.kyc.CardDeliveryAddressDetailActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.kyc.CardDeliveryAddressDetailActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvBankTransferChargesLabel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvBankTransferCharges"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvAdvanceUseFeesLabel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvBankTransferChargesLabel" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvAdvanceUseFees"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvBankTransferChargesLabel" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvTotalChargesLabel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAdvanceUseFees" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvTotalCharges"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             app:layout_constraintTop_toTopOf="@+id/tvTotalChargesLabel" />
 
 
-        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
             android:id="@+id/tvMoveAhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

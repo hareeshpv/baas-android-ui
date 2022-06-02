@@ -20,7 +20,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvPanNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <com.payu.baas.core.view.viewExtension.CustomEdittext
+            <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                 android:id="@+id/etPanNumber"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
 
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomErrorTextView
             android:id="@+id/tvPanError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

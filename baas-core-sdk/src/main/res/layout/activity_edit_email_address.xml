@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.editEmailAddress.EditEmailAddressViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.editEmailAddress.EditEmailAddressViewModel" />
     </data>
     <RelativeLayout
         android:id="@+id/rlParent"
@@ -27,7 +27,7 @@
                 android:src="@drawable/white_back_arrow" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/verify_email_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             android:textSize="@dimen/screen_title"
             app:custFont="@string/app_font_bold" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/enter_email_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
 
 
 
-            <com.payu.baas.core.view.viewExtension.CustomMobileFieldEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomMobileFieldEditText
                 android:id="@+id/email_address"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/mobile_number_text_height"
@@ -99,7 +99,7 @@
                 android:textCursorDrawable="@drawable/bg_cursor"
                 app:custFont="@string/app_font_semi_bold" />
         </LinearLayout>
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/errorMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
             android:textColor="@color/text_color"
             app:custFont="@string/app_font_regular" />
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/sendEmailOtp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

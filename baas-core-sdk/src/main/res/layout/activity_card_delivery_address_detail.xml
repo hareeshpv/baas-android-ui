@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.kyc.CardDeliveryAddressDetailActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.kyc.CardDeliveryAddressDetailActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.kyc.CardDeliveryAddressViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.kyc.CardDeliveryAddressViewModel" />
     </data>
 
     <RelativeLayout
@@ -36,7 +36,7 @@
                     android:src="@drawable/white_back_arrow"
                     android:visibility="gone" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                     android:textSize="@dimen/screen_title"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvToolTip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                     android:textSize="@dimen/tooltip_textsize"
                     app:custFont="@string/app_font_regular" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/pin_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_regular" />
 
-                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                     android:id="@+id/etPinCode"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                     android:textSize="@dimen/card_delivery_screen__edit_text_size"
                     app:custFont="@string/app_font_regular" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_regular" />
 
-                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                     android:id="@+id/etAddressLine1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                     app:custFont="@string/app_font_regular" />
 
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/colony_scetor_street"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_regular" />
 
-                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                     android:id="@+id/etAddressLine2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
                     app:custFont="@string/app_font_regular" />
 
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/landmark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
                     android:visibility="gone"
                     app:custFont="@string/app_font_regular" />
 
-                <com.payu.baas.core.view.viewExtension.CustomEdittext
+                <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                     android:id="@+id/etLandmark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -189,7 +189,7 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/city_district"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
                             android:textSize="@dimen/screen_sub_title"
                             app:custFont="@string/app_font_regular" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomEdittext
+                        <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                             android:id="@+id/etCity"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -225,7 +225,7 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/state"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
                             android:textSize="@dimen/screen_sub_title"
                             app:custFont="@string/app_font_regular" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomEdittext
+                        <com.payu.baas.coreUI.view.viewExtension.CustomEdittext
                             android:id="@+id/etState"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -260,7 +260,7 @@
             </RelativeLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/btSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

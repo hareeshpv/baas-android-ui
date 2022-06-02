@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.otpverification.OTPVerificationActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.otpverification.OTPVerificationActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.otpverification.OTPVerificationViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.otpverification.OTPVerificationViewModel" />
 
     </data>
 
@@ -53,7 +53,7 @@
                     </LinearLayout>
 
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/verify_mobile_number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                         android:textSize="@dimen/screen_title"
                         app:custFont="@string/app_font_bold" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/otp_information"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                         android:layout_below="@+id/otp_information"
                         android:orientation="horizontal">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/registered_mobile_number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                             android:textSize="@dimen/edit_text_size"
                             app:custFont="@string/app_font_semi_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/edit_mobile_number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                     </LinearLayout>
 
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/enter_OTP_message"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                         android:layout_below="@+id/enter_OTP_message"
                         android:layout_marginTop="@dimen/otp_box_top_margin">
 
-                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                        <com.payu.baas.coreUI.view.viewExtension.CustomOTPEditText
                             android:id="@+id/enter_otp1"
                             android:layout_width="@dimen/otp_width"
                             android:layout_height="@dimen/otp_height"
@@ -145,7 +145,7 @@
                             app:custFont="@string/app_font_semi_bold" />
 
 
-                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                        <com.payu.baas.coreUI.view.viewExtension.CustomOTPEditText
                             android:id="@+id/enter_otp2"
                             android:layout_width="@dimen/otp_width"
                             android:layout_height="@dimen/otp_height"
@@ -160,7 +160,7 @@
                             android:textSize="@dimen/passcode_otp_size"
                             app:custFont="@string/app_font_semi_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                        <com.payu.baas.coreUI.view.viewExtension.CustomOTPEditText
                             android:id="@+id/enter_otp3"
                             android:layout_width="@dimen/otp_width"
                             android:layout_height="@dimen/otp_height"
@@ -175,7 +175,7 @@
                             android:textSize="@dimen/passcode_otp_size"
                             app:custFont="@string/app_font_semi_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomOTPEditText
+                        <com.payu.baas.coreUI.view.viewExtension.CustomOTPEditText
                             android:id="@+id/enter_otp4"
                             android:layout_width="@dimen/otp_width"
                             android:layout_height="@dimen/otp_height"
@@ -194,7 +194,7 @@
                             app:custFont="@string/app_font_semi_bold" />
                     </LinearLayout>
 
-                    <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomErrorTextView
                         android:id="@+id/errorMessage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
                         android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/otp_mila_message"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -226,7 +226,7 @@
                             android:textSize="@dimen/screen_sub_title"
                             app:custFont="@string/app_font_regular" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/resend_otp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -244,7 +244,7 @@
                 </RelativeLayout>
             </androidx.core.widget.NestedScrollView>
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/verify"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/otp_button_height"

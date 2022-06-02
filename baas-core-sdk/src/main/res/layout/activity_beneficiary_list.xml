@@ -2,14 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.moneyTransfer.BeneficiaryListActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.moneyTransfer.BeneficiaryListActivity">
 
     <data>
 
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.moneyTransfer.MoneyTransferViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.moneyTransfer.MoneyTransferViewModel" />
 
     </data>
 
@@ -47,7 +47,7 @@
                     android:src="@drawable/black_back_arrow" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvToolbarTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                 android:textSize="@dimen/sp_14"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                 android:id="@+id/tvEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -98,7 +98,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btnDelete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

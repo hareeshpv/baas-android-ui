@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvAddress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                 android:layout_centerInParent="true"
                 android:onClick="onSelectingReason"
                 android:src="@drawable/ic_svg_delete" />
-            <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/button_left_right_padding"

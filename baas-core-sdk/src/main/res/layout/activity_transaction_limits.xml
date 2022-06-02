@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.cardTransactionLimit.TransactionLimitViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.cardTransactionLimit.TransactionLimitViewModel" />
     </data>
 
     <RelativeLayout
@@ -38,7 +38,7 @@
                     android:padding="@dimen/normal_padding"
                     android:src="@drawable/white_back_arrow" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -74,7 +74,7 @@
                 tools:ignore="IncludeLayoutParam" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

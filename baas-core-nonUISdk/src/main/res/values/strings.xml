@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="baas_invalid_brand_token">Invalid Brand Token</string>
+    <string name="baas_invalid_employee_id">Invalid Employee Id</string>
+    <string name="baas_invalid_pan_number">Invalid Pan Card Number</string>
+    <string name="baas_something_went_wrong">Something went wrong, please try again later..</string>
+</resources>

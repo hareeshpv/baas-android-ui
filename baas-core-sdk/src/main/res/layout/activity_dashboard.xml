@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.dashboard.DashboardViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.dashboard.DashboardViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -93,7 +93,7 @@
                                     </LinearLayout>
 
 
-                                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
@@ -124,7 +124,7 @@
                                         android:gravity="bottom"
                                         android:orientation="horizontal">
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginEnd="@dimen/dp_4"
@@ -133,7 +133,7 @@
                                             android:textSize="@dimen/sp_22"
                                             app:custFont="@string/app_font_regular" />
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:letterSpacing="-0.04"
@@ -145,7 +145,7 @@
 
                                     </LinearLayout>
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="@dimen/dp_2"
@@ -177,7 +177,7 @@
                                         android:paddingBottom="@dimen/dp_9"
                                         android:visibility="visible">
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:gravity="center"
@@ -186,7 +186,7 @@
                                             android:textSize="@dimen/sp_12"
                                             app:custFont="@string/app_font_regular" />
 
-                                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="@dimen/dp_5"
@@ -226,7 +226,7 @@
                                                 app:layout_constraintStart_toStartOf="parent"
                                                 app:layout_constraintTop_toTopOf="parent">
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:layout_marginEnd="@dimen/dp_2"
@@ -235,7 +235,7 @@
                                                     android:textSize="@dimen/sp_14"
                                                     app:custFont="@string/app_font_regular" />
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:text="0"
@@ -244,7 +244,7 @@
                                                     app:custFont="@string/app_font_bold" />
                                             </LinearLayout>
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:id="@+id/tvPlus2"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
@@ -276,7 +276,7 @@
                                                     android:paddingTop="@dimen/dp_5"
                                                     android:paddingBottom="@dimen/dp_5">
 
-                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_marginEnd="@dimen/dp_2"
@@ -285,7 +285,7 @@
                                                         android:textSize="@dimen/sp_14"
                                                         app:custFont="@string/app_font_regular" />
 
-                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:text="0"
@@ -348,7 +348,7 @@
                                                     android:scaleType="fitXY"
                                                     app:srcCompat="@drawable/icon_wallet" />
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:text="@string/account_balance"
@@ -357,7 +357,7 @@
                                                     app:custFont="@string/app_font_regular" />
                                             </LinearLayout>
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:id="@+id/tvPlusTemp2"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
@@ -389,7 +389,7 @@
                                                     android:scaleType="fitXY"
                                                     app:srcCompat="@drawable/icon_advance_allowed" />
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:text="@string/advance_allowed"
@@ -435,7 +435,7 @@
                                         android:padding="@dimen/dp_9"
                                         app:srcCompat="@drawable/ic_wallet" />
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="@dimen/dp_12"
@@ -489,7 +489,7 @@
                                 android:layout_marginRight="@dimen/dp_17"
                                 android:layout_marginBottom="@dimen/dp_17">
 
-                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                     android:id="@+id/tvUserName"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -580,7 +580,7 @@
                                     </LinearLayout>
 
 
-                                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
@@ -611,7 +611,7 @@
                                         android:gravity="bottom"
                                         android:orientation="horizontal">
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginEnd="@dimen/dp_4"
@@ -620,7 +620,7 @@
                                             android:textSize="@dimen/sp_22"
                                             app:custFont="@string/app_font_regular" />
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:letterSpacing="-0.04"
@@ -632,7 +632,7 @@
 
                                     </LinearLayout>
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="@dimen/dp_2"
@@ -664,7 +664,7 @@
                                         android:paddingBottom="@dimen/dp_9"
                                         android:visibility="visible">
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:gravity="center"
@@ -673,7 +673,7 @@
                                             android:textSize="@dimen/sp_12"
                                             app:custFont="@string/app_font_regular" />
 
-                                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="@dimen/dp_5"
@@ -713,7 +713,7 @@
                                                 app:layout_constraintStart_toStartOf="parent"
                                                 app:layout_constraintTop_toTopOf="parent">
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:layout_marginEnd="@dimen/dp_2"
@@ -722,7 +722,7 @@
                                                     android:textSize="@dimen/sp_14"
                                                     app:custFont="@string/app_font_regular" />
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:text="0"
@@ -731,7 +731,7 @@
                                                     app:custFont="@string/app_font_bold" />
                                             </LinearLayout>
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:id="@+id/tvPlus1"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
@@ -763,7 +763,7 @@
                                                     android:paddingTop="@dimen/dp_5"
                                                     android:paddingBottom="@dimen/dp_5">
 
-                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_marginEnd="@dimen/dp_2"
@@ -772,7 +772,7 @@
                                                         android:textSize="@dimen/sp_14"
                                                         app:custFont="@string/app_font_regular" />
 
-                                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:text="0"
@@ -835,7 +835,7 @@
                                                     android:scaleType="fitXY"
                                                     app:srcCompat="@drawable/icon_wallet" />
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:text="@string/account_balance"
@@ -844,7 +844,7 @@
                                                     app:custFont="@string/app_font_regular" />
                                             </LinearLayout>
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:id="@+id/tvPlusTemp1"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
@@ -876,7 +876,7 @@
                                                     android:scaleType="fitXY"
                                                     app:srcCompat="@drawable/icon_advance_allowed" />
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:text="@string/advance_allowed"
@@ -923,7 +923,7 @@
                                         android:padding="@dimen/dp_9"
                                         app:srcCompat="@drawable/ic_wallet" />
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvNotification"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -1018,7 +1018,7 @@
 
                                 </LinearLayout>
 
-                                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                                     android:id="@+id/tvHelp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1051,7 +1051,7 @@
                                     android:gravity="bottom"
                                     android:orientation="horizontal">
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginEnd="@dimen/dp_4"
@@ -1060,7 +1060,7 @@
                                         android:textSize="@dimen/sp_22"
                                         app:custFont="@string/app_font_regular" />
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvExpenseLimitAmount"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1073,7 +1073,7 @@
 
                                 </LinearLayout>
 
-                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/dp_2"
@@ -1105,7 +1105,7 @@
                                     android:paddingBottom="@dimen/dp_9"
                                     android:visibility="visible">
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvNoBalanceInfo"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1115,7 +1115,7 @@
                                         android:textSize="@dimen/sp_12"
                                         app:custFont="@string/app_font_regular" />
 
-                                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                                         android:id="@+id/tvAddMoney"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1156,7 +1156,7 @@
                                             app:layout_constraintStart_toStartOf="parent"
                                             app:layout_constraintTop_toTopOf="parent">
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_marginEnd="@dimen/dp_2"
@@ -1165,7 +1165,7 @@
                                                 android:textSize="@dimen/sp_14"
                                                 app:custFont="@string/app_font_regular" />
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:id="@+id/tvAccountBalanceAmount"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
@@ -1175,7 +1175,7 @@
                                                 app:custFont="@string/app_font_bold" />
                                         </LinearLayout>
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:id="@+id/tvPlus"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -1208,7 +1208,7 @@
                                                 android:paddingTop="@dimen/dp_5"
                                                 android:paddingBottom="@dimen/dp_5">
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:layout_marginEnd="@dimen/dp_2"
@@ -1217,7 +1217,7 @@
                                                     android:textSize="@dimen/sp_14"
                                                     app:custFont="@string/app_font_regular" />
 
-                                                <com.payu.baas.core.view.viewExtension.CustomTextView
+                                                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                     android:id="@+id/tvAdvanceAllowedAmount"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -1284,7 +1284,7 @@
                                                 android:scaleType="fitXY"
                                                 app:srcCompat="@drawable/icon_wallet" />
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:text="@string/account_balance"
@@ -1293,7 +1293,7 @@
                                                 app:custFont="@string/app_font_regular" />
                                         </LinearLayout>
 
-                                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                             android:id="@+id/tvPlusTemp"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -1325,7 +1325,7 @@
                                                 android:scaleType="fitXY"
                                                 app:srcCompat="@drawable/icon_advance_allowed" />
 
-                                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:text="@string/advance_allowed"
@@ -1376,7 +1376,7 @@
 
                         </RelativeLayout>
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_10"
@@ -1415,7 +1415,7 @@
                         </RelativeLayout>
 
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_10"
@@ -1452,7 +1452,7 @@
                                 app:srcCompat="@drawable/ic_advance_allowed" />
                         </RelativeLayout>
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_10"
@@ -1484,7 +1484,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/apka_card_delivery_status"
@@ -1554,7 +1554,7 @@
                                     android:gravity="center"
                                     android:orientation="vertical">
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvCardDeliveryStatusOrdered"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1563,7 +1563,7 @@
                                         android:textSize="@dimen/sp_11"
                                         app:custFont="@string/app_font_semi_bold" />
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvCardDeliveryStatusOrderedDate"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1643,7 +1643,7 @@
                                     android:gravity="center"
                                     android:orientation="vertical">
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvCardDeliveryStatusDispatched"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1652,7 +1652,7 @@
                                         android:textSize="@dimen/sp_11"
                                         app:custFont="@string/app_font_semi_bold" />
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvCardDeliveryStatusDispatchedDate"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1732,7 +1732,7 @@
                                     android:gravity="center"
                                     android:orientation="vertical">
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvCardDeliveryStatusDelivered"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1742,7 +1742,7 @@
                                         android:textSize="@dimen/sp_11"
                                         app:custFont="@string/app_font_semi_bold" />
 
-                                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                         android:id="@+id/tvCardDeliveryStatusDeliveredDate"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -1760,7 +1760,7 @@
 
                         </LinearLayout>
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/tvIsCardDelivered"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1773,7 +1773,7 @@
                             android:textStyle="bold"
                             app:custFont="@string/app_font_semi_bold" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomButton
+                        <com.payu.baas.coreUI.view.viewExtension.CustomButton
                             android:id="@+id/tvIsCardDeliveredConfirmed"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1786,7 +1786,7 @@
                             app:custFont="@string/app_font_extra_bold" />
 
 
-                        <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                             android:id="@+id/tvIsCardNotDelivered"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1829,7 +1829,7 @@
                                 app:srcCompat="@drawable/icon_idea" />
 
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/tvPleaseNote"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -1843,7 +1843,7 @@
                                 app:layout_constraintStart_toEndOf="@+id/ivIdea"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.payu.baas.core.view.viewExtension.CustomTextView
+                            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                                 android:id="@+id/tvPleaseNoteDetails"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -1860,7 +1860,7 @@
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <com.payu.baas.core.view.viewExtension.CustomButton
+                        <com.payu.baas.coreUI.view.viewExtension.CustomButton
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_20"
@@ -1890,7 +1890,7 @@
                         android:layout_height="@dimen/dp_24"
                         app:srcCompat="@drawable/ic_delivered_checked" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_12"
@@ -1905,7 +1905,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_16">
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvOne"
                             android:layout_width="@dimen/dp_24"
                             android:layout_height="@dimen/dp_24"
@@ -1927,7 +1927,7 @@
                             app:layout_constraintStart_toStartOf="@+id/tvOne"
                             app:layout_constraintTop_toBottomOf="@+id/tvOne" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvOneLabel"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -1941,7 +1941,7 @@
                             app:layout_constraintStart_toEndOf="@+id/tvOne"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvTwo"
                             android:layout_width="@dimen/dp_24"
                             android:layout_height="@dimen/dp_24"
@@ -1965,7 +1965,7 @@
                             app:layout_constraintStart_toStartOf="@+id/tvTwo"
                             app:layout_constraintTop_toBottomOf="@+id/tvTwo" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvTwoLabel"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -1978,7 +1978,7 @@
                             app:layout_constraintStart_toStartOf="@+id/tvOneLabel"
                             app:layout_constraintTop_toTopOf="@+id/tvTwo" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvThree"
                             android:layout_width="@dimen/dp_24"
                             android:layout_height="@dimen/dp_24"
@@ -1993,7 +1993,7 @@
                             app:layout_constraintStart_toStartOf="@+id/tvTwo"
                             app:layout_constraintTop_toBottomOf="@+id/tvTwoLabel" />
 
-                        <com.payu.baas.core.view.viewExtension.CustomTextView
+                        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                             android:id="@+id/tvThreeLabel"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -2009,7 +2009,7 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <com.payu.baas.core.view.viewExtension.CustomButton
+                    <com.payu.baas.coreUI.view.viewExtension.CustomButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_20"
@@ -2099,7 +2099,7 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:background="@drawable/bg_rounded_corner_black_rock" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvOffersAndDeals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

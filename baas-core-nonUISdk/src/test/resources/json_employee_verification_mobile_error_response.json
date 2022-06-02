@@ -1,0 +1,6 @@
+{
+  "userMessage": "Sorry, Please enter your employer registered mobile number.",
+  "systemMessage": "MOBILE_MISMATCH",
+  "code": "BAAS-404",
+  "verification_status": "NOT_AN_EMPLOYEE"
+}

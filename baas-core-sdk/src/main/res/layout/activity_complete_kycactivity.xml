@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.kyc.CompleteKYCActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.kyc.CompleteKYCActivity">
 
     <data>
 
@@ -14,7 +14,7 @@
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.kyc.CompleteKycViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.kyc.CompleteKycViewModel" />
     </data>
 
     <LinearLayout
@@ -33,7 +33,7 @@
             android:src="@drawable/white_back_arrow"
             android:visibility="gone" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                 android:background="@{viewModel.bgRlPan}"
                 android:gravity="center_vertical">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/pan_card_employee_detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
                 android:layout_marginLeft="@dimen/normal_padding"
                 android:background="@{viewModel.bgRlStep1}">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvStep1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                 android:background="@{viewModel.bgRlCardDelivery}"
                 android:gravity="center_vertical">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/rlCardDeliveryAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
                 android:layout_marginLeft="@dimen/normal_padding"
                 android:background="@{viewModel.bgRlStep2}">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvStep2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
                 android:layout_marginBottom="@dimen/min_padding"
                 android:background="@{viewModel.bgRlSelfie}"
                 android:gravity="center_vertical">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/selfie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -262,7 +262,7 @@
                 android:layout_marginLeft="@dimen/normal_padding"
                 android:background="@{viewModel.bgRlStep3}">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvStep3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -291,7 +291,7 @@
                 android:background="@{viewModel.bgRlAadhaar}"
                 android:gravity="center_vertical">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/aadhar_verification"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -341,7 +341,7 @@
                 android:layout_marginLeft="@dimen/normal_padding"
                 android:background="@{viewModel.bgRlStep4}">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvStep4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -370,7 +370,7 @@
                 android:background="@{viewModel.bgRlSubmit}"
                 android:gravity="center_vertical">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/review_submit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -420,7 +420,7 @@
                 android:layout_marginLeft="@dimen/normal_padding"
                 android:background="@{viewModel.bgRlStep5}">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvStep5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

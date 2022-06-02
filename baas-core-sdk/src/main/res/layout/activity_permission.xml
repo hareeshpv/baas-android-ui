@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.onboarding.PermissionActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.onboarding.PermissionActivity">
 
     <data></data>
 
@@ -38,7 +38,7 @@
                         android:src="@drawable/white_back_arrow" />
                 </LinearLayout>
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                     android:textSize="@dimen/screen_title"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/title_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                     android:layout_marginTop="@dimen/location_icon_top_margin"
                     android:src="@drawable/location_icon" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
                     android:textSize="@dimen/location_title_text_size"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/location_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                     android:layout_marginTop="@dimen/sms_icon_top_margin"
                     android:src="@drawable/sms_icon" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/sms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                     android:textStyle="bold"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/sms_message"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
                     android:layout_marginTop="@dimen/sms_icon_top_margin"
                     android:src="@drawable/ic_call" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/call_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                     android:textStyle="bold"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/call_message"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -186,7 +186,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                         android:id="@+id/privacy_policy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
                         android:textSize="@dimen/_15sdp"
                         app:custFont="@string/app_font_semi_bold" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_5sdp"
@@ -207,7 +207,7 @@
                         android:textSize="@dimen/_16sdp"
                         app:custFont="@string/app_font_semi_bold" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                         android:id="@+id/terms_condition"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -219,7 +219,7 @@
                         android:textSize="@dimen/_15sdp"
                         app:custFont="@string/app_font_semi_bold" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_6sdp"
@@ -234,7 +234,7 @@
             </RelativeLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.set_passcode.SetPasscodeActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.set_passcode.SetPasscodeActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.set_passcode.SetPasscodeViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.set_passcode.SetPasscodeViewModel" />
     </data>
 
     <RelativeLayout
@@ -39,7 +39,7 @@
                     android:src="@drawable/white_back_arrow" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         </LinearLayout>
 
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/enter_passcode_title_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_marginTop="@dimen/passcode_box_margin_top"
             android:gravity="center">
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/enter_passcode1"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -89,7 +89,7 @@
                 android:textSize="@dimen/_26sdp"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/enter_passcode2"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -104,7 +104,7 @@
                 android:textSize="@dimen/passcode_otp_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/enter_passcode3"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -119,7 +119,7 @@
                 android:textSize="@dimen/passcode_otp_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/enter_passcode4"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -138,7 +138,7 @@
         </LinearLayout>
 
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/re_enter_passcode_title_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
             android:layout_marginTop="@dimen/passcode_box_margin_top"
             android:gravity="center">
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/re_enter_passcode1"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -172,7 +172,7 @@
                 android:textSize="@dimen/passcode_otp_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/re_enter_passcode2"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -186,7 +186,7 @@
                 android:textSize="@dimen/passcode_otp_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/re_enter_passcode3"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -200,7 +200,7 @@
                 android:textSize="@dimen/passcode_otp_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomPasscodeEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomPasscodeEditText
                 android:id="@+id/re_enter_passcode4"
                 android:layout_width="@dimen/passcode_dimension"
                 android:layout_height="@dimen/passcode_dimension"
@@ -215,7 +215,7 @@
                 app:custFont="@string/app_font_semi_bold" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomErrorTextView
             android:id="@+id/error_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -229,7 +229,7 @@
             android:visibility="invisible"
             app:custFont="@string/app_font_regular" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/passcode_instruction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -246,7 +246,7 @@
             android:textSize="@dimen/welcome_instruction"
             app:custFont="@string/app_font_regular" />
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/set_passcode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

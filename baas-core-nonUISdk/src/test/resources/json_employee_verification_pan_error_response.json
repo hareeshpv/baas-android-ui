@@ -1,0 +1,6 @@
+{
+  "userMessage": "Sorry, Please enter correct PAN number ",
+  "systemMessage": "PAN_MISMATCH",
+  "code": "BAAS-404",
+  "verification_status": "NOT_AN_EMPLOYEE"
+}

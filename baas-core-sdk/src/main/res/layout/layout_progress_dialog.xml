@@ -22,7 +22,7 @@
             android:max="100"
             android:progress="5" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvAccountOpenTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:textSize="@dimen/screen_title"
             app:custFont="@string/app_font_bold" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvAccountOpenMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

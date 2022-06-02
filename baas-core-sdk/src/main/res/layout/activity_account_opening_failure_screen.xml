@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.accountopeningfailure.AccountOpeningFailureScreenActivity">
+    tools:context="com.payu.baas.coreUIUI.view.ui.activity.accountopeningfailure.AccountOpeningFailureScreenActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.reviewAndSubmit.ReviewAndSubmitViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.reviewAndSubmit.ReviewAndSubmitViewModel" />
     </data>
 
     <RelativeLayout
@@ -32,7 +32,7 @@
                 android:src="@drawable/white_back_arrow" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             android:textSize="@dimen/screen_title"
             app:custFont="@string/app_font_extra_bold" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/sorry_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             app:custFont="@string/app_font_extra_bold" />
 
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/kyonki"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:textSize="@dimen/screen_title"
             app:custFont="@string/app_font_extra_bold" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tvErrorMessageForAadhar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
                 android:background="@drawable/button_black_bg"
                 android:onClick="@{()->viewModel.reTry()}">
 
-                <com.payu.baas.core.view.viewExtension.CustomGradientTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomGradientTextView
                     android:id="@+id/btExit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
             </LinearLayout>
 
 
-            <com.payu.baas.core.view.viewExtension.CustomButton
+            <com.payu.baas.coreUI.view.viewExtension.CustomButton
                 android:id="@+id/btReloadPage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

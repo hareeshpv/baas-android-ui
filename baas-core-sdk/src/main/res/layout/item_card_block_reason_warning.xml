@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/emoji_thinking" />
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -64,7 +64,7 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/kripya_dhyaan_dein"
@@ -72,7 +72,7 @@
                         android:textSize="@dimen/dp_16"
                         app:custFont="@string/app_font_bold" />
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_10"
@@ -87,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.payu.baas.core.view.viewExtension.CustomGradientGreenButton
+                <com.payu.baas.coreUI.view.viewExtension.CustomGradientGreenButton
                     android:id="@+id/btBlock"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                     android:textAllCaps="false"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomButton
+                <com.payu.baas.coreUI.view.viewExtension.CustomButton
                     android:id="@+id/btNo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

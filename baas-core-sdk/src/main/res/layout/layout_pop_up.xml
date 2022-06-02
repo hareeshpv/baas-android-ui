@@ -7,7 +7,7 @@
     android:paddingStart="@dimen/_20sdp"
     android:paddingEnd="@dimen/dp_20">
 
-    <com.payu.baas.core.view.viewExtension.CustomTextView
+    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
         android:id="@+id/tvTooltipText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:orientation="vertical">
 
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/tooltip_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

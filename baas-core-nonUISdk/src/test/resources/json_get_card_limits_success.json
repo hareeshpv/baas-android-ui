@@ -1,0 +1,16 @@
+{
+  "limitConfigs": [
+    {
+      "channel": "POS",
+      "location": "DOM",
+      "thresholds": [
+        {
+          "amount_limit": 5000,
+          "target_duration": "DAY",
+          "usage_limit": 10
+        }
+      ],
+      "txn_mode": "CONTACTLESS"
+    }
+  ]
+}

@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.payu.baas.core.view.ui.activity.mobileverification.MobileVerificationActivity">
+    tools:context="com.payu.baas.coreUI.view.ui.activity.mobileverification.MobileVerificationActivity">
     <data>
         <variable
             name="viewModel"
-            type="com.payu.baas.core.view.ui.activity.mobileverification.MobileVerificationViewModel" />
+            type="com.payu.baas.coreUI.view.ui.activity.mobileverification.MobileVerificationViewModel" />
     </data>
 
     <RelativeLayout
@@ -30,7 +30,7 @@
                 android:src="@drawable/white_back_arrow" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/verify_mobile_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:textSize="@dimen/screen_title"
             app:custFont="@string/app_font_bold" />
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/enter_mobile_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
             android:background="@drawable/mobile_background"
             android:orientation="horizontal">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/country_code"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/mobile_number_text_height"
@@ -96,7 +96,7 @@
                 android:textSize="@dimen/mobile_number_text_size"
                 app:custFont="@string/app_font_semi_bold" />
 
-            <com.payu.baas.core.view.viewExtension.CustomMobileFieldEditText
+            <com.payu.baas.coreUI.view.viewExtension.CustomMobileFieldEditText
                 android:id="@+id/mobilenumber"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/mobile_number_text_height"
@@ -110,7 +110,7 @@
                 android:textSize="@dimen/mobile_number_text_size"
                 app:custFont="@string/app_font_semi_bold" />
         </LinearLayout>
-        <com.payu.baas.core.view.viewExtension.CustomErrorTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomErrorTextView
             android:id="@+id/errorMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
             android:textSize="@dimen/error_message"
             app:custFont="@string/app_font_regular" />
 
-        <com.payu.baas.core.view.viewExtension.CustomButton
+        <com.payu.baas.coreUI.view.viewExtension.CustomButton
             android:id="@+id/sendOtp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

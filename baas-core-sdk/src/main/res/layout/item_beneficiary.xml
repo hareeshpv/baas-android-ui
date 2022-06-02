@@ -29,7 +29,7 @@
             app:layout_constraintStart_toEndOf="@+id/chk"
             app:layout_constraintTop_toTopOf="@+id/ll">
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:id="@+id/tvShortName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:layout_marginTop="@dimen/dp_2"
                 android:layout_marginBottom="@dimen/dp_2">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/tvBeneficiaryName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tvBeneficiaryName">
 
 
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:id="@+id/tvBankName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

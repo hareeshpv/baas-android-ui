@@ -36,7 +36,7 @@
                 android:src="@drawable/white_back_arrow" />
         </LinearLayout>
 
-        <com.payu.baas.core.view.viewExtension.CustomTextView
+        <com.payu.baas.coreUI.view.viewExtension.CustomTextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_marginTop="@dimen/_25sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -95,7 +95,7 @@
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -130,14 +130,14 @@
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/free_atm_withdrawals_n_monthly"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/screen_sub_title"
                         app:custFont="@string/app_font_bold" />
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/per_month"
@@ -146,7 +146,7 @@
                         app:custFont="@string/app_font_semi_bold" />
                 </LinearLayout>
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -174,14 +174,14 @@
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/atm_withdrawal_fee_n_per_transaction"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/screen_sub_title"
                         app:custFont="@string/app_font_bold" />
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/per_transaction"
@@ -195,14 +195,14 @@
                      android:gravity="end"
                      android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                     <com.payu.baas.core.view.viewExtension.CustomTextView
+                     <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:id="@+id/atmWithdrawalFee"
                          android:textColor="@color/text_color"
                          android:textSize="@dimen/screen_sub_title"
                          app:custFont="@string/app_font_semi_bold" />
-                     <com.payu.baas.core.view.viewExtension.CustomTextView
+                     <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:id="@+id/atmWithdrawalFeeHintColor"
@@ -229,14 +229,14 @@
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/free_bank_transfers_n_monthly"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/screen_sub_title"
                         app:custFont="@string/app_font_bold" />
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/per_month"
@@ -245,7 +245,7 @@
                         app:custFont="@string/app_font_semi_bold" />
                 </LinearLayout>
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/freeBankTransfer"
@@ -272,14 +272,14 @@
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/bank_transfer_fee_n_per_transaction"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/screen_sub_title"
                         app:custFont="@string/app_font_bold" />
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/per_transaction"
@@ -292,14 +292,14 @@
                     android:gravity="end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/bankTransferFeePerTransaction"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/screen_sub_title"
                         app:custFont="@string/app_font_semi_bold" />
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/bankTransferFeePerTransactionHintColor"
@@ -327,14 +327,14 @@
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/advance_usage_fees_n_per_transaction"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/screen_sub_title"
                         app:custFont="@string/app_font_bold" />
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/per_transaction"
@@ -347,14 +347,14 @@
                     android:gravity="end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/advanceUsagefee"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/screen_sub_title"
                         app:custFont="@string/app_font_semi_bold" />
-                    <com.payu.baas.core.view.viewExtension.CustomTextView
+                    <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/advanceUsagefeeHintColor"
@@ -380,14 +380,14 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/maximum_fuel_surcharge_waiver"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Per Month"
@@ -396,7 +396,7 @@
                     app:custFont="@string/app_font_semi_bold" />
             </LinearLayout>
 
-            <com.payu.baas.core.view.viewExtension.CustomTextView
+            <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
@@ -419,14 +419,14 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/late_payment_fees"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/late_payment_message"
@@ -439,14 +439,14 @@
                 android:gravity="end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/late_payment_fees"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_semi_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -454,7 +454,7 @@
                     android:textColor="@color/hint_text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_semi_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -462,7 +462,7 @@
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_semi_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -470,7 +470,7 @@
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_semi_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -496,14 +496,14 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/late_payment_fees_interest_charges"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Per Year"
@@ -516,14 +516,14 @@
                 android:gravity="end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/late_payment_fees_interest_charges"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/screen_sub_title"
                     app:custFont="@string/app_font_semi_bold" />
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/late_payment_fees_interest_chargesHintColor"
@@ -561,7 +561,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/important_instruction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -572,7 +572,7 @@
                     android:textSize="@dimen/welcome_terms"
                     app:custFont="@string/app_font_bold" />
 
-                <com.payu.baas.core.view.viewExtension.CustomTextView
+                <com.payu.baas.coreUI.view.viewExtension.CustomTextView
                     android:id="@+id/important_instruction_message"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
