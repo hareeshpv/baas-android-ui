@@ -1,8 +1,0 @@
-{
-  "transactionMode":
-  {
-    "allow": true,
-    "channel": "ATM",
-    "location": "DOM"
-  }
-}
